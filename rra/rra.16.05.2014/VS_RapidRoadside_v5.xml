@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Rapid Roadside Assessment – 16.05.2014 (draft 2)</h:title>
+    <model>
+      <instance>
+        <VS_RapidRoadside-v5 id="vs_rra_d2" version="1">
+          <start/>
+          <end/>
+          <today/>
+          <metadata>
+            <country/>
+            <date/>
+            <first_name/>
+            <last_name/>
+          </metadata>
+          <gps>
+            <gps_note/>
+            <gps_start/>
+            <gps_end/>
+            <gps_ns/>
+            <gps_lat/>
+            <gps_ew/>
+            <gps_long/>
+            <gps_accuracy/>
+            <gps_measurement_counts/>
+          </gps>
+          <rapid_road_asses_no/>
+          <tier_2b_rra_code/>
+          <mark>
+            <mark1/>
+            <mark2/>
+            <mark3/>
+          </mark>
+          <pan_or_many/>
+          <panorama/>
+          <photos>
+            <photo_n/>
+            <photo_e/>
+            <photo_s/>
+            <photo_w/>
+          </photos>
+          <canopy>
+            <treeshrub_projected_cover/>
+            <avg_height_upper_canopy/>
+            <canopy_pct>
+              <canopy2/>
+              <canopy3/>
+              <canopy4/>
+              <canopy5/>
+              <canopy6/>
+            </canopy_pct>
+          </canopy>
+          <can_total/>
+          <canopy_total/>
+          <use/>
+          <dominant_note/>
+          <dominant jr:template="">
+            <type/>
+            <code/>
+            <genus/>
+            <species/>
+            <common/>
+            <unknown_image/>
+          </dominant>
+          <meta>
+            <instanceID/>
+          </meta>
+        </VS_RapidRoadside-v5>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_RapidRoadside-v5/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_RapidRoadside-v5/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_RapidRoadside-v5/today" type="date"/>
+      <bind nodeset="/VS_RapidRoadside-v5/metadata" required="true()"/>
+      <bind nodeset="/VS_RapidRoadside-v5/metadata/country" required="true()" type="select1"/>
+      <bind nodeset="/VS_RapidRoadside-v5/metadata/date" type="date"/>
+      <bind nodeset="/VS_RapidRoadside-v5/metadata/first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/metadata/last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps" required="true()"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps/gps_note" readonly="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps/gps_start" required="true()" type="time"/>
+      <bind constraint="decimal-time( /VS_RapidRoadside-v5/gps/gps_end )-decimal-time( /VS_RapidRoadside-v5/gps/gps_start ) &gt; 0" jr:constraintMsg="Please, GPS start and stop times can't be equal!" nodeset="/VS_RapidRoadside-v5/gps/gps_end" required="true()" type="time"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps/gps_ns" required="true()" type="select1"/>
+      <bind constraint="regex(., '^-?\d*\.\d\d\d\d\d$')" jr:constraintMsg="Please enter 5 decimal places!" nodeset="/VS_RapidRoadside-v5/gps/gps_lat" required="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps/gps_ew" required="true()" type="select1"/>
+      <bind constraint="regex(., '^-?\d*\.\d\d\d\d\d$')" jr:constraintMsg="Please enter 5 decimal places!" nodeset="/VS_RapidRoadside-v5/gps/gps_long" required="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps/gps_accuracy" required="true()" type="decimal"/>
+      <bind nodeset="/VS_RapidRoadside-v5/gps/gps_measurement_counts" required="true()" type="int"/>
+      <bind constraint="regex(., '^(r|R)\d\d\d\d$')" jr:constraintMsg="Answer must follow the pattern R0001" nodeset="/VS_RapidRoadside-v5/rapid_road_asses_no" required="true()" type="string"/>
+      <bind calculate="concat( /VS_RapidRoadside-v5/metadata/country , &quot;-&quot;,  /VS_RapidRoadside-v5/rapid_road_asses_no )" nodeset="/VS_RapidRoadside-v5/tier_2b_rra_code" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/mark/mark1" required="true()" type="decimal"/>
+      <bind nodeset="/VS_RapidRoadside-v5/mark/mark2" required="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/mark/mark3" required="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/pan_or_many" required="true()" type="select1"/>
+      <bind nodeset="/VS_RapidRoadside-v5/panorama" relevant="selected( /VS_RapidRoadside-v5/pan_or_many , '2')" required="true()" type="binary"/>
+      <bind nodeset="/VS_RapidRoadside-v5/photos" relevant="selected( /VS_RapidRoadside-v5/pan_or_many , '1')"/>
+      <bind nodeset="/VS_RapidRoadside-v5/photos/photo_n" required="true()" type="binary"/>
+      <bind nodeset="/VS_RapidRoadside-v5/photos/photo_e" required="true()" type="binary"/>
+      <bind nodeset="/VS_RapidRoadside-v5/photos/photo_s" required="true()" type="binary"/>
+      <bind nodeset="/VS_RapidRoadside-v5/photos/photo_w" required="true()" type="binary"/>
+      <bind nodeset="/VS_RapidRoadside-v5/canopy" required="true()"/>
+      <bind nodeset="/VS_RapidRoadside-v5/canopy/treeshrub_projected_cover" required="true()" type="select1"/>
+      <bind nodeset="/VS_RapidRoadside-v5/canopy/avg_height_upper_canopy" required="true()" type="select1"/>
+      <bind nodeset="/VS_RapidRoadside-v5/canopy/canopy_pct" required="true()"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 100)" nodeset="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy2" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 100)" nodeset="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy3" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 100)" nodeset="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy4" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 100)" nodeset="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy5" required="true()" type="int"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 100)" nodeset="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy6" required="true()" type="int"/>
+      <bind calculate="( /VS_RapidRoadside-v5/canopy/canopy_pct/canopy2  +  /VS_RapidRoadside-v5/canopy/canopy_pct/canopy3  +  /VS_RapidRoadside-v5/canopy/canopy_pct/canopy4  +  /VS_RapidRoadside-v5/canopy/canopy_pct/canopy5  +  /VS_RapidRoadside-v5/canopy/canopy_pct/canopy6 )" nodeset="/VS_RapidRoadside-v5/can_total" type="string"/>
+      <bind jr:constraintMsg="Total must be equal to 100%!" nodeset="/VS_RapidRoadside-v5/canopy_total" readonly="true()" relevant=" /VS_RapidRoadside-v5/can_total  &gt; 100 or  /VS_RapidRoadside-v5/can_total  &lt; 100" required=" /VS_RapidRoadside-v5/can_total  &gt; 100 or  /VS_RapidRoadside-v5/can_total  &lt; 100" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/use" required="true()" type="select"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant_note" readonly="true()" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant/type" type="select1"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant/code" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant/genus" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant/species" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant/common" type="string"/>
+      <bind nodeset="/VS_RapidRoadside-v5/dominant/unknown_image" type="binary"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_RapidRoadside-v5/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/VS_RapidRoadside-v5/metadata">
+      <select1 ref="/VS_RapidRoadside-v5/metadata/country">
+        <label>Country</label>
+        <item>
+          <label>Tanzania</label>
+          <value>TZA</value>
+        </item>
+        <item>
+          <label>Ghana</label>
+          <value>GHA</value>
+        </item>
+      </select1>
+      <input ref="/VS_RapidRoadside-v5/metadata/date">
+        <label>Date</label>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/metadata/first_name">
+        <label>Observer First name</label>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/metadata/last_name">
+        <label>Observer Last name</label>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/VS_RapidRoadside-v5/gps">
+      <input ref="/VS_RapidRoadside-v5/gps/gps_note">
+        <label>Enter the GPS information</label>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/gps/gps_start">
+        <label>GPS start time</label>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/gps/gps_end">
+        <label>GPS end time</label>
+      </input>
+      <select1 ref="/VS_RapidRoadside-v5/gps/gps_ns">
+        <label>Latitude: North or South?</label>
+        <item>
+          <label>North</label>
+          <value>n</value>
+        </item>
+        <item>
+          <label>South</label>
+          <value>s</value>
+        </item>
+      </select1>
+      <input ref="/VS_RapidRoadside-v5/gps/gps_lat">
+        <label>Latitude</label>
+        <hint>Please record to 5 decimal places</hint>
+      </input>
+      <select1 ref="/VS_RapidRoadside-v5/gps/gps_ew">
+        <label>Longitude: East or West?</label>
+        <item>
+          <label>East</label>
+          <value>e</value>
+        </item>
+        <item>
+          <label>West</label>
+          <value>w</value>
+        </item>
+      </select1>
+      <input ref="/VS_RapidRoadside-v5/gps/gps_long">
+        <label>Longitude</label>
+        <hint>Please record to 5 decimal places</hint>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/gps/gps_accuracy">
+        <label>Accuracy</label>
+        <hint>(m)</hint>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/gps/gps_measurement_counts">
+        <label>Number of measurement counts on average</label>
+      </input>
+    </group>
+    <input ref="/VS_RapidRoadside-v5/rapid_road_asses_no">
+      <label>Rapid Road Asses No.</label>
+      <hint>ex: r0001</hint>
+    </input>
+    <group appearance="field-list" ref="/VS_RapidRoadside-v5/mark">
+      <input ref="/VS_RapidRoadside-v5/mark/mark1">
+        <label>Distance from marker (km)</label>
+        <hint>Distance in kilometers from a town/marker towards another town or marker (precision of 0.1 km required, e.g 3.2).</hint>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/mark/mark2">
+        <label>Name of the marker (eg town or road junction) to which the distance measurement above relates</label>
+      </input>
+      <input ref="/VS_RapidRoadside-v5/mark/mark3">
+        <label>Direction of travel on road</label>
+      </input>
+    </group>
+    <select1 ref="/VS_RapidRoadside-v5/pan_or_many">
+      <label>Take four pictures (N, S, E, W) or a panorama?</label>
+      <item>
+        <label>Four pictures (N, E, S, W)</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Panorama</label>
+        <value>2</value>
+      </item>
+    </select1>
+    <upload mediatype="image/*" ref="/VS_RapidRoadside-v5/panorama">
+      <label>Take a panoramic picture using either the tablet or panoramic camera</label>
+    </upload>
+    <group ref="/VS_RapidRoadside-v5/photos">
+      <upload mediatype="image/*" ref="/VS_RapidRoadside-v5/photos/photo_n">
+        <label>Please take a photo facing NORTH</label>
+      </upload>
+      <upload mediatype="image/*" ref="/VS_RapidRoadside-v5/photos/photo_e">
+        <label>Please take a photo facing EAST</label>
+      </upload>
+      <upload mediatype="image/*" ref="/VS_RapidRoadside-v5/photos/photo_s">
+        <label>Please take a photo facing SOUTH</label>
+      </upload>
+      <upload mediatype="image/*" ref="/VS_RapidRoadside-v5/photos/photo_w">
+        <label>Please take a photo facing WEST</label>
+      </upload>
+    </group>
+    <group ref="/VS_RapidRoadside-v5/canopy">
+      <select1 ref="/VS_RapidRoadside-v5/canopy/treeshrub_projected_cover">
+        <label>Tree / shrub total projected canopy cover</label>
+        <hint>General guide: tree crowns that are 2 crown diameters apart = 9 % canopy cover, 1 diameter apart = 20%, ½ a diameter apart = 35%, crowns touching = 75%</hint>
+        <item>
+          <label>&lt;10%</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>10-39%</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>40-59%</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>&gt;60%</label>
+          <value>4</value>
+        </item>
+      </select1>
+      <select1 ref="/VS_RapidRoadside-v5/canopy/avg_height_upper_canopy">
+        <label>Average height of upper canopy</label>
+        <item>
+          <label>&lt;1m</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>1-2m</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>2-5m</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>5-20m</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>&gt;20m</label>
+          <value>5</value>
+        </item>
+      </select1>
+      <group appearance="field-list" ref="/VS_RapidRoadside-v5/canopy/canopy_pct">
+        <input ref="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy2">
+          <label>Percentage contribution of height class to total projected canopy cover (&lt;1m)</label>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy3">
+          <label>Percentage contribution of height class to total projected canopy cover (1-2m)</label>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy4">
+          <label>Percentage contribution of height class to total projected canopy cover (2-5m)</label>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy5">
+          <label>Percentage contribution of height class to total projected canopy cover (5-20m)</label>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/canopy/canopy_pct/canopy6">
+          <label>Percentage contribution of height class to total projected canopy cover (&gt;20m)</label>
+        </input>
+      </group>
+    </group>
+    <input ref="/VS_RapidRoadside-v5/canopy_total">
+      <label>(Calculated total is: <output value=" /VS_RapidRoadside-v5/can_total "/>), If this total is not equal to 100, please go back and make changes to canopy contributions on previous page.</label>
+    </input>
+    <select ref="/VS_RapidRoadside-v5/use">
+      <label>Land-use</label>
+      <hint>Select all that apply</hint>
+      <item>
+        <label>Protected</label>
+        <value>1</value>
+      </item>
+      <item>
+        <label>Livestock grazing</label>
+        <value>2</value>
+      </item>
+      <item>
+        <label>Wood harvesting</label>
+        <value>3</value>
+      </item>
+      <item>
+        <label>Short duration cropping</label>
+        <value>4</value>
+      </item>
+      <item>
+        <label>Tree crops</label>
+        <value>5</value>
+      </item>
+      <item>
+        <label>Habitation / business</label>
+        <value>6</value>
+      </item>
+    </select>
+    <input ref="/VS_RapidRoadside-v5/dominant_note">
+      <label>In the next section, please list all dominant tree, herbaceous and crop species within 50m of the rapid assessment</label>
+      <hint>For each tree/crop, select 'Add new Group'. When you are finished completing the section,</hint>
+    </input>
+    <group ref="/VS_RapidRoadside-v5/dominant">
+      <label>Dominant Tree and/or Crop species</label>
+      <repeat appearance="field-list" nodeset="/VS_RapidRoadside-v5/dominant">
+        <select1 ref="/VS_RapidRoadside-v5/dominant/type">
+          <label>Is this a tree or a crop?</label>
+          <item>
+            <label>Tree</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Herbaceous and Crop</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <input ref="/VS_RapidRoadside-v5/dominant/code">
+          <label>Code</label>
+          <hint>If Unknown, enter unk sp#</hint>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/dominant/genus">
+          <label>Genus</label>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/dominant/species">
+          <label>Species</label>
+        </input>
+        <input ref="/VS_RapidRoadside-v5/dominant/common">
+          <label>Common Name</label>
+          <hint>Optional</hint>
+        </input>
+        <upload mediatype="image/*" ref="/VS_RapidRoadside-v5/dominant/unknown_image">
+          <label>Take a picture of the Unknown tree</label>
+          <hint>Optional</hint>
+        </upload>
+      </repeat>
+    </group>
+  </h:body>
+</h:html>

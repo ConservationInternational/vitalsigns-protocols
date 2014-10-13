@@ -1,0 +1,205 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>House Hold Survey (Section V) – June 04 2014</h:title>
+    <model>
+      <instance>
+        <VS_Household_SecV-d3 id="vs_household_secv_d4" version="1">
+          <start/>
+          <end/>
+          <today/>
+          <metadata>
+            <hhid/>
+          </metadata>
+          <v1_group>
+            <location>
+              <gps_ns/>
+              <gpsse_lat/>
+              <gps_ew/>
+              <gpsse_long/>
+            </location>
+            <v1_1/>
+            <v1_2_group>
+              <v1_2_a_name/>
+              <v1_2_a_phone/>
+              <v1_2_b_name/>
+              <v1_2_b_phone/>
+              <v1_2_c_name/>
+              <v1_2_c_phone/>
+            </v1_2_group>
+            <v1_3_group>
+              <v1_3_a/>
+              <v1_3_b/>
+              <v1_3_c/>
+              <v1_3_d/>
+              <v1_3_e/>
+              <v1_3_f/>
+            </v1_3_group>
+            <v1_4_group>
+              <v1_4_a/>
+              <v1_4_b/>
+              <v1_4_c/>
+              <v1_4_d/>
+              <v1_4_e/>
+              <v1_4_f/>
+            </v1_4_group>
+          </v1_group>
+          <end_group>
+            <end_time/>
+            <end_date/>
+          </end_group>
+          <meta>
+            <instanceID/>
+          </meta>
+        </VS_Household_SecV-d3>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_Household_SecV-d3/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_Household_SecV-d3/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_Household_SecV-d3/today" type="date"/>
+      <bind jr:constraintMsg="must be 5 digits" nodeset="/VS_Household_SecV-d3/metadata/hhid" required="true()" type="int"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/location/gps_ns" required="true()" type="select1"/>
+      <bind constraint="regex(., '-?\d*\.\d\d\d\d\d')" jr:constraintMsg="Please enter 5 decimal places!" nodeset="/VS_Household_SecV-d3/v1_group/location/gpsse_lat" required="true()" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/location/gps_ew" required="true()" type="select1"/>
+      <bind constraint="regex(., '-?\d*\.\d\d\d\d\d')" jr:constraintMsg="Please enter 5 decimal places!" nodeset="/VS_Household_SecV-d3/v1_group/location/gpsse_long" required="true()" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_1" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_a_name" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_a_phone" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_b_name" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_b_phone" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_c_name" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_c_phone" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_a" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_b" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_c" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_d" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_e" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_f" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_a" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_b" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_c" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_d" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_e" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_f" type="string"/>
+      <bind nodeset="/VS_Household_SecV-d3/end_group/end_time" type="time"/>
+      <bind nodeset="/VS_Household_SecV-d3/end_group/end_date" type="date"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_Household_SecV-d3/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/VS_Household_SecV-d3/metadata">
+      <input ref="/VS_Household_SecV-d3/metadata/hhid">
+        <label>Household ID</label>
+        <hint>five digit</hint>
+      </input>
+    </group>
+    <group ref="/VS_Household_SecV-d3/v1_group">
+      <label>V-1: Household Recontact Information</label>
+      <group appearance="field-list" ref="/VS_Household_SecV-d3/v1_group/location">
+        <select1 ref="/VS_Household_SecV-d3/v1_group/location/gps_ns">
+          <label>Latitude: North or South?</label>
+          <item>
+            <label>North</label>
+            <value>n</value>
+          </item>
+          <item>
+            <label>South</label>
+            <value>s</value>
+          </item>
+        </select1>
+        <input ref="/VS_Household_SecV-d3/v1_group/location/gpsse_lat">
+          <label>Latitude</label>
+          <hint>Please record to 5 decimal places</hint>
+        </input>
+        <select1 ref="/VS_Household_SecV-d3/v1_group/location/gps_ew">
+          <label>Longitude: East or West?</label>
+          <item>
+            <label>East</label>
+            <value>e</value>
+          </item>
+          <item>
+            <label>West</label>
+            <value>w</value>
+          </item>
+        </select1>
+        <input ref="/VS_Household_SecV-d3/v1_group/location/gpsse_long">
+          <label>Longitude</label>
+          <hint>Please record to 5 decimal places</hint>
+        </input>
+      </group>
+      <input appearance="numbers" ref="/VS_Household_SecV-d3/v1_group/v1_1">
+        <label>1. Phone Number of Household Head</label>
+      </input>
+      <group appearance="field-list" ref="/VS_Household_SecV-d3/v1_group/v1_2_group">
+        <label>2. Phone Numbers for Other Household Members:</label>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_a_name">
+          <label>a) Name</label>
+        </input>
+        <input appearance="numbers" ref="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_a_phone">
+          <label>Phone</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_b_name">
+          <label>b) Name</label>
+        </input>
+        <input appearance="numbers" ref="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_b_phone">
+          <label>Phone</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_c_name">
+          <label>c) Name</label>
+        </input>
+        <input appearance="numbers" ref="/VS_Household_SecV-d3/v1_group/v1_2_group/v1_2_c_phone">
+          <label>Phone</label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/VS_Household_SecV-d3/v1_group/v1_3_group">
+        <label>3. Reference Person (with Community)</label>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_a">
+          <label>a) Name</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_b">
+          <label>b) Relationship To Head</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_c">
+          <label>c) Main Occupation</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_d">
+          <label>d) Location</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_e">
+          <label>e) Other</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_3_group/v1_3_f">
+          <label>f) Phone</label>
+        </input>
+      </group>
+      <group appearance="field-list" ref="/VS_Household_SecV-d3/v1_group/v1_4_group">
+        <label>4. Reference Person (outside Community)</label>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_a">
+          <label>a) Name</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_b">
+          <label>b) Relationship To Head</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_c">
+          <label>c) Main Occupation</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_d">
+          <label>d) Location</label>
+        </input>
+        <input ref="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_e">
+          <label>e) Other</label>
+        </input>
+        <input appearance="numbers" ref="/VS_Household_SecV-d3/v1_group/v1_4_group/v1_4_f">
+          <label>f) Phone</label>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/VS_Household_SecV-d3/end_group">
+      <input ref="/VS_Household_SecV-d3/end_group/end_time">
+        <label>End time</label>
+      </input>
+      <input ref="/VS_Household_SecV-d3/end_group/end_date">
+        <label>End date</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>
