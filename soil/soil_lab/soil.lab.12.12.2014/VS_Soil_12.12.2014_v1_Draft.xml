@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Vital Signs Eplot Soil Sample Laboratory Analysis Survey – 12 December 2014 v1</h:title>
+    <model>
+      <instance>
+        <VS_Soil_12.12.2014_v1 id="eplot_soil_lab_12_dec_2014_v1" version="1">
+          <start/>
+          <end/>
+          <today/>
+          <metadata>
+            <meta_display>
+              <country/>
+              <vs_landscape_no/>
+              <vs_eplot_no/>
+              <vs_eplot_code/>
+              <first_name/>
+              <last_name/>
+              <data_entry_date/>
+            </meta_display>
+          </metadata>
+          <top_depth/>
+          <dp1_grp>
+            <top_moisture_tin_id/>
+            <top_tin_dry_weight>yes</top_tin_dry_weight>
+            <top_sample_bag_label/>
+            <top_total_dry_weight>yes</top_total_dry_weight>
+            <top_fine_dry_weight>yes</top_fine_dry_weight>
+            <top_coarse_dry_weight>yes</top_coarse_dry_weight>
+          </dp1_grp>
+          <top_dp1_test/>
+          <subsoil_depth/>
+          <ddp1_grp>
+            <subsoil_moisture_tin_id/>
+            <subsoil_tin_dry_weight>yes</subsoil_tin_dry_weight>
+            <subsoil_sample_bag_label/>
+            <subsoil_total_dry_weight>yes</subsoil_total_dry_weight>
+            <subsoil_fine_dry_weight>yes</subsoil_fine_dry_weight>
+            <subsoil_coarse_dry_weight>yes</subsoil_coarse_dry_weight>
+          </ddp1_grp>
+          <subsoil_ddp1_test/>
+          <s_50_80_depth/>
+          <dddp1_grp>
+            <s_50_80_moisture_tin_id/>
+            <s_50_80_tin_dry_weight>yes</s_50_80_tin_dry_weight>
+            <s_50_80_sample_bag_label/>
+            <s_50_80_total_dry_weight>yes</s_50_80_total_dry_weight>
+            <s_50_80_fine_dry_weight>yes</s_50_80_fine_dry_weight>
+            <s_50_80_coarse_dry_weight>yes</s_50_80_coarse_dry_weight>
+          </dddp1_grp>
+          <s_50_80_dddp1_test/>
+          <s_80_100_depth/>
+          <ddddp1_grp>
+            <s_80_100_moisture_tin_id/>
+            <s_80_100_tin_dry_weight>yes</s_80_100_tin_dry_weight>
+            <s_80_100_sample_bag_label/>
+            <s_80_100_total_dry_weight>yes</s_80_100_total_dry_weight>
+            <s_80_100_fine_dry_weight>yes</s_80_100_fine_dry_weight>
+            <s_80_100_coarse_dry_weight>yes</s_80_100_coarse_dry_weight>
+          </ddddp1_grp>
+          <s_80_100_ddddp1_test/>
+          <meta>
+            <instanceID/>
+          </meta>
+        </VS_Soil_12.12.2014_v1>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_Soil_12.12.2014_v1/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_Soil_12.12.2014_v1/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_Soil_12.12.2014_v1/today" type="date"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/country" required="true()" type="select1"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/vs_landscape_no" required="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/vs_eplot_no" type="string"/>
+      <bind calculate="concat( /VS_Soil_12.12.2014_v1/metadata/meta_display/country , '-',  /VS_Soil_12.12.2014_v1/metadata/meta_display/vs_landscape_no , '-',  /VS_Soil_12.12.2014_v1/metadata/meta_display/vs_eplot_no )" nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/vs_eplot_code" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/metadata/meta_display/data_entry_date" type="date"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/top_depth" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dp1_grp/top_moisture_tin_id" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dp1_grp/top_tin_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dp1_grp/top_sample_bag_label" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dp1_grp/top_total_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dp1_grp/top_fine_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dp1_grp/top_coarse_dry_weight" type="decimal"/>
+      <bind calculate="( /VS_Soil_12.12.2014_v1/dp1_grp/top_fine_dry_weight  +  /VS_Soil_12.12.2014_v1/dp1_grp/top_coarse_dry_weight )" constraint=". &lt;=  /VS_Soil_12.12.2014_v1/dp1_grp/top_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_Soil_12.12.2014_v1/top_dp1_test" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/subsoil_depth" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_moisture_tin_id" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_tin_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_sample_bag_label" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_total_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_fine_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_coarse_dry_weight" type="decimal"/>
+      <bind calculate="( /VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_fine_dry_weight  +  /VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_coarse_dry_weight )" constraint=". &lt;=  /VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_Soil_12.12.2014_v1/subsoil_ddp1_test" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/s_50_80_depth" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_moisture_tin_id" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_tin_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_sample_bag_label" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_total_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_fine_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_coarse_dry_weight" type="decimal"/>
+      <bind calculate="( /VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_fine_dry_weight  +  /VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_coarse_dry_weight )" constraint=". &lt;=  /VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_Soil_12.12.2014_v1/s_50_80_dddp1_test" readonly="true()" required="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/s_80_100_depth" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_moisture_tin_id" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_tin_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_sample_bag_label" type="string"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_total_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_fine_dry_weight" type="decimal"/>
+      <bind nodeset="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_coarse_dry_weight" type="decimal"/>
+      <bind calculate="( /VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_fine_dry_weight  +  /VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_coarse_dry_weight )" constraint=". &lt;=  /VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_Soil_12.12.2014_v1/s_80_100_ddddp1_test" readonly="true()" required="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_Soil_12.12.2014_v1/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/VS_Soil_12.12.2014_v1/metadata">
+      <group appearance="field-list" ref="/VS_Soil_12.12.2014_v1/metadata/meta_display">
+        <select1 ref="/VS_Soil_12.12.2014_v1/metadata/meta_display/country">
+          <label>Country</label>
+          <item>
+            <label>Ghana</label>
+            <value>GHA</value>
+          </item>
+          <item>
+            <label>Tanzania</label>
+            <value>TZA</value>
+          </item>
+          <item>
+            <label>Uganda</label>
+            <value>UGA</value>
+          </item>
+        </select1>
+        <input ref="/VS_Soil_12.12.2014_v1/metadata/meta_display/vs_landscape_no">
+          <label>Landscape no.</label>
+        </input>
+        <input ref="/VS_Soil_12.12.2014_v1/metadata/meta_display/vs_eplot_no">
+          <label>E-plot no.</label>
+          <hint>Optional e.g 004</hint>
+        </input>
+        <input ref="/VS_Soil_12.12.2014_v1/metadata/meta_display/first_name">
+          <label>Analysts First Name</label>
+          <hint>First Name of person Weighing Samples</hint>
+        </input>
+        <input ref="/VS_Soil_12.12.2014_v1/metadata/meta_display/last_name">
+          <label>Analysts Last Name (Others)</label>
+          <hint>Last Name of person Weighing Samples</hint>
+        </input>
+        <input ref="/VS_Soil_12.12.2014_v1/metadata/meta_display/data_entry_date">
+          <label>Date of Weighing dried samples</label>
+        </input>
+      </group>
+    </group>
+    <input ref="/VS_Soil_12.12.2014_v1/top_depth">
+      <label>TOP SOIL ( 0 – 20 ) Depth (cm)</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Soil_12.12.2014_v1/dp1_grp">
+      <input ref="/VS_Soil_12.12.2014_v1/dp1_grp/top_moisture_tin_id">
+        <label>Moisture Tin ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dp1_grp/top_tin_dry_weight">
+        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
+        <hint>to nearest 0.1 g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dp1_grp/top_sample_bag_label">
+        <label>Sample Bag label ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dp1_grp/top_total_dry_weight">
+        <label>Total Air Dried Weight of Composite Sample in Bag</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dp1_grp/top_fine_dry_weight">
+        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dp1_grp/top_coarse_dry_weight">
+        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+    </group>
+    <input ref="/VS_Soil_12.12.2014_v1/top_dp1_test">
+      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+    </input>
+    <input ref="/VS_Soil_12.12.2014_v1/subsoil_depth">
+      <label>SUB SOIL ( 20 – 50 ) Depth (cm)</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Soil_12.12.2014_v1/ddp1_grp">
+      <input ref="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_moisture_tin_id">
+        <label>Moisture Tin ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_tin_dry_weight">
+        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
+        <hint>to nearest 0.1 g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_sample_bag_label">
+        <label>Sample Bag label ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_total_dry_weight">
+        <label>Total Air Dried Weight of Composite Sample in Bag</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_fine_dry_weight">
+        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddp1_grp/subsoil_coarse_dry_weight">
+        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+    </group>
+    <input ref="/VS_Soil_12.12.2014_v1/subsoil_ddp1_test">
+      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+    </input>
+    <input ref="/VS_Soil_12.12.2014_v1/s_50_80_depth">
+      <label>( 50 – 80 ) Depth (cm)</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Soil_12.12.2014_v1/dddp1_grp">
+      <input ref="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_moisture_tin_id">
+        <label>Moisture Tin ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_tin_dry_weight">
+        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
+        <hint>to nearest 0.1 g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_sample_bag_label">
+        <label>Sample Bag label ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_total_dry_weight">
+        <label>Total Air Dried Weight of Composite Sample in Bag</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_fine_dry_weight">
+        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/dddp1_grp/s_50_80_coarse_dry_weight">
+        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+    </group>
+    <input ref="/VS_Soil_12.12.2014_v1/s_50_80_dddp1_test">
+      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+    </input>
+    <input ref="/VS_Soil_12.12.2014_v1/s_80_100_depth">
+      <label>( 80 – 100 ) Depth (cm)</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Soil_12.12.2014_v1/ddddp1_grp">
+      <input ref="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_moisture_tin_id">
+        <label>Moisture Tin ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_tin_dry_weight">
+        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
+        <hint>to nearest 0.1 g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_sample_bag_label">
+        <label>Sample Bag label ID #</label>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_total_dry_weight">
+        <label>Total Air Dried Weight of Composite Sample in Bag</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_fine_dry_weight">
+        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+      <input ref="/VS_Soil_12.12.2014_v1/ddddp1_grp/s_80_100_coarse_dry_weight">
+        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
+        <hint>to nearest g</hint>
+      </input>
+    </group>
+    <input ref="/VS_Soil_12.12.2014_v1/s_80_100_ddddp1_test">
+      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+    </input>
+  </h:body>
+</h:html>
