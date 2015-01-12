@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Vital Signs Farm Field Soils Survey – 10 October 2014 v1</h:title>
+    <h:title>Vital Signs Farm Field Soils Yields Maize Survey – 12 November 2014 v1</h:title>
     <model>
       <itext>
         <translation default="true()" lang="default">
@@ -860,7 +860,7 @@
         </translation>
       </itext>
       <instance>
-        <FarmFieldSoils_v1 id="Ffs_10_oct_2014_v1" version="1">
+        <FarmFieldSoils_Yields_Maize_v1 id="ffs_yields_maize_12_nov_2014_v1" version="1">
           <start/>
           <end/>
           <today/>
@@ -881,7 +881,6 @@
               <m1_a_1/>
               <m1_a_2/>
               <m1_a_3/>
-              <m1_a_4/>
               <m1_a_5/>
               <m1_a_6/>
             </m1_group>
@@ -889,7 +888,6 @@
               <m2_a_1/>
               <m2_a_2/>
               <m2_a_3/>
-              <m2_a_4/>
               <m2_a_5/>
               <m2_a_6/>
             </m2_group>
@@ -897,7 +895,6 @@
               <m3_a_1/>
               <m3_a_2/>
               <m3_a_3/>
-              <m3_a_4/>
               <m3_a_5/>
               <m3_a_6/>
             </m3_group>
@@ -905,7 +902,6 @@
               <m4_a_1/>
               <m4_a_2/>
               <m4_a_3/>
-              <m4_a_4/>
               <m4_a_5/>
               <m4_a_6/>
             </m4_group>
@@ -913,7 +909,6 @@
               <m5_a_1/>
               <m5_a_2/>
               <m5_a_3/>
-              <m5_a_4/>
               <m5_a_5/>
               <m5_a_6/>
             </m5_group>
@@ -921,7 +916,6 @@
               <m6_a_1/>
               <m6_a_2/>
               <m6_a_3/>
-              <m6_a_4/>
               <m6_a_5/>
               <m6_a_6/>
             </m6_group>
@@ -929,7 +923,6 @@
               <m7_a_1/>
               <m7_a_2/>
               <m7_a_3/>
-              <m7_a_4/>
               <m7_a_5/>
               <m7_a_6/>
             </m7_group>
@@ -937,7 +930,6 @@
               <m8_a_1/>
               <m8_a_2/>
               <m8_a_3/>
-              <m8_a_4/>
               <m8_a_5/>
               <m8_a_6/>
             </m8_group>
@@ -996,7 +988,7 @@
           <meta>
             <instanceID/>
           </meta>
-        </FarmFieldSoils_v1>
+        </FarmFieldSoils_Yields_Maize_v1>
       </instance>
       <instance id="slope">
         <root>
@@ -2610,124 +2602,116 @@
           </item>
         </root>
       </instance>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/FarmFieldSoils_v1/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/FarmFieldSoils_v1/end" type="dateTime"/>
-      <bind jr:preload="date" jr:preloadParams="today" nodeset="/FarmFieldSoils_v1/today" type="date"/>
-      <bind nodeset="/FarmFieldSoils_v1/country" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/region" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/district" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata" required="true()"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata/ward" required="true()" type="int"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata/landscape" required="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata/eplot_id" required="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata/hhid" required="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata/enumerator_first" required="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/metadata/enumerator_last" required="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/number_of_fields" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m1_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m1_group/m1_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m1_group/m1_a_2" relevant=" /FarmFieldSoils_v1/a_group/m1_group/m1_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m1_group/m1_a_3" relevant=" /FarmFieldSoils_v1/a_group/m1_group/m1_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m1_group/m1_a_4" relevant=" /FarmFieldSoils_v1/a_group/m1_group/m1_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m1_group/m1_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m1_group/m1_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m1_group/m1_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m1_group/m1_a_5" relevant=" /FarmFieldSoils_v1/a_group/m1_group/m1_a_4  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m1_group/m1_a_6" relevant=" /FarmFieldSoils_v1/a_group/m1_group/m1_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m2_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 2"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m2_group/m2_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m2_group/m2_a_2" relevant=" /FarmFieldSoils_v1/a_group/m2_group/m2_a_1  = '1'" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m2_group/m2_a_3" relevant=" /FarmFieldSoils_v1/a_group/m2_group/m2_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m2_group/m2_a_4" relevant=" /FarmFieldSoils_v1/a_group/m2_group/m2_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m2_group/m2_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m2_group/m2_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m2_group/m2_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m2_group/m2_a_5" relevant=" /FarmFieldSoils_v1/a_group/m2_group/m2_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m2_group/m2_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m2_group/m2_a_6" relevant=" /FarmFieldSoils_v1/a_group/m2_group/m2_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m3_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 3"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m3_group/m3_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m3_group/m3_a_2" relevant=" /FarmFieldSoils_v1/a_group/m3_group/m3_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m3_group/m3_a_3" relevant=" /FarmFieldSoils_v1/a_group/m3_group/m3_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m3_group/m3_a_4" relevant=" /FarmFieldSoils_v1/a_group/m3_group/m3_a_3  = '1'" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m3_group/m3_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m3_group/m3_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m3_group/m3_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m3_group/m3_a_5" relevant=" /FarmFieldSoils_v1/a_group/m3_group/m3_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m3_group/m3_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m3_group/m3_a_6" relevant=" /FarmFieldSoils_v1/a_group/m3_group/m3_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m4_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 4"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m4_group/m4_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m4_group/m4_a_2" relevant=" /FarmFieldSoils_v1/a_group/m4_group/m4_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m4_group/m4_a_3" relevant=" /FarmFieldSoils_v1/a_group/m4_group/m4_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m4_group/m4_a_4" relevant=" /FarmFieldSoils_v1/a_group/m4_group/m4_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m4_group/m4_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m4_group/m4_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m4_group/m4_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m4_group/m4_a_5" relevant=" /FarmFieldSoils_v1/a_group/m4_group/m4_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m4_group/m4_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m4_group/m4_a_6" relevant=" /FarmFieldSoils_v1/a_group/m4_group/m4_a_1  = '1'" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m5_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 5"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m5_group/m5_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m5_group/m5_a_2" relevant=" /FarmFieldSoils_v1/a_group/m5_group/m5_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m5_group/m5_a_3" relevant=" /FarmFieldSoils_v1/a_group/m5_group/m5_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m5_group/m5_a_4" relevant=" /FarmFieldSoils_v1/a_group/m5_group/m5_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m5_group/m5_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m5_group/m5_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m5_group/m5_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m5_group/m5_a_5" relevant=" /FarmFieldSoils_v1/a_group/m5_group/m5_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m5_group/m5_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m5_group/m5_a_6" relevant=" /FarmFieldSoils_v1/a_group/m5_group/m5_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m6_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 6"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m6_group/m6_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m6_group/m6_a_2" relevant=" /FarmFieldSoils_v1/a_group/m6_group/m6_a_1  = '1'" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m6_group/m6_a_3" relevant=" /FarmFieldSoils_v1/a_group/m6_group/m6_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m6_group/m6_a_4" relevant=" /FarmFieldSoils_v1/a_group/m6_group/m6_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m6_group/m6_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m6_group/m6_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m6_group/m6_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m6_group/m6_a_5" relevant=" /FarmFieldSoils_v1/a_group/m6_group/m6_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m6_group/m6_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m6_group/m6_a_6" relevant=" /FarmFieldSoils_v1/a_group/m6_group/m6_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m7_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 7"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m7_group/m7_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m7_group/m7_a_2" relevant=" /FarmFieldSoils_v1/a_group/m7_group/m7_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m7_group/m7_a_3" relevant=" /FarmFieldSoils_v1/a_group/m7_group/m7_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m7_group/m7_a_4" relevant=" /FarmFieldSoils_v1/a_group/m7_group/m7_a_3  = '1'" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m7_group/m7_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m7_group/m7_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m7_group/m7_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m7_group/m7_a_5" relevant=" /FarmFieldSoils_v1/a_group/m7_group/m7_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m7_group/m7_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m7_group/m7_a_6" relevant=" /FarmFieldSoils_v1/a_group/m7_group/m7_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m8_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 8"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m8_group/m8_a_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m8_group/m8_a_2" relevant=" /FarmFieldSoils_v1/a_group/m8_group/m8_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m8_group/m8_a_3" relevant=" /FarmFieldSoils_v1/a_group/m8_group/m8_a_2  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/m8_group/m8_a_4" relevant=" /FarmFieldSoils_v1/a_group/m8_group/m8_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m8_group/m8_a_2  = '1' and  /FarmFieldSoils_v1/a_group/m8_group/m8_a_3  = '1' and  /FarmFieldSoils_v1/a_group/m8_group/m8_a_4  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m8_group/m8_a_5" relevant=" /FarmFieldSoils_v1/a_group/m8_group/m8_a_4  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmFieldSoils_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmFieldSoils_v1/a_group/m8_group/m8_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_v1/a_group/m8_group/m8_a_6" relevant=" /FarmFieldSoils_v1/a_group/m8_group/m8_a_1  = '1'" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/a_group/selected_fields" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 1"/>
-      <bind calculate="concat(if( /FarmFieldSoils_v1/a_group/m1_group/m1_a_5  = '1', 'M1 ', ''), if( /FarmFieldSoils_v1/a_group/m2_group/m2_a_5  = '1', 'M2 ', ''), if( /FarmFieldSoils_v1/a_group/m3_group/m3_a_5  = '1', 'M3 ', ''), if( /FarmFieldSoils_v1/a_group/m4_group/m4_a_5  = '1', 'M4 ', ''), if( /FarmFieldSoils_v1/a_group/m5_group/m5_a_5  = '1', 'M5 ', ''), if( /FarmFieldSoils_v1/a_group/m6_group/m6_a_5  = '1', 'M6 ', ''), if( /FarmFieldSoils_v1/a_group/m7_group/m7_a_5  = '1', 'M7 ', ''), if( /FarmFieldSoils_v1/a_group/m8_group/m8_a_5  = '1', 'M8 ', ''))" nodeset="/FarmFieldSoils_v1/a_group/selected_fields/eligible_first_field" readonly="true()" type="string"/>
-      <bind calculate="concat(if( /FarmFieldSoils_v1/a_group/m1_group/m1_a_6  = '1', 'M1 ', ''), if( /FarmFieldSoils_v1/a_group/m2_group/m2_a_6  = '1', 'M2 ', ''), if( /FarmFieldSoils_v1/a_group/m3_group/m3_a_6  = '1', 'M3 ', ''), if( /FarmFieldSoils_v1/a_group/m4_group/m4_a_6  = '1', 'M4 ', ''), if( /FarmFieldSoils_v1/a_group/m5_group/m5_a_6  = '1', 'M5 ', ''), if( /FarmFieldSoils_v1/a_group/m6_group/m6_a_6  = '1', 'M6 ', ''), if( /FarmFieldSoils_v1/a_group/m7_group/m7_a_6  = '1', 'M7 ', ''), if( /FarmFieldSoils_v1/a_group/m8_group/m8_a_6  = '1', 'M8 ', ''))" nodeset="/FarmFieldSoils_v1/a_group/selected_fields/eligible_second_field" readonly="true()" type="string"/>
-      <bind constraint="selected( /FarmFieldSoils_v1/a_group/selected_fields/eligible_first_field ,.) or ( /FarmFieldSoils_v1/a_group/selected_fields/eligible_first_field  = '' and . = 'None')" jr:constraintMsg="You must select an eligible first field. If there is none, select None." nodeset="/FarmFieldSoils_v1/a_group/selected_fields/selected_first_field" required="true()" type="select1"/>
-      <bind constraint="(selected( /FarmFieldSoils_v1/a_group/selected_fields/eligible_second_field ,.) or ( /FarmFieldSoils_v1/a_group/selected_fields/eligible_second_field  = '' and . = 'None'))" jr:constraintMsg="You must select an eligible second field. If there is none, select None." nodeset="/FarmFieldSoils_v1/a_group/selected_fields/selected_second_field" required="true()" type="select1"/>
-      <bind calculate="if(( /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field  =  /FarmFieldSoils_v1/a_group/selected_fields/selected_second_field ) and ( /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field  != 'None'), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="The first and second fields must be different. Go back and correct the selected fields." nodeset="/FarmFieldSoils_v1/a_group/selected_fields_warning" readonly="true()" relevant="( /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field  =  /FarmFieldSoils_v1/a_group/selected_fields/selected_second_field ) and ( /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field  != 'None')" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group" relevant=" /FarmFieldSoils_v1/number_of_fields  &gt;= 1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group" relevant=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field  != 'None'"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_8" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9_a" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9_b" relevant="selected( /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9_a , '1')" required="true()" type="select"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10" readonly="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11" required="true()" type="select1"/>
-      <bind calculate="( /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11 )" constraint=". = 10" jr:constraintMsg="Go back and correct surface condition values so they add up to 10." nodeset="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_sum" readonly="true()" relevant="( /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10  +  /FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11 ) != 1" required="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group" relevant=" /FarmFieldSoils_v1/a_group/selected_fields/selected_second_field  != 'None'"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_8" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9_a" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9_b" relevant="selected( /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9_a , '1')" required="true()" type="select"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10" readonly="true()" type="string"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11" required="true()" type="select1"/>
-      <bind calculate="( /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11 )" constraint=". = 10" jr:constraintMsg="Go back and correct surface condition values so they add up to 10." nodeset="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_sum" readonly="true()" relevant="( /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10  +  /FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11 ) != 1" required="true()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/FarmFieldSoils_v1/meta/instanceID" readonly="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/FarmFieldSoils_Yields_Maize_v1/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/FarmFieldSoils_Yields_Maize_v1/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/FarmFieldSoils_Yields_Maize_v1/today" type="date"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/country" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/region" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/district" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata" required="true()"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata/ward" required="true()" type="int"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata/landscape" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata/eplot_id" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata/hhid" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata/enumerator_first" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/metadata/enumerator_last" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/number_of_fields" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 2"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_1  = '1'" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 3"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 4"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_1  = '1'" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 5"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 6"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_1  = '1'" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 7"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 8"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_2" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_3" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_2  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_3  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_5" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_2  = '1', '1', '2')" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_6" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_1  = '1'" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 1"/>
+      <bind calculate="concat(if( /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_5  = '1', 'M1 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_5  = '1', 'M2 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_5  = '1', 'M3 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_5  = '1', 'M4 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_5  = '1', 'M5 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_5  = '1', 'M6 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_5  = '1', 'M7 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_5  = '1', 'M8 ', ''))" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field" readonly="true()" type="string"/>
+      <bind calculate="concat(if( /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_6  = '1', 'M1 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_6  = '1', 'M2 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_6  = '1', 'M3 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_6  = '1', 'M4 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_6  = '1', 'M5 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_6  = '1', 'M6 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_6  = '1', 'M7 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_6  = '1', 'M8 ', ''))" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field" readonly="true()" type="string"/>
+      <bind constraint="selected( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field ,.) or ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field  = '' and . = 'None')" jr:constraintMsg="You must select an eligible first field. If there is none, select None." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field" required="true()" type="select1"/>
+      <bind constraint="(selected( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field ,.) or ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field  = '' and . = 'None'))" jr:constraintMsg="You must select an eligible second field. If there is none, select None." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field" required="true()" type="select1"/>
+      <bind calculate="if(( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  =  /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field ) and ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  != 'None'), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="The first and second fields must be different. Go back and correct the selected fields." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields_warning" readonly="true()" relevant="( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  =  /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field ) and ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  != 'None')" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  != 'None'"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_8" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9_a" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9_a , '1')" required="true()" type="select"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10" readonly="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11" required="true()" type="select1"/>
+      <bind calculate="( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11 )" constraint=". = 10" jr:constraintMsg="Go back and correct surface condition values so they add up to 10." nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_sum" readonly="true()" relevant="( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11 ) != 1" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field  != 'None'"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_8" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9_a" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9_a , '1')" required="true()" type="select"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10" readonly="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11" required="true()" type="select1"/>
+      <bind calculate="( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11 )" constraint=". = 10" jr:constraintMsg="Go back and correct surface condition values so they add up to 10." nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_sum" readonly="true()" relevant="( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11 ) != 1" required="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/FarmFieldSoils_Yields_Maize_v1/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/FarmFieldSoils_v1/country">
+    <select1 ref="/FarmFieldSoils_Yields_Maize_v1/country">
       <label>Country</label>
       <item>
         <label>Tanzania</label>
@@ -2742,42 +2726,42 @@
         <value>UGA</value>
       </item>
     </select1>
-    <select1 ref="/FarmFieldSoils_v1/region">
+    <select1 ref="/FarmFieldSoils_Yields_Maize_v1/region">
       <label>Region</label>
-      <itemset nodeset="instance('regions')/root/item[country= /FarmFieldSoils_v1/country ]">
+      <itemset nodeset="instance('regions')/root/item[country= /FarmFieldSoils_Yields_Maize_v1/country ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/FarmFieldSoils_v1/district">
+    <select1 ref="/FarmFieldSoils_Yields_Maize_v1/district">
       <label>District</label>
-      <itemset nodeset="instance('districts')/root/item[region= /FarmFieldSoils_v1/region  and country= /FarmFieldSoils_v1/country ]">
+      <itemset nodeset="instance('districts')/root/item[region= /FarmFieldSoils_Yields_Maize_v1/region  and country= /FarmFieldSoils_Yields_Maize_v1/country ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <group appearance="field-list" ref="/FarmFieldSoils_v1/metadata">
-      <input ref="/FarmFieldSoils_v1/metadata/ward">
+    <group appearance="field-list" ref="/FarmFieldSoils_Yields_Maize_v1/metadata">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/metadata/ward">
         <label>Ward</label>
         <hint>Must be between 1 and 99. Enter 99 for Unknown.</hint>
       </input>
-      <input ref="/FarmFieldSoils_v1/metadata/landscape">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/metadata/landscape">
         <label>Landscape</label>
       </input>
-      <input ref="/FarmFieldSoils_v1/metadata/eplot_id">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/metadata/eplot_id">
         <label>E-Plot ID</label>
       </input>
-      <input ref="/FarmFieldSoils_v1/metadata/hhid">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/metadata/hhid">
         <label>HHID</label>
       </input>
-      <input ref="/FarmFieldSoils_v1/metadata/enumerator_first">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/metadata/enumerator_first">
         <label>Enumerator First</label>
       </input>
-      <input ref="/FarmFieldSoils_v1/metadata/enumerator_last">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/metadata/enumerator_last">
         <label>Enumerator Last</label>
       </input>
     </group>
-    <select1 appearance="minimal" ref="/FarmFieldSoils_v1/number_of_fields">
+    <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/number_of_fields">
       <label>Number of fields</label>
       <item>
         <label>0</label>
@@ -2816,10 +2800,10 @@
         <value>8</value>
       </item>
     </select1>
-    <group ref="/FarmFieldSoils_v1/a_group">
+    <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group">
       <label>Field Eligibility</label>
-      <group ref="/FarmFieldSoils_v1/a_group/m1_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m1_group/m1_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_1">
           <label>M1-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -2830,8 +2814,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m1_group/m1_a_2">
-          <label>M1-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_2">
+          <label>M1-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -2841,8 +2825,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m1_group/m1_a_3">
-          <label>M1-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_3">
+          <label>M1-3. Is the MAIZE ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -2852,19 +2836,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m1_group/m1_a_4">
-          <label>M1-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m1_group/m1_a_5">
-          <label>M1-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_5">
+          <label>M1-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -2875,8 +2848,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m1_group/m1_a_6">
-          <label>M1-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_6">
+          <label>M1-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -2888,8 +2861,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m2_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m2_group/m2_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_1">
           <label>M2-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -2900,8 +2873,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m2_group/m2_a_2">
-          <label>M2-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_2">
+          <label>M2-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -2911,8 +2884,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m2_group/m2_a_3">
-          <label>M2-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_3">
+          <label>M2-3. Is the MAIZE ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -2922,19 +2895,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m2_group/m2_a_4">
-          <label>M2-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m2_group/m2_a_5">
-          <label>M2-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_5">
+          <label>M2-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -2945,8 +2907,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m2_group/m2_a_6">
-          <label>M2-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_6">
+          <label>M2-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -2958,8 +2920,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m3_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m3_group/m3_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_1">
           <label>M3-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -2970,8 +2932,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m3_group/m3_a_2">
-          <label>M3-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_2">
+          <label>M3-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -2981,8 +2943,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m3_group/m3_a_3">
-          <label>M3-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_3">
+          <label>M3-3. Is the MAIZE ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -2992,19 +2954,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m3_group/m3_a_4">
-          <label>M3-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m3_group/m3_a_5">
-          <label>M3-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_5">
+          <label>M3-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3015,8 +2966,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m3_group/m3_a_6">
-          <label>M3-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_6">
+          <label>M3-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3028,8 +2979,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m4_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m4_group/m4_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_1">
           <label>M4-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -3040,8 +2991,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m4_group/m4_a_2">
-          <label>M4-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_2">
+          <label>M4-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3051,8 +3002,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m4_group/m4_a_3">
-          <label>M4-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_3">
+          <label>M4-3. Is the MAIZE ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3062,19 +3013,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m4_group/m4_a_4">
-          <label>M4-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m4_group/m4_a_5">
-          <label>M4-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_5">
+          <label>M4-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3085,8 +3025,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m4_group/m4_a_6">
-          <label>M4-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_6">
+          <label>M4-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3098,8 +3038,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m5_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m5_group/m5_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_1">
           <label>M5-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -3110,8 +3050,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m5_group/m5_a_2">
-          <label>M5-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_2">
+          <label>M5-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3121,8 +3061,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m5_group/m5_a_3">
-          <label>M5-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_3">
+          <label>M5-3. Is the MAIZE ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3132,19 +3072,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m5_group/m5_a_4">
-          <label>M5-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m5_group/m5_a_5">
-          <label>M5-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_5">
+          <label>M5-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3155,8 +3084,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m5_group/m5_a_6">
-          <label>M5-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_6">
+          <label>M5-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3168,8 +3097,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m6_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m6_group/m6_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_1">
           <label>M6-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -3180,8 +3109,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m6_group/m6_a_2">
-          <label>M6-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_2">
+          <label>M6-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3191,8 +3120,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m6_group/m6_a_3">
-          <label>M6-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_3">
+          <label>M6-3. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3202,19 +3131,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m6_group/m6_a_4">
-          <label>M6-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m6_group/m6_a_5">
-          <label>M6-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_5">
+          <label>M6-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3225,8 +3143,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m6_group/m6_a_6">
-          <label>M6-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_6">
+          <label>M6-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3238,8 +3156,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m7_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m7_group/m7_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_1">
           <label>M7-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -3250,8 +3168,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m7_group/m7_a_2">
-          <label>M7-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_2">
+          <label>M7-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3261,8 +3179,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m7_group/m7_a_3">
-          <label>M7-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_3">
+          <label>M7-3. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3272,19 +3190,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m7_group/m7_a_4">
-          <label>M7-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m7_group/m7_a_5">
-          <label>M7-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_5">
+          <label>M7-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3295,8 +3202,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m7_group/m7_a_6">
-          <label>M7-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_6">
+          <label>M7-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3308,8 +3215,8 @@
           </item>
         </select1>
       </group>
-      <group ref="/FarmFieldSoils_v1/a_group/m8_group">
-        <select1 ref="/FarmFieldSoils_v1/a_group/m8_group/m8_a_1">
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_1">
           <label>M8-1. Is this field size larger than 100 m²? (or 0.025 acres)</label>
           <item>
             <label>Yes</label>
@@ -3320,8 +3227,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m8_group/m8_a_2">
-          <label>M8-2. Was the field cultivated during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_2">
+          <label>M8-2. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3331,8 +3238,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m8_group/m8_a_3">
-          <label>M8-3. Was one of the 3 major crops grown on this field during the Current or most recently completed Season?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_3">
+          <label>M8-3. Is MAIZE cultivated during the Current or most recently completed Season?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3342,19 +3249,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m8_group/m8_a_4">
-          <label>M8-4. Is this field purestand/monoculture?</label>
-          <item>
-            <label>Yes</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>No</label>
-            <value>2</value>
-          </item>
-        </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m8_group/m8_a_5">
-          <label>M8-5. Is this field eligible for testing for first field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_5">
+          <label>M8-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3365,8 +3261,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/a_group/m8_group/m8_a_6">
-          <label>M8-6. Is this field eligible for testing for second field?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_6">
+          <label>M8-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <hint>Automatically calculated from previous answers.</hint>
           <item>
             <label>Yes</label>
@@ -3378,14 +3274,14 @@
           </item>
         </select1>
       </group>
-      <group appearance="field-list" ref="/FarmFieldSoils_v1/a_group/selected_fields">
-        <input ref="/FarmFieldSoils_v1/a_group/selected_fields/eligible_first_field">
+      <group appearance="field-list" ref="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields">
+        <input ref="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field">
           <label>Eligible first field</label>
         </input>
-        <input ref="/FarmFieldSoils_v1/a_group/selected_fields/eligible_second_field">
+        <input ref="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field">
           <label>Eligible second field</label>
         </input>
-        <select1 appearance="minimal" ref="/FarmFieldSoils_v1/a_group/selected_fields/selected_first_field">
+        <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field">
           <label>Selected first field</label>
           <hint>You must select an eligible first field. If there is none, select None.</hint>
           <item>
@@ -3425,7 +3321,7 @@
             <value>None</value>
           </item>
         </select1>
-        <select1 appearance="minimal" ref="/FarmFieldSoils_v1/a_group/selected_fields/selected_second_field">
+        <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field">
           <label>Selected second field</label>
           <hint>You must select an eligible second field. If there is none, select None.</hint>
           <item>
@@ -3466,15 +3362,15 @@
           </item>
         </select1>
       </group>
-      <input ref="/FarmFieldSoils_v1/a_group/selected_fields_warning">
+      <input ref="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields_warning">
         <label>The first and second fields must be different. Go back and correct the selected fields.</label>
       </input>
     </group>
-    <group ref="/FarmFieldSoils_v1/b_group">
+    <group ref="/FarmFieldSoils_Yields_Maize_v1/b_group">
       <label>Soil Measurements</label>
-      <group ref="/FarmFieldSoils_v1/b_group/f1_b_group">
-        <select1 ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_8">
-          <label>F1-8. What is the slope of the <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/> field?</label>
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_8">
+          <label>F1-8. What is the slope of the <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/> field?</label>
           <item>
             <label>Flat (&lt;8%)</label>
             <value>1</value>
@@ -3488,8 +3384,8 @@
             <value>3</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9">
-          <label>F1-9. Are there visible signs of soil erosion (sheet, hill or gully) in <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/>?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9">
+          <label>F1-9. Are there visible signs of soil erosion (sheet, hill or gully) in <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>?</label>
           <item>
             <label>None</label>
             <value>1</value>
@@ -3507,8 +3403,8 @@
             <value>4</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9_a">
-          <label>F1-9A. Are there any erosion control/water harvesting facility? <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/>?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9_a">
+          <label>F1-9A. Are there any erosion control/water harvesting facility? <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -3518,8 +3414,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_9_b">
-          <label>F1-9B. What type of soil erosion /water harvesting facility is on the field? <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/>?</label>
+        <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_9_b">
+          <label>F1-9B. What type of soil erosion /water harvesting facility is on the field? <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>?</label>
           <item>
             <label>TERRACES</label>
             <value>1</value>
@@ -3553,12 +3449,12 @@
             <value>8</value>
           </item>
         </select>
-        <group appearance="field-list" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group">
-          <input ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10">
-            <label>F1-10. What is the surface condition of <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/>?</label>
+        <group appearance="field-list" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group">
+          <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10">
+            <label>F1-10. What is the surface condition of <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>?</label>
             <hint>Values must sum up to 10.</hint>
           </input>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_1">
             <label>Rooted plants</label>
             <item>
               <label>0</label>
@@ -3605,7 +3501,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_2">
             <label>Litter cover</label>
             <item>
               <label>0</label>
@@ -3652,7 +3548,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_3">
             <label>Downed wood</label>
             <item>
               <label>0</label>
@@ -3699,7 +3595,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_4">
             <label>Stone or gravel</label>
             <item>
               <label>0</label>
@@ -3746,7 +3642,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_5">
             <label>Dung</label>
             <item>
               <label>0</label>
@@ -3793,7 +3689,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_6">
             <label>Disturbed soil (generally means tilled)</label>
             <item>
               <label>0</label>
@@ -3840,7 +3736,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_7">
             <label>Undisturbed, bare &amp; porous soil</label>
             <item>
               <label>0</label>
@@ -3887,7 +3783,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_8">
             <label>Undisturbed, bare but sealed soil</label>
             <item>
               <label>0</label>
@@ -3934,7 +3830,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_9">
             <label>Sodic soil</label>
             <item>
               <label>0</label>
@@ -3981,7 +3877,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_10">
             <label>Microfloral crust</label>
             <item>
               <label>0</label>
@@ -4028,7 +3924,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_group/f1_b_10_11">
             <label>Termite mound</label>
             <item>
               <label>0</label>
@@ -4076,13 +3972,13 @@
             </item>
           </select1>
         </group>
-        <input ref="/FarmFieldSoils_v1/b_group/f1_b_group/f1_b_10_sum">
+        <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_10_sum">
           <label>Surface condition values must sum up to 10. Current sum is</label>
         </input>
       </group>
-      <group ref="/FarmFieldSoils_v1/b_group/f2_b_group">
-        <select1 ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_8">
-          <label>F2-8. What is the slope of the <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_second_field "/> field?</label>
+      <group ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group">
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_8">
+          <label>F2-8. What is the slope of the <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/> field?</label>
           <item>
             <label>Flat (&lt;8%)</label>
             <value>1</value>
@@ -4096,8 +3992,8 @@
             <value>3</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9">
-          <label>F2-9. Are there visible signs of soil erosion (sheet, hill or gully) in <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_second_field "/>?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9">
+          <label>F2-9. Are there visible signs of soil erosion (sheet, hill or gully) in <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>?</label>
           <item>
             <label>None</label>
             <value>1</value>
@@ -4115,8 +4011,8 @@
             <value>4</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9_a">
-          <label>F2-9A. Are there any erosion control/water harvesting facility? <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/>?</label>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9_a">
+          <label>F2-9A. Are there any erosion control/water harvesting facility? <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>?</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -4126,8 +4022,8 @@
             <value>2</value>
           </item>
         </select1>
-        <select ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_9_b">
-          <label>F2-9B. What type of soil erosion /water harvesting facility is on the field? <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_first_field "/>?</label>
+        <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_9_b">
+          <label>F2-9B. What type of soil erosion /water harvesting facility is on the field? <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>?</label>
           <item>
             <label>TERRACES</label>
             <value>1</value>
@@ -4161,12 +4057,12 @@
             <value>8</value>
           </item>
         </select>
-        <group appearance="field-list" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group">
-          <input ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10">
-            <label>F2-10. What is the surface condition pf <output value=" /FarmFieldSoils_v1/a_group/selected_fields/selected_second_field "/>?</label>
+        <group appearance="field-list" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group">
+          <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10">
+            <label>F2-10. What is the surface condition pf <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>?</label>
             <hint>Values must sum up to 10.</hint>
           </input>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_1">
             <label>Rooted plants</label>
             <item>
               <label>0</label>
@@ -4213,7 +4109,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_2">
             <label>Litter cover</label>
             <item>
               <label>0</label>
@@ -4260,7 +4156,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_3">
             <label>Downed wood</label>
             <item>
               <label>0</label>
@@ -4307,7 +4203,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_4">
             <label>Stone or gravel</label>
             <item>
               <label>0</label>
@@ -4354,7 +4250,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_5">
             <label>Dung</label>
             <item>
               <label>0</label>
@@ -4401,7 +4297,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_6">
             <label>Disturbed soil (generally means tilled)</label>
             <item>
               <label>0</label>
@@ -4448,7 +4344,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_7">
             <label>Undisturbed, bare &amp; porous soil</label>
             <item>
               <label>0</label>
@@ -4495,7 +4391,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_8">
             <label>Undisturbed, bare but sealed soil</label>
             <item>
               <label>0</label>
@@ -4542,7 +4438,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_9">
             <label>Sodic soil</label>
             <item>
               <label>0</label>
@@ -4589,7 +4485,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_10">
             <label>Microfloral crust</label>
             <item>
               <label>0</label>
@@ -4636,7 +4532,7 @@
               <value>10</value>
             </item>
           </select1>
-          <select1 appearance="minimal" ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11">
+          <select1 appearance="minimal" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_group/f2_b_10_11">
             <label>Termite mound</label>
             <item>
               <label>0</label>
@@ -4684,7 +4580,7 @@
             </item>
           </select1>
         </group>
-        <input ref="/FarmFieldSoils_v1/b_group/f2_b_group/f2_b_10_sum">
+        <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_10_sum">
           <label>Surface condition values must sum up to 10. Current sum is</label>
         </input>
       </group>

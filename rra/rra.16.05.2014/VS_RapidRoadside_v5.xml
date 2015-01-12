@@ -132,6 +132,10 @@
           <label>Ghana</label>
           <value>GHA</value>
         </item>
+        <item>
+          <label>Uganda</label>
+          <value>UGA</value>
+        </item>
       </select1>
       <input ref="/VS_RapidRoadside-v5/metadata/date">
         <label>Date</label>
