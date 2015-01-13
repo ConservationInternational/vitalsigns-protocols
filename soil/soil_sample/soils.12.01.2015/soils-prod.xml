@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>Vital Signs Soils Sample  – 12 January 2015 v1</h:title>
+    <model>
+      <instance>
+        <soils-prod id="soils_sample_12_jan_2015_v1" version="1">
+          <start/>
+          <end/>
+          <today/>
+          <metadata>
+            <country/>
+            <plot_id/>
+            <name_group>
+              <first_name/>
+              <last_name/>
+            </name_group>
+            <scribe/>
+          </metadata>
+          <se_top_group>
+            <generated_note_name_15/>
+            <se_top_restriction_depth/>
+            <se_top_weight/>
+            <se_top_moisture/>
+            <se_top_tin_weight/>
+            <se_top_tin_fresh_weight/>
+            <se_top_texture/>
+          </se_top_group>
+          <se_subsoil_group>
+            <generated_note_name_25/>
+            <se_subsoil_restriction_depth/>
+            <se_subsoil_weight/>
+            <se_subsoil_moisture/>
+            <se_subsoil_tin_weight/>
+            <se_subsoil_tin_fresh_weight/>
+            <se_subsoil_texture/>
+          </se_subsoil_group>
+          <se_50-80_group>
+            <generated_note_name_35/>
+            <se_50-80_restriction_depth/>
+            <se_50-80_weight/>
+            <se_50-80_moisture/>
+            <se_50-80_tin_weight/>
+            <se_50-80_tin_fresh_weight/>
+            <se_50-80_texture/>
+          </se_50-80_group>
+          <se_80-100_group>
+            <generated_note_name_45/>
+            <se_80-100_restriction_depth/>
+            <se_80-100_weight/>
+            <se_80-100_moisture/>
+            <se_80-100_tin_weight/>
+            <se_80-100_tin_fresh_weight/>
+            <se_80-100_texture/>
+          </se_80-100_group>
+          <sw_top_group>
+            <generated_note_name_55/>
+            <sw_top_restriction_depth/>
+            <sw_top_texture/>
+          </sw_top_group>
+          <sw_sub_group>
+            <generated_note_name_61/>
+            <sw_sub_restriction_depth/>
+            <sw_sub_texture/>
+          </sw_sub_group>
+          <nw_top_group>
+            <generated_note_name_67/>
+            <nw_top_restriction_depth/>
+            <nw_top_texture/>
+          </nw_top_group>
+          <nw_sub_group>
+            <generated_note_name_73/>
+            <nw_sub_restriction_depth/>
+            <nw_sub_texture/>
+          </nw_sub_group>
+          <ne_top_group>
+            <generated_note_name_79/>
+            <ne_top_restriction_depth/>
+            <ne_top_texture/>
+          </ne_top_group>
+          <ne_sub_group>
+            <generated_note_name_85/>
+            <ne_sub_restriction_depth/>
+            <ne_sub_texture/>
+          </ne_sub_group>
+          <meta>
+            <instanceID/>
+          </meta>
+        </soils-prod>
+      </instance>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/soils-prod/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/soils-prod/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/soils-prod/today" type="date"/>
+      <bind nodeset="/soils-prod/metadata/country" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/metadata/plot_id" required="true()" type="string"/>
+      <bind nodeset="/soils-prod/metadata/name_group/first_name" required="true()" type="string"/>
+      <bind nodeset="/soils-prod/metadata/name_group/last_name" required="true()" type="string"/>
+      <bind nodeset="/soils-prod/metadata/scribe" required="true()" type="string"/>
+      <bind nodeset="/soils-prod/se_top_group/generated_note_name_15" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/soils-prod/se_top_group/se_top_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/soils-prod/se_top_group/se_top_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_top_group/se_top_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_top_group/se_top_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_top_group/se_top_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_top_group/se_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/se_subsoil_group" relevant=" /soils-prod/se_top_group/se_top_restriction_depth  = ''"/>
+      <bind nodeset="/soils-prod/se_subsoil_group/generated_note_name_25" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/soils-prod/se_subsoil_group/se_subsoil_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/soils-prod/se_subsoil_group/se_subsoil_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_subsoil_group/se_subsoil_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_subsoil_group/se_subsoil_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_subsoil_group/se_subsoil_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_subsoil_group/se_subsoil_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/se_50-80_group" relevant=" /soils-prod/se_top_group/se_top_restriction_depth  = '' and  /soils-prod/se_subsoil_group/se_subsoil_restriction_depth  = ''"/>
+      <bind nodeset="/soils-prod/se_50-80_group/generated_note_name_35" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 50 and . &lt;= 80" jr:constraintMsg="Must be between 50-80" nodeset="/soils-prod/se_50-80_group/se_50-80_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/soils-prod/se_50-80_group/se_50-80_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_50-80_group/se_50-80_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_50-80_group/se_50-80_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_50-80_group/se_50-80_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_50-80_group/se_50-80_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/se_80-100_group" relevant=" /soils-prod/se_top_group/se_top_restriction_depth  = '' and  /soils-prod/se_subsoil_group/se_subsoil_restriction_depth  = '' and  /soils-prod/se_50-80_group/se_50-80_restriction_depth  = ''"/>
+      <bind nodeset="/soils-prod/se_80-100_group/generated_note_name_45" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 80 and . &lt;= 100" jr:constraintMsg="Must be between 80-100" nodeset="/soils-prod/se_80-100_group/se_80-100_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/soils-prod/se_80-100_group/se_80-100_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_80-100_group/se_80-100_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_80-100_group/se_80-100_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_80-100_group/se_80-100_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/soils-prod/se_80-100_group/se_80-100_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/sw_top_group/generated_note_name_55" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/soils-prod/sw_top_group/sw_top_restriction_depth" type="decimal"/>
+      <bind nodeset="/soils-prod/sw_top_group/sw_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/sw_sub_group" relevant=" /soils-prod/sw_top_group/sw_top_restriction_depth  = ''"/>
+      <bind nodeset="/soils-prod/sw_sub_group/generated_note_name_61" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/soils-prod/sw_sub_group/sw_sub_restriction_depth" type="decimal"/>
+      <bind nodeset="/soils-prod/sw_sub_group/sw_sub_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/nw_top_group/generated_note_name_67" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/soils-prod/nw_top_group/nw_top_restriction_depth" type="decimal"/>
+      <bind nodeset="/soils-prod/nw_top_group/nw_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/nw_sub_group" relevant=" /soils-prod/nw_top_group/nw_top_restriction_depth  = ''"/>
+      <bind nodeset="/soils-prod/nw_sub_group/generated_note_name_73" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/soils-prod/nw_sub_group/nw_sub_restriction_depth" type="decimal"/>
+      <bind nodeset="/soils-prod/nw_sub_group/nw_sub_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/ne_top_group/generated_note_name_79" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/soils-prod/ne_top_group/ne_top_restriction_depth" type="decimal"/>
+      <bind nodeset="/soils-prod/ne_top_group/ne_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/soils-prod/ne_sub_group" relevant=" /soils-prod/ne_top_group/ne_top_restriction_depth  = ''"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/soils-prod/ne_sub_group/generated_note_name_85" readonly="true()" type="string"/>
+      <bind nodeset="/soils-prod/ne_sub_group/ne_sub_restriction_depth" type="decimal"/>
+      <bind nodeset="/soils-prod/ne_sub_group/ne_sub_texture" required="true()" type="select1"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/soils-prod/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group ref="/soils-prod/metadata">
+      <select1 ref="/soils-prod/metadata/country">
+        <label>Country</label>
+        <item>
+          <label>Tanzania</label>
+          <value>TZA</value>
+        </item>
+        <item>
+          <label>Ghana</label>
+          <value>GHA</value>
+        </item>
+        <item>
+          <label>Uganda</label>
+          <value>UGA</value>
+        </item>
+      </select1>
+      <input ref="/soils-prod/metadata/plot_id">
+        <label>Plot ID #:</label>
+      </input>
+      <group appearance="field-list" ref="/soils-prod/metadata/name_group">
+        <input ref="/soils-prod/metadata/name_group/first_name">
+          <label>Name of person sampling and weighing samples</label>
+          <hint>First Name</hint>
+        </input>
+        <input ref="/soils-prod/metadata/name_group/last_name">
+          <hint>Last Name</hint>
+        </input>
+      </group>
+      <input ref="/soils-prod/metadata/scribe">
+        <label>Name of scribe:</label>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/se_top_group">
+      <input ref="/soils-prod/se_top_group/generated_note_name_15">
+        <label>Corner 1. SE -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/soils-prod/se_top_group/se_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <input ref="/soils-prod/se_top_group/se_top_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
+      </input>
+      <input ref="/soils-prod/se_top_group/se_top_moisture">
+        <label>Soil Moisture Tin ID#</label>
+      </input>
+      <input ref="/soils-prod/se_top_group/se_top_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <input ref="/soils-prod/se_top_group/se_top_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <select1 ref="/soils-prod/se_top_group/se_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/se_subsoil_group">
+      <input ref="/soils-prod/se_subsoil_group/generated_note_name_25">
+        <label>Corner 1. SE -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/soils-prod/se_subsoil_group/se_subsoil_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <input ref="/soils-prod/se_subsoil_group/se_subsoil_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
+      </input>
+      <input ref="/soils-prod/se_subsoil_group/se_subsoil_moisture">
+        <label>Soil Moisture Tin ID#</label>
+      </input>
+      <input ref="/soils-prod/se_subsoil_group/se_subsoil_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <input ref="/soils-prod/se_subsoil_group/se_subsoil_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <select1 ref="/soils-prod/se_subsoil_group/se_subsoil_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/se_50-80_group">
+      <input ref="/soils-prod/se_50-80_group/generated_note_name_35">
+        <label>Corner 1. SE -- 50-80</label>
+      </input>
+      <input ref="/soils-prod/se_50-80_group/se_50-80_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <input ref="/soils-prod/se_50-80_group/se_50-80_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
+      </input>
+      <input ref="/soils-prod/se_50-80_group/se_50-80_moisture">
+        <label>Soil Moisture Tin ID#</label>
+      </input>
+      <input ref="/soils-prod/se_50-80_group/se_50-80_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <input ref="/soils-prod/se_50-80_group/se_50-80_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <select1 ref="/soils-prod/se_50-80_group/se_50-80_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/se_80-100_group">
+      <input ref="/soils-prod/se_80-100_group/generated_note_name_45">
+        <label>Corner 1. SE -- 80-100</label>
+      </input>
+      <input ref="/soils-prod/se_80-100_group/se_80-100_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <input ref="/soils-prod/se_80-100_group/se_80-100_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
+      </input>
+      <input ref="/soils-prod/se_80-100_group/se_80-100_moisture">
+        <label>Soil Moisture Tin ID#</label>
+      </input>
+      <input ref="/soils-prod/se_80-100_group/se_80-100_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <input ref="/soils-prod/se_80-100_group/se_80-100_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <select1 ref="/soils-prod/se_80-100_group/se_80-100_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/sw_top_group">
+      <input ref="/soils-prod/sw_top_group/generated_note_name_55">
+        <label>Corner 6. SW -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/soils-prod/sw_top_group/sw_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/soils-prod/sw_top_group/sw_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/sw_sub_group">
+      <input ref="/soils-prod/sw_sub_group/generated_note_name_61">
+        <label>Corner 6. SW -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/soils-prod/sw_sub_group/sw_sub_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/soils-prod/sw_sub_group/sw_sub_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/nw_top_group">
+      <input ref="/soils-prod/nw_top_group/generated_note_name_67">
+        <label>Corner 11. NW -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/soils-prod/nw_top_group/nw_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/soils-prod/nw_top_group/nw_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/nw_sub_group">
+      <input ref="/soils-prod/nw_sub_group/generated_note_name_73">
+        <label>Corner 11. NW -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/soils-prod/nw_sub_group/nw_sub_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/soils-prod/nw_sub_group/nw_sub_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/ne_top_group">
+      <input ref="/soils-prod/ne_top_group/generated_note_name_79">
+        <label>Corner 16. NE -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/soils-prod/ne_top_group/ne_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/soils-prod/ne_top_group/ne_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/soils-prod/ne_sub_group">
+      <input ref="/soils-prod/ne_sub_group/generated_note_name_85">
+        <label>Corner 16. NE -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/soils-prod/ne_sub_group/ne_sub_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/soils-prod/ne_sub_group/ne_sub_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+  </h:body>
+</h:html>
