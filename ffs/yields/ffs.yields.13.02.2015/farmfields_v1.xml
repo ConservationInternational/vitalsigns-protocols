@@ -1433,14 +1433,10 @@
                 <f1_b_11_133/>
                 <f1_b_11_134/>
                 <f1_b_11_136/>
+                <f1_b_11_136a_calc/>
                 <f1_b_11_136a/>
                 <f1_b_11_137/>
               </f1_b_11_group>
-              <f1_b_12_group>
-                <f1_b_12_138/>
-                <f1_b_12_139_1/>
-                <f1_b_12_139_1_other/>
-              </f1_b_12_group>
               <f1_b_13_group>
                 <f1_b_13_8/>
                 <f1_b_13_9/>
@@ -1462,6 +1458,7 @@
                 <f1_b_14_11>0</f1_b_14_11>
               </f1_b_14_group>
               <f1_b_14_sum>0</f1_b_14_sum>
+              <f1_b_13_13/>
             </f1_b_group>
             <f2_b_group>
               <f2_b_103/>
@@ -1512,14 +1509,10 @@
                 <f2_b_11_133/>
                 <f2_b_11_134/>
                 <f2_b_11_136/>
+                <f2_b_11_136a_calc/>
                 <f2_b_11_136a/>
                 <f2_b_11_137/>
               </f2_b_11_group>
-              <f2_b_12_group>
-                <f2_b_12_138/>
-                <f2_b_12_139_1/>
-                <f2_b_12_139_1_other/>
-              </f2_b_12_group>
               <f2_b_13_group>
                 <f2_b_13_8/>
                 <f2_b_13_9/>
@@ -1541,6 +1534,7 @@
                 <f2_b_14_11>0</f2_b_14_11>
               </f2_b_14_group>
               <f2_b_14_sum>0</f2_b_14_sum>
+              <f2_b_13_13/>
             </f2_b_group>
           </b_group>
           <meta>
@@ -3860,8 +3854,8 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 1"/>
       <bind calculate="concat(if( /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_5  = '1', 'M1 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_5  = '1', 'M2 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_5  = '1', 'M3 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_5  = '1', 'M4 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_5  = '1', 'M5 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_5  = '1', 'M6 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_5  = '1', 'M7 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_5  = '1', 'M8 ', ''))" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field" readonly="true()" type="string"/>
       <bind calculate="concat(if( /FarmFieldSoils_Yields_Maize_v1/a_group/m1_group/m1_a_6  = '1', 'M1 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m2_group/m2_a_6  = '1', 'M2 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m3_group/m3_a_6  = '1', 'M3 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m4_group/m4_a_6  = '1', 'M4 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m5_group/m5_a_6  = '1', 'M5 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m6_group/m6_a_6  = '1', 'M6 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m7_group/m7_a_6  = '1', 'M7 ', ''), if( /FarmFieldSoils_Yields_Maize_v1/a_group/m8_group/m8_a_6  = '1', 'M8 ', ''))" nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field" readonly="true()" type="string"/>
-      <bind constraint="selected( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field ,.) or ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field  = '' and . = 'None')" jr:constraintMsg="You must select an eligible first field. If there is none, select None." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field" required="true()" type="select1"/>
-      <bind constraint="(selected( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field ,.) or ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field  = '' and . = 'None'))" jr:constraintMsg="You must select an eligible second field. If there is none, select None." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field" required="true()" type="select1"/>
+      <bind constraint="selected( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field ,.) or ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_first_field  = '' and . = 'None') or ( . = 'None')" jr:constraintMsg="You must select an eligible first field. If there is none, select None." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field" required="true()" type="select1"/>
+      <bind constraint="(selected( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field ,.) or ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/eligible_second_field  = '' and . = 'None') or ( . = 'None'))" jr:constraintMsg="You must select an eligible second field. If there is none, select None." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field" required="true()" type="select1"/>
       <bind calculate="if(( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  =  /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field ) and ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  != 'None'), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="The first and second fields must be different. Go back and correct the selected fields." nodeset="/FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields_warning" readonly="true()" relevant="( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  =  /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field ) and ( /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  != 'None')" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/number_of_fields  &gt;= 1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field  != 'None'"/>
@@ -3873,7 +3867,7 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_109_other" relevant="selected(../f1_b_109, 'other')" type="string"/>
       <bind calculate="jr:choice-name( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_109 , ' /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_109 ')" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_109_name" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_110" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_107 , '1')" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_112" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_107 , '2')" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_112" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_107 , '2') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_110 ) = 0)" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_114" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_112 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_114_other" relevant="selected(../f1_b_114, 'other')" type="string"/>
       <bind calculate="jr:choice-name( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_114 , ' /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_114 ')" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_114_name" type="string"/>
@@ -3887,7 +3881,7 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122 , '1')" required="true()" type="select"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122_b_other" relevant="selected(../f1_b_122_b, 'other')" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_123" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122 , '1')" required="true()" type="int"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_125" type="date"/>
+      <bind constraint="decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_125 )-decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_106 ) &gt; 0" jr:constraintMsg="Please, date of flowering can't be equal or less than date of planting!" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_125" type="date"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_a" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '1')" required="true()" type="select"/>
@@ -3904,22 +3898,20 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/gpsne_group_f1/gpsne_accuracy_f1" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_130_1" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_130_2" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_132" required="true()" type="decimal"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_132" required="true()" type="int"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_104" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_105" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_133" required="true()" type="decimal"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_133" required="true()" type="int"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group/f1_b_12_138" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group/f1_b_12_139_1" type="select"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group/f1_b_12_139_1_other" relevant="selected(../f1_b_12_139_1, 'other')" type="string"/>
+      <bind calculate="( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136 *1000)" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a" readonly="true()" type="string"/>
+      <bind constraint="( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc )-( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137 ) &gt; 0" jr:constraintMsg="The fresh weight of the cobs grains (Q137) should be inferior to the fresh weight of the cobs (Q136)" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137" required="true()" type="int"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_8" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_9" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_10" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_11" type="select"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14" readonly="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_11" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_10 , '1')" type="select"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14" readonly="true()" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_10 , '2') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group/f1_b_13_11 ) = 0)" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_1" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_2" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_3" required="true()" type="select1"/>
@@ -3932,6 +3924,7 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_10" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_11" required="true()" type="select1"/>
       <bind calculate="( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_11 )" constraint=". = 10" jr:constraintMsg="Go back and correct surface condition values so they add up to 10." nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_sum" readonly="true()" relevant="( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_group/f1_b_14_11 ) != 1" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_13" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group" relevant=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field  != 'None'"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_103" required="true()" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_103_a" required="true()" type="select1"/>
@@ -3941,7 +3934,7 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_109_other" relevant="selected(../f2_b_109, 'other')" type="string"/>
       <bind calculate="jr:choice-name( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_109 , ' /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_109 ')" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_109_name" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_110" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_107 , '1')" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_112" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_107 , '2')" required="true()" type="select1"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_112" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_107 , '2') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_110 ) = 0)" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_114" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_112 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_114_other" relevant="selected(../f2_b_114, 'other')" type="string"/>
       <bind calculate="jr:choice-name( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_114 , ' /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_114 ')" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_114_name" type="string"/>
@@ -3955,7 +3948,7 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122 , '1') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_120 ) = 0)" required="true()" type="select"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122_b_other" relevant="selected(../f2_b_122_b, 'other')" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_123" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122 , '1')" required="true()" type="int"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_125" type="date"/>
+      <bind constraint="decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_125 )-decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_106 ) &gt; 0" jr:constraintMsg="Please, date of flowering can't be equal or less than date of planting!" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_125" type="date"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_a" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '1')" required="true()" type="select"/>
@@ -3973,22 +3966,20 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/gpsne_group_f2/gpsne_accuracy_f2" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_130_1" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_130_2" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_132" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_104" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_105" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_133" required="true()" type="decimal"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_132" required="true()" type="int"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_104" required="true()" type="int"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_105" required="true()" type="int"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_133" required="true()" type="int"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_134" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137" required="true()" type="decimal"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group/f2_b_12_138" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group/f2_b_12_139_1" type="select"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group/f2_b_12_139_1_other" relevant="selected(../f2_b_12_139_1, 'other')" type="string"/>
+      <bind calculate="( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136 *1000)" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a" readonly="true()" type="string"/>
+      <bind constraint="( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc )-( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137 ) &gt; 0" jr:constraintMsg="The fresh weight of the cobs grains (Q137) should be inferior to the fresh weight of the cobs (Q136)" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137" type="int"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_8" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_9" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_10" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_11" type="select"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14" readonly="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_11" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_10 , '1')" type="select"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14" readonly="true()" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_10 , '2') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group/f2_b_13_11 ) = 0)" type="string"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_1" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_2" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_3" required="true()" type="select1"/>
@@ -4001,6 +3992,7 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_10" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_11" required="true()" type="select1"/>
       <bind calculate="( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_11 )" constraint=". = 10" jr:constraintMsg="Go back and correct surface condition values so they add up to 10." nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_sum" readonly="true()" relevant="( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_1  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_2  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_3  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_4  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_5  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_6  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_7  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_8  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_9  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_10  +  /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_group/f2_b_14_11 ) != 1" required="true()" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_13" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/FarmFieldSoils_Yields_Maize_v1/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -4701,7 +4693,7 @@
           <hint>
             <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
 NA = Don't Know
-MAXIMUM SPACE NEEDED = 15 characters</hint>
+(If several varieties were used, indicate the main one.)</hint>
         </input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_103_a">
           <label>F1-103.A. What type of seed did you use? (SELECT ONE)</label>
@@ -4776,10 +4768,7 @@ MAXIMUM SPACE NEEDED = 15 characters</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_110">
           <label>F1-110. What quantity of <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_109_name "/> did you use (Kg)?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? Up to 2 decimal places e.g 10.11
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? Up to 2 decimal places e.g 10.11</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_112">
           <label>F1-112. Did you use any other INORGANIC/MINERAL fertilizer on this plot?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
@@ -4831,10 +4820,7 @@ NA = Don't Know</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_115">
           <label>F1-115. What quantity of <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_114_name "/> did you use (Kg)?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? Up to 2 decimal places e.g 10.11
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? Up to 2 decimal places e.g 10.11</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_117">
           <label>F1-117. Did you use any ORGANIC FERTILIZER on this field during past/current season?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
@@ -4890,12 +4876,9 @@ NA = Don't Know</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_120">
           <label>F1-120. What was the quantity of <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_119_name "/> used (Kg)?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? Up to 2 decimal places e.g 10.11
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? Up to 2 decimal places e.g 10.11</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122">
-          <label>F1-122. Did you weed?</label>
+          <label>F1-122. Did you weed in the past or current season ?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
             <label>Yes</label>
             <value>1</value>
@@ -4906,7 +4889,7 @@ NA = Don't Know</hint>
           </item>
         </select1>
         <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122_b">
-          <label>F1-122B. What weeding method did you use? (TICK ALL THAT APPLY)</label>
+          <label>F1-122B. What weeding method did you use in the past or current season ? (TICK ALL THAT APPLY)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
             <label>Manual</label>
             <value>1</value>
@@ -4924,13 +4907,10 @@ NA = Don't Know</hint>
           <label>Specify other.</label>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_123">
-          <label>F1-123. How many times did you weed?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
-NA = Don't Know</hint>
-        </input>
+          <label>F1-123. How many times did you weed in the past or current season?</label>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_125">
-          <label>F1-125. What is the date of 75% flowering?</label>
+          <label>F1-125. What was the date of 75% flowering?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126">
           <label>F1-126. What is the stand/yield of MAIZE?</label>
@@ -4979,7 +4959,7 @@ NA = Don't Know</hint>
           </item>
         </select1>
         <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_b">
-          <label>F1-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY)</label>
+          <label>F1-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY, INCLUDING THE ONE SELECTED IN THE PREVIOUS QUESTION)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
             <label>Pests</label>
             <value>1</value>
@@ -5011,10 +4991,7 @@ NA = Don't Know</hint>
         </select>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128">
           <label>F1-128. What was the quantity of MAIZE harvested on this field during the current/past season ? (Kg)</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128_a">
           <label>F1-128.A. Was cultivation inter-cropped ?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
@@ -5487,75 +5464,55 @@ NA = Don't Know</hint>
           </group>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_130_1">
             <label>F1-130.1. Measure the length of the Quadrant (In Meters)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+Up to 2 decimal places e.g 3.03</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_130_2">
             <label>F1-130.2. Measure the width of the Quadrant (In Meters)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+Up to 2 decimal places e.g 3.03</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_132">
             <label>F1-132. What is the number of plants in sample Quadrant?</label>
             <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_104">
-            <label>F1-104. What is the planting density?
-1. Space between RIDGES (cm) OR rows: (PLEASE MEASURE)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <label>F1-104. 
+Space between RIDGES (cm) OR rows: (PLEASE MEASURE)</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+No decimal e.g 75</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_105">
-            <label>F1-105. What is the planting density?
-2. Plant Space between SEEDING HOLES (cm): (PLEASE MEASURE)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <label>F1-105. 
+Plant Space between SEEDING HOLES (cm): (PLEASE MEASURE)</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+No decimal e.g 30</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_133">
-            <label>F1-133. What is the number of COBS/PODS in the sample Quadrant?</label>
+            <label>F1-133. What is the number of COBS in the sample Quadrant?</label>
             <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134">
-            <label>F1-134. What is the total fresh weight of COBS/PODS sampled in Quadrant (KG)?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <label>F1-134. What is the total fresh weight of COBS sampled in Quadrant (KG)?</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+“Up to 2 decimal places e.g 5.23”</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136">
             <label>F1-136. What is the fresh weight of 10 COBS weight (KG)?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+“Up to 2 decimal places e.g 1.75”</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a">
-            <label>F1-136A. Convert Q136 from KG into Grams?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+            <label>F1-136A. Conversion Q136 from KG into Grams is: <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc "/></label></input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137">
             <label>F1-137. What is the fresh weight of GRAIN from 10 COBS composite subsamples threshold (g)?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
-        </group>
-        <group appearance="field-list" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group">
-          <label>TAKE THE GRAINS FROM THE COBS SUBSAMPLE THRESHOLD (Q137) INTO A SAMPLE BAG FOR DRYING. ANSWER THE FOLLOWING QUESTIONS FOR THE ENTIRE FIELD.</label>
-          <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group/f1_b_12_138">
-            <label>F1-138. Was there pest damage?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
-              <label>Yes</label>
-              <value>1</value>
-            </item>
-            <item>
-              <label>No</label>
-              <value>2</value>
-            </item>
-          </select1>
-          <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group/f1_b_12_139_1">
-            <label>F1-139.1. Did you have any other damage?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
-              <label>Animal</label>
-              <value>a</value>
-            </item>
-            <item>
-              <label>Theft</label>
-              <value>b</value>
-            </item>
-            <item>
-              <label>Flooding</label>
-              <value>c</value>
-            </item>
-            <item>
-              <label>Dry Spells</label>
-              <value>d</value>
-            </item>
-            <item>
-              <label>Other</label>
-              <value>other</value>
-            </item>
-          </select>
-          <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_12_group/f1_b_12_139_1_other">
-            <label>Specify other.</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field? 
+“No decimal e.g 1350”</hint>
           </input>
         </group>
         <group ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_group">
@@ -6167,14 +6124,17 @@ NA = Don't Know</hint>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_14_sum">
           <label>Surface condition values must sum up to 10. Current sum is</label>
         </input>
+        <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_13_13">
+          <label>F1- 13 NOTES - RECORD ANY OBSERVATIONS ABOUT THE FIELD AND WHETHER ANY DEPTH RESTRICTION WAS ENCOUNTERED DURING SAMPLING, INCLUDING DEPTH (CM)</label>
+        </input>
       </group>
       <group ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group">
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_103">
           <label>F2-103. What is the name of the variety?</label>
           <hint>
             <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
-90 = Don't Know
-MAXIMUM SPACE NEEDED = 15 characters</hint>
+NA = Don't Know
+(If several varieties were used, indicate the main one.)</hint>
         </input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_103_a">
           <label>F2-103.A. What type of seed did you use? (SELECT ONE)</label>
@@ -6249,10 +6209,7 @@ MAXIMUM SPACE NEEDED = 15 characters</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_110">
           <label>F2-110. What quantity of <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_109_name "/> did you use (Kg)?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? Up to 2 decimal places e.g 10.11
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? Up to 2 decimal places e.g 10.11</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_112">
           <label>F2-112. Did you use any other INORGANIC/MINERAL fertilizer on this plot?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
@@ -6304,10 +6261,7 @@ NA = Don't Know</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_115">
           <label>F2-115. What quantity of <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_114_name "/> did you use (Kg)?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? Up to 2 decimal places e.g 10.11
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? Up to 2 decimal places e.g 10.11</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_117">
           <label>F2-117. Did you use any ORGANIC FERTILIZER on this field during past/current season?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
@@ -6363,12 +6317,9 @@ NA = Don't Know</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_120">
           <label>F2-120. What was the quantity <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_119_name "/> used (Kg)?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? Up to 2 decimal places e.g 10.11
-90 = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? Up to 2 decimal places e.g 10.11</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122">
-          <label>F2-122. Did you weed?</label>
+          <label>F2-122. Did you weed in the past or current season?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
             <label>Yes</label>
             <value>1</value>
@@ -6379,7 +6330,7 @@ NA = Don't Know</hint>
           </item>
         </select1>
         <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122_b">
-          <label>F2-122B. What weeding method did you use? (TICK ALL THAT APPLY)</label>
+          <label>F2-122B. What weeding method did you use in the past or current season ? (TICK ALL THAT APPLY)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
             <label>Manual</label>
             <value>1</value>
@@ -6397,13 +6348,10 @@ NA = Don't Know</hint>
           <label>Specify other.</label>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_123">
-          <label>F2-123. How many times did you weed?</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
-NA = Don't Know</hint>
-        </input>
+          <label>F2-123. How many times did you weed in the past or current season ?</label>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_125">
-          <label>F2-125. What is the date of 75% flowering?</label>
+          <label>F2-125. What was the date of 75% flowering?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126">
           <label>F2-126. What is the stand/yield of MAIZE?</label>
@@ -6452,7 +6400,7 @@ NA = Don't Know</hint>
           </item>
         </select1>
         <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b">
-          <label>F2-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY)</label>
+          <label>F2-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY, INCLUDING THE ONE SELECTED IN THE PREVIOUS QUESTION)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
             <label>Pests</label>
             <value>1</value>
@@ -6491,10 +6439,7 @@ NA = Don't Know</hint>
         </input>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_128">
           <label>F2-128. What was the quantity of MAIZE harvested on this field during the current/past season ? (Kg)</label>
-          <hint>
-            <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
-NA = Don't Know</hint>
-        </input>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
         <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_128_a">
           <label>F2-128.A. Was cultivation inter-cropped ?</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
@@ -6967,75 +6912,55 @@ NA = Don't Know</hint>
           </group>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_130_1">
             <label>F2-130.1. Measure the length of the Quadrant (In Meters)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+Up to 2 decimal places e.g 3.03</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_130_2">
             <label>F2-130.2. Measure the width of the Quadrant (In Meters)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+Up to 2 decimal places e.g 3.03</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_132">
             <label>F2-132. What is the number of plants in sample Quadrant?</label>
             <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_104">
-            <label>F2-104. What is the planting density?
-1. Space between RIDGES (cm) OR rows: (PLEASE MEASURE)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <label>F2-104. 
+Space between RIDGES (cm) OR rows: (PLEASE MEASURE)</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+No decimal e.g 75</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_105">
-            <label>F2-105. What is the planting density?
-2. Plant Space between SEEDING HOLES (cm): (PLEASE MEASURE)</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <label>F2-105. 
+Plant Space between SEEDING HOLES (cm): (PLEASE MEASURE)</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+No decimal e.g 30</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_133">
-            <label>F2-133. What is the number of COBS/PODS in the sample Quadrant?</label>
+            <label>F2-133. What is the number of COBS in the sample Quadrant?</label>
             <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_134">
-            <label>F2-134. What is the total fresh weight of COBS/PODS sampled in Quadrant (KG)?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <label>F2-134. What is the total fresh weight of COBS sampled in Quadrant (KG)?</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+“Up to 2 decimal places e.g 5.23”</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136">
             <label>F2-136. What is the fresh weight of 10 COBS weight (KG)?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+“Up to 2 decimal places e.g 1.75”</hint>
+          </input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a">
-            <label>F2-136A. Convert Q136 from KG into Grams?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+            <label>F2-136A. Conversion Q136 from KG into Grams is: <output value=" /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc "/></label></input>
           <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137">
             <label>F2-137. What is the fresh weight of GRAIN from 10 COBS composite subsamples threshold (g)?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
-        </group>
-        <group appearance="field-list" ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group">
-          <label>TAKE THE GRAINS FROM THE COBS SUBSAMPLE THRESHOLD (Q137) INTO A SAMPLE BAG FOR DRYING. ANSWER THE FOLLOWING QUESTIONS FOR THE ENTIRE FIELD.</label>
-          <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group/f2_b_12_138">
-            <label>F2-138. Was there pest damage?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
-              <label>Yes</label>
-              <value>1</value>
-            </item>
-            <item>
-              <label>No</label>
-              <value>2</value>
-            </item>
-          </select1>
-          <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group/f2_b_12_139_1">
-            <label>F2-139.1. Did you have any other damage?</label>
-            <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
-              <label>Animal</label>
-              <value>a</value>
-            </item>
-            <item>
-              <label>Theft</label>
-              <value>b</value>
-            </item>
-            <item>
-              <label>Flooding</label>
-              <value>c</value>
-            </item>
-            <item>
-              <label>Dry Spells</label>
-              <value>d</value>
-            </item>
-            <item>
-              <label>Other</label>
-              <value>other</value>
-            </item>
-          </select>
-          <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_12_group/f2_b_12_139_1_other">
-            <label>Specify other.</label>
+            <hint>
+              <output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field? 
+“No decimal e.g 1350”</hint>
           </input>
         </group>
         <group ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_group">
@@ -7646,6 +7571,9 @@ NA = Don't Know</hint>
         </group>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_14_sum">
           <label>Surface condition values must sum up to 10. Current sum is</label>
+        </input>
+        <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_13_13">
+          <label>F2- 13 NOTES - RECORD ANY OBSERVATIONS ABOUT THE FIELD AND WHETHER ANY DEPTH RESTRICTION WAS ENCOUNTERED DURING SAMPLING, INCLUDING DEPTH (CM)</label>
         </input>
       </group>
     </group>
