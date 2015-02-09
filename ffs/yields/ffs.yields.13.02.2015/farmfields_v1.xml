@@ -233,9 +233,6 @@
           <text id="static_instance-primary_factor-1">
             <value>Insufficient rainfall</value>
           </text>
-          <text id="static_instance-primary_factor-6">
-            <value>Other (Specify)</value>
-          </text>
           <text id="static_instance-primary_factor-4">
             <value>Low soil fertility / other soil problems</value>
           </text>
@@ -1100,6 +1097,24 @@
           <text id="static_instance-regions-1">
             <value>Pwani</value>
           </text>
+          <text id="static_instance-factor-5">
+            <value>Don't Know</value>
+          </text>
+          <text id="static_instance-factor-4">
+            <value>Low soil fertility / other soil problems</value>
+          </text>
+          <text id="static_instance-factor-3">
+            <value>Weeds</value>
+          </text>
+          <text id="static_instance-factor-2">
+            <value>Too much rainfall</value>
+          </text>
+          <text id="static_instance-factor-1">
+            <value>Insufficient rainfall</value>
+          </text>
+          <text id="static_instance-factor-0">
+            <value>Pests</value>
+          </text>
           <text id="static_instance-surface_condition-8">
             <value>Sodic soil</value>
           </text>
@@ -1410,8 +1425,8 @@
               <f1_b_123/>
               <f1_b_125/>
               <f1_b_126/>
-              <f1_b_126_a/>
               <f1_b_126_b/>
+              <f1_b_126_a/>
               <f1_b_128/>
               <f1_b_128_a/>
               <f1_b_128_b/>
@@ -1485,9 +1500,8 @@
               <f2_b_123/>
               <f2_b_125/>
               <f2_b_126/>
-              <f2_b_126_a/>
               <f2_b_126_b/>
-              <f2_b_126_b_other/>
+              <f2_b_126_a/>
               <f2_b_128/>
               <f2_b_128_a/>
               <f2_b_128_b/>
@@ -1898,6 +1912,34 @@
           </item>
         </root>
       </instance>
+      <instance id="factor">
+        <root>
+          <item>
+            <itextId>static_instance-factor-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>static_instance-factor-1</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>static_instance-factor-2</itextId>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>static_instance-factor-3</itextId>
+            <name>4</name>
+          </item>
+          <item>
+            <itextId>static_instance-factor-4</itextId>
+            <name>5</name>
+          </item>
+          <item>
+            <itextId>static_instance-factor-5</itextId>
+            <name>90</name>
+          </item>
+        </root>
+      </instance>
       <instance id="percentage">
         <root>
           <item>
@@ -2026,31 +2068,33 @@
         <root>
           <item>
             <itextId>static_instance-primary_factor-0</itextId>
+            <f1_b_126_b>1</f1_b_126_b>
             <name>1</name>
           </item>
           <item>
             <itextId>static_instance-primary_factor-1</itextId>
+            <f1_b_126_b>2</f1_b_126_b>
             <name>2</name>
           </item>
           <item>
             <itextId>static_instance-primary_factor-2</itextId>
+            <f1_b_126_b>3</f1_b_126_b>
             <name>3</name>
           </item>
           <item>
             <itextId>static_instance-primary_factor-3</itextId>
+            <f1_b_126_b>4</f1_b_126_b>
             <name>4</name>
           </item>
           <item>
             <itextId>static_instance-primary_factor-4</itextId>
+            <f1_b_126_b>5</f1_b_126_b>
             <name>5</name>
           </item>
           <item>
             <itextId>static_instance-primary_factor-5</itextId>
+            <f1_b_126_b>90</f1_b_126_b>
             <name>90</name>
-          </item>
-          <item>
-            <itextId>static_instance-primary_factor-6</itextId>
-            <name>96</name>
           </item>
         </root>
       </instance>
@@ -3883,8 +3927,8 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_123" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_122 , '1')" required="true()" type="int"/>
       <bind constraint="decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_125 )-decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_106 ) &gt; 0" jr:constraintMsg="Please, date of flowering can't be equal or less than date of planting!" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_125" type="date"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_a" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '1')" required="true()" type="select"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_a" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '2') or selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126 , '3') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_b ) = 0)" required="true()" type="decimal"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128_a" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128_a , '1')" required="true()" type="select"/>
@@ -3950,9 +3994,8 @@
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_123" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_122 , '1')" required="true()" type="int"/>
       <bind constraint="decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_125 )-decimal-date-time( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_106 ) &gt; 0" jr:constraintMsg="Please, date of flowering can't be equal or less than date of planting!" nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_125" type="date"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126" required="true()" type="select1"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_a" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '1')" required="true()" type="select"/>
-      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b_other" relevant="selected(../f2_b_126_b, 'other')" type="string"/>
+      <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_a" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_128" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '2') or selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '3') or not(string-length( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b ) = 0)" required="true()" type="int"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_128_a" required="true()" type="select1"/>
       <bind nodeset="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_128_b" relevant="selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126 , '1')" required="true()" type="select"/>
@@ -4927,39 +4970,8 @@ NA = Don't Know
             <value>3</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_a">
-          <label>F1-126A. What is the PRIMARY contributing factor to the poor stand quality for MAIZE? (TICK ONE )</label>
-          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
-            <label>Pests</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Insufficient rainfall</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Too much rainfall</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Weeds</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Low soil fertility / other soil problems</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Don't Know</label>
-            <value>90</value>
-          </item>
-          <item>
-            <label>Other (Specify)</label>
-            <value>96</value>
-          </item>
-        </select1>
         <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_b">
-          <label>F1-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY, INCLUDING THE ONE SELECTED IN THE PREVIOUS QUESTION)</label>
+          <label>F1-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY )</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
             <label>Pests</label>
             <value>1</value>
@@ -4983,12 +4995,15 @@ NA = Don't Know
           <item>
             <label>Don't Know</label>
             <value>90</value>
-          </item>
-          <item>
-            <label>Other (Specify)</label>
-            <value>96</value>
           </item>
         </select>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_a">
+          <label>F1-126A. What is the PRIMARY contributing factor to the poor stand quality for MAIZE? (TICK ONE )</label>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><itemset nodeset="instance('primary_factor')/root/item[selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_126_b , f1_b_126_b)]">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f1_b_group/f1_b_128">
           <label>F1-128. What was the quantity of MAIZE harvested on this field during the current/past season ? (Kg)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
@@ -6368,39 +6383,8 @@ NA = Don't Know
             <value>3</value>
           </item>
         </select1>
-        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_a">
-          <label>F2-126A. What is the PRIMARY contributing factor to the poor stand quality for MAIZE? (TICK ONE )</label>
-          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
-            <label>Pests</label>
-            <value>1</value>
-          </item>
-          <item>
-            <label>Insufficient rainfall</label>
-            <value>2</value>
-          </item>
-          <item>
-            <label>Too much rainfall</label>
-            <value>3</value>
-          </item>
-          <item>
-            <label>Weeds</label>
-            <value>4</value>
-          </item>
-          <item>
-            <label>Low soil fertility / other soil problems</label>
-            <value>5</value>
-          </item>
-          <item>
-            <label>Don't Know</label>
-            <value>90</value>
-          </item>
-          <item>
-            <label>Other (Specify)</label>
-            <value>96</value>
-          </item>
-        </select1>
         <select ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b">
-          <label>F2-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY, INCLUDING THE ONE SELECTED IN THE PREVIOUS QUESTION)</label>
+          <label>F2-126B. CIRCLE ALL contributing factors to the poor stand quality for MAIZE? (TICK ALL THAT APPLY)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
             <label>Pests</label>
             <value>1</value>
@@ -6424,19 +6408,15 @@ NA = Don't Know
           <item>
             <label>Don't Know</label>
             <value>90</value>
-          </item>
-          <item>
-            <label>Other (Specify)</label>
-            <value>96</value>
-          </item>
-          <item>
-            <label>Other</label>
-            <value>other</value>
           </item>
         </select>
-        <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b_other">
-          <label>Specify other.</label>
-        </input>
+        <select1 ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_a">
+          <label>F2-126A. What is the PRIMARY contributing factor to the poor stand quality for MAIZE? (TICK ONE )</label>
+          <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><itemset nodeset="instance('primary_factor')/root/item[selected( /FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_126_b , f2_b_126_b)]">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
         <input ref="/FarmFieldSoils_Yields_Maize_v1/b_group/f2_b_group/f2_b_128">
           <label>F2-128. What was the quantity of MAIZE harvested on this field during the current/past season ? (Kg)</label>
           <hint><output value=" /FarmFieldSoils_Yields_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
