@@ -12,8 +12,8 @@
             <meta_display>
               <country/>
               <sample_note/>
-              <analyst_first_name/>
-              <analyst_last_name/>
+              <first_name/>
+              <last_name/>
               <data_entry_date/>
             </meta_display>
           </metadata>
@@ -51,8 +51,8 @@
       <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_Water_quality_13.02.2015_v1/today" type="date"/>
       <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/country" required="true()" type="select1"/>
       <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/sample_note" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/analyst_first_name" required="true()" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/analyst_last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/last_name" required="true()" type="string"/>
       <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/data_entry_date" type="date"/>
       <bind nodeset="/VS_Water_quality_13.02.2015_v1/calibration" readonly="true()" type="string"/>
       <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl1_1" type="select1"/>
@@ -97,10 +97,10 @@
           <label>Sample Note</label>
           <hint>Optional</hint>
         </input>
-        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/analyst_first_name">
+        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/first_name">
           <label>Analysts First Name</label>
         </input>
-        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/analyst_last_name">
+        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/last_name">
           <label>Analysts Last Name</label>
         </input>
         <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/data_entry_date">

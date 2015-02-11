@@ -10,15 +10,16 @@
           <today/>
           <metadata>
             <country/>
-            <plot_id/>
+            <eplot_no/>
             <name_group>
-              <first_name/>
-              <last_name/>
+              <sampler_first_name/>
+              <sampler_last_name/>
             </name_group>
-            <scribe/>
+            <scribe_first_name/>
+            <scribe_last_name/>
           </metadata>
           <se_top_group>
-            <generated_note_name_15/>
+            <generated_note_name_16/>
             <se_top_restriction_depth/>
             <se_top_weight/>
             <se_top_moisture/>
@@ -27,7 +28,7 @@
             <se_top_texture/>
           </se_top_group>
           <se_subsoil_group>
-            <generated_note_name_25/>
+            <generated_note_name_26/>
             <se_subsoil_restriction_depth/>
             <se_subsoil_weight/>
             <se_subsoil_moisture/>
@@ -36,7 +37,7 @@
             <se_subsoil_texture/>
           </se_subsoil_group>
           <se_50-80_group>
-            <generated_note_name_35/>
+            <generated_note_name_36/>
             <se_50-80_restriction_depth/>
             <se_50-80_weight/>
             <se_50-80_moisture/>
@@ -45,7 +46,7 @@
             <se_50-80_texture/>
           </se_50-80_group>
           <se_80-100_group>
-            <generated_note_name_45/>
+            <generated_note_name_46/>
             <se_80-100_restriction_depth/>
             <se_80-100_weight/>
             <se_80-100_moisture/>
@@ -54,32 +55,32 @@
             <se_80-100_texture/>
           </se_80-100_group>
           <sw_top_group>
-            <generated_note_name_55/>
+            <generated_note_name_56/>
             <sw_top_restriction_depth/>
             <sw_top_texture/>
           </sw_top_group>
           <sw_sub_group>
-            <generated_note_name_61/>
+            <generated_note_name_62/>
             <sw_sub_restriction_depth/>
             <sw_sub_texture/>
           </sw_sub_group>
           <nw_top_group>
-            <generated_note_name_67/>
+            <generated_note_name_68/>
             <nw_top_restriction_depth/>
             <nw_top_texture/>
           </nw_top_group>
           <nw_sub_group>
-            <generated_note_name_73/>
+            <generated_note_name_74/>
             <nw_sub_restriction_depth/>
             <nw_sub_texture/>
           </nw_sub_group>
           <ne_top_group>
-            <generated_note_name_79/>
+            <generated_note_name_80/>
             <ne_top_restriction_depth/>
             <ne_top_texture/>
           </ne_top_group>
           <ne_sub_group>
-            <generated_note_name_85/>
+            <generated_note_name_86/>
             <ne_sub_restriction_depth/>
             <ne_sub_texture/>
           </ne_sub_group>
@@ -92,11 +93,12 @@
       <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_soils_sample_13.02.2015_v1/end" type="dateTime"/>
       <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_soils_sample_13.02.2015_v1/today" type="date"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/country" required="true()" type="select1"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/plot_id" required="true()" type="string"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/name_group/first_name" required="true()" type="string"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/name_group/last_name" required="true()" type="string"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/scribe" required="true()" type="string"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/generated_note_name_15" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/eplot_no" required="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/name_group/sampler_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/name_group/sampler_last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/scribe_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/metadata/scribe_last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/generated_note_name_16" readonly="true()" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth" type="decimal"/>
       <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/se_top_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/se_top_moisture" required="true()" type="decimal"/>
@@ -104,7 +106,7 @@
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/se_top_tin_fresh_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_top_group/se_top_texture" required="true()" type="select1"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group" relevant=" /VS_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth  = ''"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/generated_note_name_25" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/generated_note_name_26" readonly="true()" type="string"/>
       <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth" type="decimal"/>
       <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_moisture" required="true()" type="decimal"/>
@@ -112,7 +114,7 @@
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_tin_fresh_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_texture" required="true()" type="select1"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group" relevant=" /VS_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth  = '' and  /VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth  = ''"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/generated_note_name_35" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/generated_note_name_36" readonly="true()" type="string"/>
       <bind constraint=". &gt;= 50 and . &lt;= 80" jr:constraintMsg="Must be between 50-80" nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_restriction_depth" type="decimal"/>
       <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_moisture" required="true()" type="decimal"/>
@@ -120,32 +122,32 @@
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_tin_fresh_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_texture" required="true()" type="select1"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group" relevant=" /VS_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth  = '' and  /VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth  = '' and  /VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_restriction_depth  = ''"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/generated_note_name_45" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/generated_note_name_46" readonly="true()" type="string"/>
       <bind constraint=". &gt;= 80 and . &lt;= 100" jr:constraintMsg="Must be between 80-100" nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_restriction_depth" type="decimal"/>
       <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_moisture" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_tin_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_tin_fresh_weight" required="true()" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_texture" required="true()" type="select1"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_top_group/generated_note_name_55" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_top_group/generated_note_name_56" readonly="true()" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_soils_sample_13.02.2015_v1/sw_top_group/sw_top_restriction_depth" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_top_group/sw_top_texture" required="true()" type="select1"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_sub_group" relevant=" /VS_soils_sample_13.02.2015_v1/sw_top_group/sw_top_restriction_depth  = ''"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_sub_group/generated_note_name_61" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_sub_group/generated_note_name_62" readonly="true()" type="string"/>
       <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_restriction_depth" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_texture" required="true()" type="select1"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_top_group/generated_note_name_67" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_top_group/generated_note_name_68" readonly="true()" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_soils_sample_13.02.2015_v1/nw_top_group/nw_top_restriction_depth" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_top_group/nw_top_texture" required="true()" type="select1"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_sub_group" relevant=" /VS_soils_sample_13.02.2015_v1/nw_top_group/nw_top_restriction_depth  = ''"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_sub_group/generated_note_name_73" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_sub_group/generated_note_name_74" readonly="true()" type="string"/>
       <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_restriction_depth" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_texture" required="true()" type="select1"/>
-      <bind nodeset="/VS_soils_sample_13.02.2015_v1/ne_top_group/generated_note_name_79" readonly="true()" type="string"/>
+      <bind nodeset="/VS_soils_sample_13.02.2015_v1/ne_top_group/generated_note_name_80" readonly="true()" type="string"/>
       <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_soils_sample_13.02.2015_v1/ne_top_group/ne_top_restriction_depth" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/ne_top_group/ne_top_texture" required="true()" type="select1"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/ne_sub_group" relevant=" /VS_soils_sample_13.02.2015_v1/ne_top_group/ne_top_restriction_depth  = ''"/>
-      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_soils_sample_13.02.2015_v1/ne_sub_group/generated_note_name_85" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_soils_sample_13.02.2015_v1/ne_sub_group/generated_note_name_86" readonly="true()" type="string"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_restriction_depth" type="decimal"/>
       <bind nodeset="/VS_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_texture" required="true()" type="select1"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/VS_soils_sample_13.02.2015_v1/meta/instanceID" readonly="true()" type="string"/>
@@ -168,24 +170,28 @@
           <value>UGA</value>
         </item>
       </select1>
-      <input ref="/VS_soils_sample_13.02.2015_v1/metadata/plot_id">
-        <label>Plot ID #:</label>
+      <input ref="/VS_soils_sample_13.02.2015_v1/metadata/eplot_no">
+        <label>Eplot No</label>
       </input>
       <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/metadata/name_group">
-        <input ref="/VS_soils_sample_13.02.2015_v1/metadata/name_group/first_name">
-          <label>Name of person sampling and weighing samples</label>
+        <input ref="/VS_soils_sample_13.02.2015_v1/metadata/name_group/sampler_first_name">
+          <label>First Name of person sampling and weighing samples</label>
           <hint>First Name</hint>
         </input>
-        <input ref="/VS_soils_sample_13.02.2015_v1/metadata/name_group/last_name">
+        <input ref="/VS_soils_sample_13.02.2015_v1/metadata/name_group/sampler_last_name">
+          <label>First Name of person sampling and weighing samples</label>
           <hint>Last Name</hint>
         </input>
       </group>
-      <input ref="/VS_soils_sample_13.02.2015_v1/metadata/scribe">
-        <label>Name of scribe:</label>
+      <input ref="/VS_soils_sample_13.02.2015_v1/metadata/scribe_first_name">
+        <label>First Name of scribe:</label>
+      </input>
+      <input ref="/VS_soils_sample_13.02.2015_v1/metadata/scribe_last_name">
+        <label>Last Name of scribe:</label>
       </input>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/se_top_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/se_top_group/generated_note_name_15">
+      <input ref="/VS_soils_sample_13.02.2015_v1/se_top_group/generated_note_name_16">
         <label>Corner 1. SE -- Topsoil (0-20)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth">
@@ -256,7 +262,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/se_subsoil_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/generated_note_name_25">
+      <input ref="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/generated_note_name_26">
         <label>Corner 1. SE -- Subsoil (20-50)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth">
@@ -327,7 +333,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/se_50-80_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/se_50-80_group/generated_note_name_35">
+      <input ref="/VS_soils_sample_13.02.2015_v1/se_50-80_group/generated_note_name_36">
         <label>Corner 1. SE -- 50-80</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_restriction_depth">
@@ -398,7 +404,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/se_80-100_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/se_80-100_group/generated_note_name_45">
+      <input ref="/VS_soils_sample_13.02.2015_v1/se_80-100_group/generated_note_name_46">
         <label>Corner 1. SE -- 80-100</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_restriction_depth">
@@ -469,7 +475,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/sw_top_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/sw_top_group/generated_note_name_55">
+      <input ref="/VS_soils_sample_13.02.2015_v1/sw_top_group/generated_note_name_56">
         <label>Corner 6. SW -- Topsoil (0-20)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/sw_top_group/sw_top_restriction_depth">
@@ -525,7 +531,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/sw_sub_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/sw_sub_group/generated_note_name_61">
+      <input ref="/VS_soils_sample_13.02.2015_v1/sw_sub_group/generated_note_name_62">
         <label>Corner 6. SW -- Subsoil (20-50)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_restriction_depth">
@@ -581,7 +587,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/nw_top_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/nw_top_group/generated_note_name_67">
+      <input ref="/VS_soils_sample_13.02.2015_v1/nw_top_group/generated_note_name_68">
         <label>Corner 11. NW -- Topsoil (0-20)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/nw_top_group/nw_top_restriction_depth">
@@ -637,7 +643,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/nw_sub_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/nw_sub_group/generated_note_name_73">
+      <input ref="/VS_soils_sample_13.02.2015_v1/nw_sub_group/generated_note_name_74">
         <label>Corner 11. NW -- Subsoil (20-50)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_restriction_depth">
@@ -693,7 +699,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/ne_top_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/ne_top_group/generated_note_name_79">
+      <input ref="/VS_soils_sample_13.02.2015_v1/ne_top_group/generated_note_name_80">
         <label>Corner 16. NE -- Topsoil (0-20)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/ne_top_group/ne_top_restriction_depth">
@@ -749,7 +755,7 @@
       </select1>
     </group>
     <group appearance="field-list" ref="/VS_soils_sample_13.02.2015_v1/ne_sub_group">
-      <input ref="/VS_soils_sample_13.02.2015_v1/ne_sub_group/generated_note_name_85">
+      <input ref="/VS_soils_sample_13.02.2015_v1/ne_sub_group/generated_note_name_86">
         <label>Corner 16. NE -- Subsoil (20-50)</label>
       </input>
       <input ref="/VS_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_restriction_depth">

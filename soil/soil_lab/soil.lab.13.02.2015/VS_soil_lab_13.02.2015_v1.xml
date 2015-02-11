@@ -14,8 +14,8 @@
               <landscape_no/>
               <eplot_no/>
               <eplot_code/>
-              <first_name/>
-              <last_name/>
+              <analyst_first_name/>
+              <analyst_last_name/>
               <data_entry_date/>
             </meta_display>
           </metadata>
@@ -71,8 +71,8 @@
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/landscape_no" required="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no" type="string"/>
       <bind calculate="concat( /VS_soil_lab_13.02.2015_v1/metadata/meta_display/country , '-',  /VS_soil_lab_13.02.2015_v1/metadata/meta_display/landscape_no , '-',  /VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no )" nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_code" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/first_name" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_last_name" required="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/data_entry_date" type="date"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/top_depth" readonly="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_moisture_tin_id" type="string"/>
@@ -128,17 +128,17 @@
           </item>
         </select1>
         <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/landscape_no">
-          <label>Landscape no.</label>
+          <label>Landscape No</label>
         </input>
         <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no">
-          <label>E-plot no.</label>
+          <label>E-plot No</label>
           <hint>Optional e.g 004</hint>
         </input>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/first_name">
+        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_first_name">
           <label>Analyst First Name</label>
           <hint>First Name of person Weighing Samples</hint>
         </input>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/last_name">
+        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_last_name">
           <label>Analyst Last Name</label>
           <hint>Last Name of person Weighing Samples</hint>
         </input>

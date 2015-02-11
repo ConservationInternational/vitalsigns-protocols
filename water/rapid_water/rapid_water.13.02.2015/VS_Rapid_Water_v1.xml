@@ -16,8 +16,8 @@
               <rapid_water_asses_code/>
               <water_sample_code/>
               <water_depth_marker/>
-              <first_name/>
-              <last_name/>
+              <observer_first_name/>
+              <observer_last_name/>
               <photo_file_name/>
               <data_entry_date/>
             </meta_display>
@@ -57,8 +57,8 @@
       <bind calculate="concat( /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/country , '_', 'WS', '-',  /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_no )" nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_code" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/water_sample_code" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/water_depth_marker" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/first_name" required="true()" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_last_name" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/photo_file_name" relevant="numbers" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/data_entry_date" type="date"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/gpsnw_group" required="true()"/>
@@ -111,10 +111,10 @@
           <label>Water Depth Against Marker</label>
           <hint>(If applicable)</hint>
         </input>
-        <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/first_name">
+        <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_first_name">
           <label>Observer First Name</label>
         </input>
-        <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/last_name">
+        <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_last_name">
           <label>Observer Last Name</label>
         </input>
         <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/photo_file_name">
