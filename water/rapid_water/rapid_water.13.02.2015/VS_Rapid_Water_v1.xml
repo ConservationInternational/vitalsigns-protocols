@@ -15,10 +15,8 @@
               <rapid_water_asses_no/>
               <rapid_water_asses_code/>
               <water_sample_code/>
-              <water_depth_marker/>
               <observer_first_name/>
               <observer_last_name/>
-              <photo_file_name/>
               <data_entry_date/>
             </meta_display>
             <gpsnw_group>
@@ -30,19 +28,46 @@
               <gpsnw_accuracy/>
             </gpsnw_group>
           </metadata>
-          <depth/>
-          <dp_grp>
-            <dp_1>yes</dp_1>
-          </dp_grp>
-          <water_surface/>
-          <dp1_grp>
-            <dp_water>yes</dp_water>
-          </dp1_grp>
+          <photos>
+            <photo_file_name/>
+            <photo_water/>
+          </photos>
+          <water_depth_marker/>
+          <water_surface_cover/>
+          <b_14_group>
+            <b_14/>
+            <b_14_1>0</b_14_1>
+            <b_14_2>0</b_14_2>
+            <b_14_3>0</b_14_3>
+            <b_14_4>0</b_14_4>
+            <b_14_5>0</b_14_5>
+            <b_14_6>0</b_14_6>
+            <b_14_7>0</b_14_7>
+          </b_14_group>
+          <b_14_sum/>
+          <flow_status/>
+          <flow_grp>
+            <flow_1/>
+          </flow_grp>
           <color/>
           <dp2_grp>
             <dp_color_type>yes</dp_color_type>
             <dp_color_intensity/>
           </dp2_grp>
+          <smell/>
+          <dp3_grp>
+            <dp_smell_desc>yes</dp_smell_desc>
+            <dp_smell_intensity/>
+          </dp3_grp>
+          <taste/>
+          <dp4_grp>
+            <dp_taste/>
+            <dp_taste_intensity/>
+          </dp4_grp>
+          <use/>
+          <dp6_grp>
+            <dp_obs_use/>
+          </dp6_grp>
           <meta>
             <instanceID/>
           </meta>
@@ -56,10 +81,8 @@
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_no" type="string"/>
       <bind calculate="concat( /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/country , '_', 'WS', '-',  /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_no )" nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_code" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/water_sample_code" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/water_depth_marker" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_first_name" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_last_name" required="true()" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/photo_file_name" relevant="numbers" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/data_entry_date" type="date"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/gpsnw_group" required="true()"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/gpsnw_group/gpsnw_note" readonly="true()" type="string"/>
@@ -68,13 +91,32 @@
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/gpsnw_group/gpsnw_ew" required="true()" type="select1"/>
       <bind constraint="regex(., '^-?\d*\.\d\d\d\d\d$')" jr:constraintMsg="Please enter 5 decimal places!" nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/gpsnw_group/gpsnw_long" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/gpsnw_group/gpsnw_accuracy" required="true()" type="decimal"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/depth" readonly="true()" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp_grp/dp_1" type="select1"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/water_surface" readonly="true()" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp1_grp/dp_water" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/photos/photo_file_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/photos/photo_water" required="true()" type="binary"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/water_depth_marker" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/water_surface_cover" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1" required="true()" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_2" required="true()" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_3" required="true()" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_4" required="true()" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_5" required="true()" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6" required="true()" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7" required="true()" type="select1"/>
+      <bind calculate="( /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_2  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_3  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_4  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_5  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7 )" constraint=". = 10" jr:constraintMsg="Go back and correct water surface cover values so they add up to 10." nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_sum" readonly="true()" relevant="( /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_2  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_3  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_4  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_5  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7 ) != 1" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/flow_status" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/flow_grp/flow_1" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/color" readonly="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp2_grp/dp_color_type" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp2_grp/dp_color_intensity" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/smell" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp3_grp/dp_smell_desc" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp3_grp/dp_smell_intensity" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/taste" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp4_grp/dp_taste" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp4_grp/dp_taste_intensity" type="select1"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/use" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp6_grp/dp_obs_use" type="select"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/VS_Rapid_Water_13.02.2015_v1/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -107,18 +149,11 @@
           <label>Water Sample code</label>
           <hint>(If applicable)</hint>
         </input>
-        <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/water_depth_marker">
-          <label>Water Depth Against Marker</label>
-          <hint>(If applicable)</hint>
-        </input>
         <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_first_name">
           <label>Observer First Name</label>
         </input>
         <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_last_name">
           <label>Observer Last Name</label>
-        </input>
-        <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/photo_file_name">
-          <label>Photograph File Name</label>
         </input>
         <input ref="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/data_entry_date">
           <label>Date of data entry</label>
@@ -164,12 +199,365 @@
         </input>
       </group>
     </group>
-    <input ref="/VS_Rapid_Water_13.02.2015_v1/depth">
-      <label>DEPTH</label>
+    <group ref="/VS_Rapid_Water_13.02.2015_v1/photos">
+      <input ref="/VS_Rapid_Water_13.02.2015_v1/photos/photo_file_name">
+        <label>Photograph File Name</label>
+      </input>
+      <upload mediatype="image/*" ref="/VS_Rapid_Water_13.02.2015_v1/photos/photo_water">
+        <label>Please take a photo of the Marker</label>
+      </upload>
+    </group>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/water_depth_marker">
+      <label>Water Depth Against Marker</label>
+      <hint>(If applicable)</hint>
     </input>
-    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/dp_grp">
-      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp_grp/dp_1">
-        <label>Depth</label>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/water_surface_cover">
+      <label>Water Surface Cover %</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group">
+      <input ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14">
+        <label>Water Surface Cover %</label>
+        <hint>Values must sum up to 10.</hint>
+      </input>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1">
+        <label>OPEN</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_2">
+        <label>ALAGAL SCUM</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_3">
+        <label>WATER PLANTS</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_4">
+        <label>ALIEN WEED</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_5">
+        <label>FLOATING RUBBISH</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6">
+        <label>FOAM</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+      <select1 appearance="minimal" ref="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7">
+        <label>OILY SHEEN</label>
+        <item>
+          <label>0</label>
+          <value>0</value>
+        </item>
+        <item>
+          <label>1</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>2</label>
+          <value>2</value>
+        </item>
+        <item>
+          <label>3</label>
+          <value>3</value>
+        </item>
+        <item>
+          <label>4</label>
+          <value>4</value>
+        </item>
+        <item>
+          <label>5</label>
+          <value>5</value>
+        </item>
+        <item>
+          <label>6</label>
+          <value>6</value>
+        </item>
+        <item>
+          <label>7</label>
+          <value>7</value>
+        </item>
+        <item>
+          <label>8</label>
+          <value>8</value>
+        </item>
+        <item>
+          <label>9</label>
+          <value>9</value>
+        </item>
+        <item>
+          <label>10</label>
+          <value>10</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/b_14_sum">
+      <label>Surface condition values must sum up to 10. Current sum is</label>
+    </input>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/flow_status">
+      <label>FLOW STATUS</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/flow_grp">
+      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/flow_grp/flow_1">
+        <label>Flow Status</label>
         <item>
           <label>DRY</label>
           <value>dry</value>
@@ -196,44 +584,8 @@
         </item>
       </select1>
     </group>
-    <input ref="/VS_Rapid_Water_13.02.2015_v1/water_surface">
-      <label>Water Surface %</label>
-    </input>
-    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/dp1_grp">
-      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp1_grp/dp_water">
-        <label>Water Surface %</label>
-        <item>
-          <label>OPEN</label>
-          <value>open</value>
-        </item>
-        <item>
-          <label>ALAGAL SCUM</label>
-          <value>alagal_scum</value>
-        </item>
-        <item>
-          <label>WATER PLANTS</label>
-          <value>water_plans</value>
-        </item>
-        <item>
-          <label>ALIEN WEED</label>
-          <value>alien_weeds</value>
-        </item>
-        <item>
-          <label>FLOATING RUBBISH</label>
-          <value>floating_rubbish</value>
-        </item>
-        <item>
-          <label>FOAM</label>
-          <value>foam</value>
-        </item>
-        <item>
-          <label>OILY SHEEN</label>
-          <value>oily_sheen</value>
-        </item>
-      </select1>
-    </group>
     <input ref="/VS_Rapid_Water_13.02.2015_v1/color">
-      <label>Color ()</label>
+      <label>Appearance</label>
     </input>
     <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/dp2_grp">
       <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp2_grp/dp_color_type">
@@ -270,18 +622,144 @@
           <value>none</value>
         </item>
         <item>
+          <label>JUST DETECTABLE</label>
+          <value>just_detectable</value>
+        </item>
+        <item>
+          <label>NOTICEABLE BUT DRINKABLE</label>
+          <value>drinkable</value>
+        </item>
+        <item>
+          <label>NOT SUITABLE FOR DRINKING</label>
+          <value>not_for_drinking</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/smell">
+      <label>Smell</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/dp3_grp">
+      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp3_grp/dp_smell_desc">
+        <label>Smell (DESCRIPTION)</label>
+        <item>
+          <label>CLEAN / NONE</label>
+          <value>clean_none</value>
+        </item>
+        <item>
+          <label>PEATY / EARTHY</label>
+          <value>peaty_earthy</value>
+        </item>
+        <item>
+          <label>ROTTEN / DEAD FISH</label>
+          <value>rotten_dead</value>
+        </item>
+        <item>
+          <label>SEWAGE</label>
+          <value>sewage</value>
+        </item>
+        <item>
+          <label>CHEMICAL</label>
+          <value>chemical</value>
+        </item>
+      </select1>
+      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp3_grp/dp_smell_intensity">
+        <label>Smell (INTENSITY)</label>
+        <item>
+          <label>NONE</label>
+          <value>none</value>
+        </item>
+        <item>
+          <label>NOTICEABLE BUT NOT OFFENSIVE</label>
+          <value>noticeable</value>
+        </item>
+        <item>
+          <label>NOT SUITABLE FOR DRINKING</label>
+          <value>suitable</value>
+        </item>
+      </select1>
+    </group>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/taste">
+      <label>TASTE</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/dp4_grp">
+      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp4_grp/dp_taste">
+        <label>TASTE (Optional)</label>
+        <item>
+          <label>CLEAN</label>
+          <value>clean</value>
+        </item>
+        <item>
+          <label>SALTY / BRACK</label>
+          <value>salty_brack</value>
+        </item>
+        <item>
+          <label>MUDDY</label>
+          <value>muddy</value>
+        </item>
+        <item>
+          <label>SOAPY</label>
+          <value>soapy</value>
+        </item>
+        <item>
+          <label>CHEMICAL</label>
+          <value>chemical</value>
+        </item>
+        <item>
+          <label>ROTTEN</label>
+          <value>rotten</value>
+        </item>
+      </select1>
+      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/dp4_grp/dp_taste_intensity">
+        <label>TASTE (INTENSITY)</label>
+        <item>
+          <label>CLEAN</label>
+          <value>clean</value>
+        </item>
+        <item>
           <label>SLIGHT</label>
           <value>slight</value>
         </item>
         <item>
-          <label>NOT FOR DRINKING</label>
-          <value>not_for_drinking</value>
+          <label>PLEASANT TO DRINK</label>
+          <value>pleasant</value>
         </item>
         <item>
-          <label>NOT FOR WASHING</label>
-          <value>not_for_washing</value>
+          <label>OFFENSIVE / UNSUITABLE TO DRINK</label>
+          <value>offensive</value>
         </item>
       </select1>
+    </group>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/use">
+      <label>OBSERVED USE</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/dp6_grp">
+      <select ref="/VS_Rapid_Water_13.02.2015_v1/dp6_grp/dp_obs_use">
+        <label>OBSERVED USE (TICK ONE OR MORE)</label>
+        <item>
+          <label>DRINKING</label>
+          <value>drinking</value>
+        </item>
+        <item>
+          <label>BATHING</label>
+          <value>bathing</value>
+        </item>
+        <item>
+          <label>LIVESTOCK WATERING</label>
+          <value>livestock</value>
+        </item>
+        <item>
+          <label>WASHING CLOTHES</label>
+          <value>washing</value>
+        </item>
+        <item>
+          <label>IRRGATION</label>
+          <value>irrigation</value>
+        </item>
+        <item>
+          <label>MINING / INDUSTRIAL</label>
+          <value>mining</value>
+        </item>
+      </select>
     </group>
   </h:body>
 </h:html>

@@ -81,7 +81,7 @@
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_total_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_fine_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/dp1_grp/top_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/dp1_grp/top_coarse_dry_weight )" constraint=". &lt;=  /VS_soil_lab_13.02.2015_v1/dp1_grp/top_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/top_dp1_test" readonly="true()" required="true()" type="string"/>
+      <bind calculate="( /VS_soil_lab_13.02.2015_v1/dp1_grp/top_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/dp1_grp/top_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/top_dp1_test" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/subsoil_depth" readonly="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_moisture_tin_id" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_tin_dry_weight" type="decimal"/>
@@ -89,7 +89,7 @@
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_total_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_fine_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_coarse_dry_weight )" constraint=". &lt;=  /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/subsoil_ddp1_test" readonly="true()" required="true()" type="string"/>
+      <bind calculate="( /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/subsoil_ddp1_test" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/s_50_80_depth" readonly="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_moisture_tin_id" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_tin_dry_weight" type="decimal"/>
@@ -97,7 +97,7 @@
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_total_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_fine_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_coarse_dry_weight )" constraint=". &lt;=  /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/s_50_80_dddp1_test" readonly="true()" required="true()" type="string"/>
+      <bind calculate="( /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/s_50_80_dddp1_test" readonly="true()" required="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/s_80_100_depth" readonly="true()" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_moisture_tin_id" type="string"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_tin_dry_weight" type="decimal"/>
@@ -105,7 +105,7 @@
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_total_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_fine_dry_weight" type="decimal"/>
       <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_coarse_dry_weight )" constraint=". &lt;=  /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_total_dry_weight " jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/s_80_100_ddddp1_test" readonly="true()" required="true()" type="string"/>
+      <bind calculate="( /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/s_80_100_ddddp1_test" readonly="true()" required="true()" type="string"/>
       <bind calculate="concat('uuid:', uuid())" nodeset="/VS_soil_lab_13.02.2015_v1/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
@@ -131,7 +131,7 @@
           <label>Landscape No</label>
         </input>
         <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no">
-          <label>E-plot No</label>
+          <label>Eplot No</label>
           <hint>Optional e.g 004</hint>
         </input>
         <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_first_name">
@@ -175,7 +175,7 @@
       </input>
     </group>
     <input ref="/VS_soil_lab_13.02.2015_v1/top_dp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
     </input>
     <input ref="/VS_soil_lab_13.02.2015_v1/subsoil_depth">
       <label>SUB SOIL ( 20 – 50 ) Depth (cm)</label>
@@ -205,7 +205,7 @@
       </input>
     </group>
     <input ref="/VS_soil_lab_13.02.2015_v1/subsoil_ddp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
     </input>
     <input ref="/VS_soil_lab_13.02.2015_v1/s_50_80_depth">
       <label>( 50 – 80 ) Depth (cm)</label>
@@ -235,7 +235,7 @@
       </input>
     </group>
     <input ref="/VS_soil_lab_13.02.2015_v1/s_50_80_dddp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
     </input>
     <input ref="/VS_soil_lab_13.02.2015_v1/s_80_100_depth">
       <label>( 80 – 100 ) Depth (cm)</label>
@@ -265,7 +265,7 @@
       </input>
     </group>
     <input ref="/VS_soil_lab_13.02.2015_v1/s_80_100_ddddp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag MUST BE LESS THAN OR EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
+      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
     </input>
   </h:body>
 </h:html>

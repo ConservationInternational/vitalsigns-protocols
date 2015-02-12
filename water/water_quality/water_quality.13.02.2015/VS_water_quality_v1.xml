@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Vital Signs Water Quality Laboratory Analysis Survey – 13 February 2015 v1</h:title>
+    <h:title>Vital Signs Water Laboratory Analysis Survey – 13 February 2015 v1</h:title>
     <model>
       <instance>
-        <VS_Water_quality_13.02.2015_v1 id="water_quality_lab_13_feb_2015_v1" version="1">
+        <VS_Water_Quality_13.02.2015 id="water_lab_13_feb_2015_v1" version="1">
           <start/>
           <end/>
           <today/>
@@ -12,8 +12,8 @@
             <meta_display>
               <country/>
               <sample_note/>
-              <first_name/>
-              <last_name/>
+              <analyst_first_name/>
+              <analyst_last_name/>
               <data_entry_date/>
             </meta_display>
           </metadata>
@@ -44,41 +44,41 @@
           <meta>
             <instanceID/>
           </meta>
-        </VS_Water_quality_13.02.2015_v1>
+        </VS_Water_Quality_13.02.2015>
       </instance>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_Water_quality_13.02.2015_v1/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_Water_quality_13.02.2015_v1/end" type="dateTime"/>
-      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_Water_quality_13.02.2015_v1/today" type="date"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/country" required="true()" type="select1"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/sample_note" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/first_name" required="true()" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/last_name" required="true()" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/data_entry_date" type="date"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/calibration" readonly="true()" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl1_1" type="select1"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl1_2" type="select1"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_0" type="select1"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_1" type="select1"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_no_1" type="select1"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_no_2" type="select1"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 100" nodeset="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_temp" required="true()" type="decimal"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_page" readonly="true()" type="string"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_note" readonly="true()" type="string"/>
-      <bind constraint="regex(., '^[0-9]{4}$')" jr:constraintMsg="Please enter the 4 numeral code that would be added to e.g TZA_WS_xxxx" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_code" required="true()" type="string"/>
-      <bind calculate="concat( /VS_Water_quality_13.02.2015_v1/metadata/meta_display/country , '-', 'WS', '-',  /VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_code )" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp-code_label" type="string"/>
-      <bind constraint="(. &gt;= 0 and . &lt;= 14) and regex(., '^-?\d*\.\d$')" jr:constraintMsg="Please enter pH value between ( 0 – 14) and to 1 decimal places (Required)!" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_ph" required="true()" type="decimal"/>
-      <bind constraint="(. &gt;= 0 and . &lt;= 20) and regex(., '^-?\d*\.\d\d$')" jr:constraintMsg="Please enter Conductivity value between ( 0 – 20) and to 2 decimal places (Required)!" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_cdty" type="decimal"/>
-      <bind constraint="(. &gt;= 0 and . &lt;= 2000) and regex(., '^-?\d*\.\d$')" jr:constraintMsg="Please enter NO3 value between ( 0 – 2000) and to 1 decimal places (Required)!" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_no3" type="decimal"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 200" jr:constraintMsg="Please enter PO4 value between ( 0 – 200)!" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_po4" type="decimal"/>
-      <bind nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/ws1_1" type="select"/>
-      <bind constraint=". &gt;= 0 and . &lt;= 100" nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/ws1_mpn" type="decimal"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_Water_quality_13.02.2015_v1/meta/instanceID" readonly="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_Water_Quality_13.02.2015/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_Water_Quality_13.02.2015/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_Water_Quality_13.02.2015/today" type="date"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/metadata/meta_display/country" required="true()" type="select1"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/metadata/meta_display/sample_note" type="string"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/metadata/meta_display/analyst_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/metadata/meta_display/analyst_last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/metadata/meta_display/data_entry_date" type="date"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/calibration" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl1_1" type="select1"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl1_2" type="select1"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_0" type="select1"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_1" type="select1"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_no_1" type="select1"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_no_2" type="select1"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 100" nodeset="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_temp" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/water_smp_page" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_note" readonly="true()" type="string"/>
+      <bind constraint="regex(., '^[0-9]{4}$')" jr:constraintMsg="Please enter the 4 numeral code that would be added to e.g TZA_WS_xxxx" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_code" required="true()" type="string"/>
+      <bind calculate="concat( /VS_Water_Quality_13.02.2015/metadata/meta_display/country , '-', 'WS', '-',  /VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_code )" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp-code_label" type="string"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 14) and regex(., '^-?\d*\.\d$')" jr:constraintMsg="Please enter pH value between ( 0 – 14) and to 1 decimal places (Required)!" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_ph" required="true()" type="decimal"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 20) and regex(., '^-?\d*\.\d\d$')" jr:constraintMsg="Please enter Conductivity value between ( 0 – 20) and to 2 decimal places (Required)!" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_cdty" type="decimal"/>
+      <bind constraint="(. &gt;= 0 and . &lt;= 2000) and regex(., '^-?\d*\.\d$')" jr:constraintMsg="Please enter NO3 value between ( 0 – 2000) and to 1 decimal places (Required)!" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_no3" type="decimal"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 200" jr:constraintMsg="Please enter PO4 value between ( 0 – 200)!" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_po4" type="decimal"/>
+      <bind nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/ws1_1" type="select"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 100" nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/ws1_mpn" type="decimal"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_Water_Quality_13.02.2015/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <group ref="/VS_Water_quality_13.02.2015_v1/metadata">
-      <group appearance="field-list" ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display">
-        <select1 ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/country">
+    <group ref="/VS_Water_Quality_13.02.2015/metadata">
+      <group appearance="field-list" ref="/VS_Water_Quality_13.02.2015/metadata/meta_display">
+        <select1 ref="/VS_Water_Quality_13.02.2015/metadata/meta_display/country">
           <label>Country</label>
           <item>
             <label>Ghana</label>
@@ -93,27 +93,27 @@
             <value>UGA</value>
           </item>
         </select1>
-        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/sample_note">
-          <label>Sample Note</label>
+        <input ref="/VS_Water_Quality_13.02.2015/metadata/meta_display/sample_note">
+          <label>Sample Notes</label>
           <hint>Optional</hint>
         </input>
-        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/first_name">
+        <input ref="/VS_Water_Quality_13.02.2015/metadata/meta_display/analyst_first_name">
           <label>Analysts First Name</label>
         </input>
-        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/last_name">
+        <input ref="/VS_Water_Quality_13.02.2015/metadata/meta_display/analyst_last_name">
           <label>Analysts Last Name</label>
         </input>
-        <input ref="/VS_Water_quality_13.02.2015_v1/metadata/meta_display/data_entry_date">
+        <input ref="/VS_Water_Quality_13.02.2015/metadata/meta_display/data_entry_date">
           <label>Date of data entry</label>
         </input>
       </group>
     </group>
-    <input ref="/VS_Water_quality_13.02.2015_v1/calibration">
+    <input ref="/VS_Water_Quality_13.02.2015/calibration">
       <label>CALIBRATION OF INSTRUMENT</label>
       <hint>Except for recording water temperature, one should tick off each step of calibration process.</hint>
     </input>
-    <group appearance="field-list" ref="/VS_Water_quality_13.02.2015_v1/cl1_grp">
-      <select1 ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl1_1">
+    <group appearance="field-list" ref="/VS_Water_Quality_13.02.2015/cl1_grp">
+      <select1 ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl1_1">
         <label>EC Calibration</label>
         <item>
           <label>Yes</label>
@@ -124,7 +124,7 @@
           <value>0</value>
         </item>
       </select1>
-      <select1 ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl1_2">
+      <select1 ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl1_2">
         <label>PO4 Blank</label>
         <item>
           <label>Yes</label>
@@ -135,7 +135,7 @@
           <value>0</value>
         </item>
       </select1>
-      <select1 ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_0">
+      <select1 ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_0">
         <label>pH 4 Calibration</label>
         <item>
           <label>Yes</label>
@@ -146,7 +146,7 @@
           <value>0</value>
         </item>
       </select1>
-      <select1 ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_1">
+      <select1 ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_1">
         <label>pH 7 Calibration</label>
         <item>
           <label>Yes</label>
@@ -157,7 +157,7 @@
           <value>0</value>
         </item>
       </select1>
-      <select1 ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_no_1">
+      <select1 ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_no_1">
         <label>NO3 High Calibration</label>
         <item>
           <label>Yes</label>
@@ -168,7 +168,7 @@
           <value>0</value>
         </item>
       </select1>
-      <select1 ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_no_2">
+      <select1 ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_no_2">
         <label>NO3 Low Calibration</label>
         <item>
           <label>Yes</label>
@@ -179,42 +179,42 @@
           <value>0</value>
         </item>
       </select1>
-      <input ref="/VS_Water_quality_13.02.2015_v1/cl1_grp/cl2_temp">
+      <input ref="/VS_Water_Quality_13.02.2015/cl1_grp/cl2_temp">
         <label>Recorded Water Temperature(Degrees Celsius)</label>
         <hint>Temperature value between ( 0 – 100)</hint>
       </input>
     </group>
-    <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_page">
+    <input ref="/VS_Water_Quality_13.02.2015/water_smp_page">
       <label>WATER SAMPLE DATA details ahead.</label>
     </input>
-    <group ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt">
+    <group ref="/VS_Water_Quality_13.02.2015/water_smp_rpt">
       <label>WATER SAMPLE DATA</label>
-      <repeat nodeset="/VS_Water_quality_13.02.2015_v1/water_smp_rpt">
-        <group appearance="field-list" ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp">
-          <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_note">
+      <repeat nodeset="/VS_Water_Quality_13.02.2015/water_smp_rpt">
+        <group appearance="field-list" ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp">
+          <input ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_note">
             <label>WATER SAMPLE DATA</label>
           </input>
-          <input appearance="numbers" ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_code">
+          <input appearance="numbers" ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_code">
             <label>Sample Code</label>
             <hint>Enter the 4 numeral code e.g 0004</hint>
           </input>
-          <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_ph">
+          <input ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_ph">
             <label>pH</label>
             <hint>pH value between ( 0 – 14) and to 1 decimal places (Required) e.g 0.1</hint>
           </input>
-          <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_cdty">
+          <input ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_cdty">
             <label>Conductivity (mS/m)</label>
             <hint>Conductivity value between ( 0 – 20) and to 2 decimal places (Required) E.g 0.22</hint>
           </input>
-          <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_no3">
+          <input ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_no3">
             <label>NO3 (mg/l)</label>
             <hint>NO3 value between ( 0 – 2000) and to 1 decimal places (Required) e.g 2.1</hint>
           </input>
-          <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/water_smp_po4">
+          <input ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/water_smp_po4">
             <label>PO4 (mg/l)</label>
             <hint>PO4 value between ( 0 – 200) E.g 10</hint>
           </input>
-          <select ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/ws1_1">
+          <select ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/ws1_1">
             <label>Ecoli</label>
             <hint>Tick if colour has changed in each compartment</hint>
             <item>
@@ -238,7 +238,7 @@
               <value>1ml</value>
             </item>
           </select>
-          <input ref="/VS_Water_quality_13.02.2015_v1/water_smp_rpt/water_smp_grp/ws1_mpn">
+          <input ref="/VS_Water_Quality_13.02.2015/water_smp_rpt/water_smp_grp/ws1_mpn">
             <label>MPN Per 100 ml</label>
           </input>
         </group>

@@ -8,12 +8,6 @@
           <text id="static_instance-percentage-10">
             <value>10</value>
           </text>
-          <text id="static_instance-field-1">
-            <value>M2</value>
-          </text>
-          <text id="static_instance-percentage-0">
-            <value>0</value>
-          </text>
           <text id="static_instance-districts-178">
             <value>Zabzugu Tatali</value>
           </text>
@@ -44,56 +38,29 @@
           <text id="static_instance-districts-173">
             <value>Gonja Central</value>
           </text>
-          <text id="static_instance-districts-65">
-            <value>Agona West</value>
-          </text>
-          <text id="static_instance-districts-64">
-            <value>Agona East</value>
-          </text>
-          <text id="static_instance-districts-67">
-            <value>Assin South</value>
-          </text>
-          <text id="static_instance-districts-66">
-            <value>Asikuma / Odoben  / Brakwa</value>
-          </text>
-          <text id="static_instance-districts-61">
-            <value>Effutu</value>
-          </text>
-          <text id="static_instance-districts-60">
-            <value>Gomoa West</value>
-          </text>
-          <text id="static_instance-districts-63">
-            <value>Ewutu Senya</value>
-          </text>
-          <text id="static_instance-districts-62">
-            <value>Gomoa East</value>
-          </text>
-          <text id="static_instance-regions-2">
-            <value>Ruvuma</value>
-          </text>
-          <text id="static_instance-districts-69">
-            <value>Twifo / Heman / Lower Denkyira</value>
-          </text>
-          <text id="static_instance-districts-68">
-            <value>Assin North</value>
-          </text>
-          <text id="static_instance-surface_condition-10">
-            <value>Termite mound</value>
-          </text>
           <text id="static_instance-districts-98">
             <value>Nkwanta South</value>
           </text>
           <text id="static_instance-districts-99">
             <value>Nkwanta North</value>
           </text>
-          <text id="static_instance-facility-2">
-            <value>GABIONS / SAND BAGS</value>
+          <text id="static_instance-districts-213">
+            <value>MPIGI</value>
           </text>
-          <text id="static_instance-percentage-6">
-            <value>6</value>
+          <text id="static_instance-districts-212">
+            <value>MASAKA</value>
           </text>
-          <text id="static_instance-regions-3">
-            <value>Iringa</value>
+          <text id="static_instance-districts-215">
+            <value>MUKONO</value>
+          </text>
+          <text id="static_instance-districts-214">
+            <value>MUBENDE</value>
+          </text>
+          <text id="static_instance-districts-217">
+            <value>RAKAI</value>
+          </text>
+          <text id="static_instance-districts-216">
+            <value>NAKASONGOLA</value>
           </text>
           <text id="static_instance-districts-90">
             <value>South Dayi</value>
@@ -118,87 +85,6 @@
           </text>
           <text id="static_instance-districts-97">
             <value>Krachi West</value>
-          </text>
-          <text id="static_instance-districts-109">
-            <value>Asuogyaman</value>
-          </text>
-          <text id="static_instance-districts-108">
-            <value>Lower Manya</value>
-          </text>
-          <text id="static_instance-regions-9">
-            <value>Volta</value>
-          </text>
-          <text id="static_instance-districts-101">
-            <value>Birim Municipal</value>
-          </text>
-          <text id="static_instance-districts-100">
-            <value>Birim South</value>
-          </text>
-          <text id="static_instance-districts-103">
-            <value>Suhum / Kraboa Coaltar</value>
-          </text>
-          <text id="static_instance-districts-102">
-            <value>West Akim</value>
-          </text>
-          <text id="static_instance-districts-105">
-            <value>Akwapen North</value>
-          </text>
-          <text id="static_instance-districts-104">
-            <value>Akwapem South</value>
-          </text>
-          <text id="static_instance-districts-107">
-            <value>Yilo Krobo</value>
-          </text>
-          <text id="static_instance-districts-106">
-            <value>New Juaben Municipal</value>
-          </text>
-          <text id="static_instance-districts-10">
-            <value>Rufiji</value>
-          </text>
-          <text id="static_instance-districts-11">
-            <value>Mafia</value>
-          </text>
-          <text id="static_instance-districts-12">
-            <value>Kibaha Urban</value>
-          </text>
-          <text id="static_instance-districts-13">
-            <value>Tunduru</value>
-          </text>
-          <text id="static_instance-districts-14">
-            <value>Songea Rural</value>
-          </text>
-          <text id="static_instance-districts-15">
-            <value>Mbinga</value>
-          </text>
-          <text id="static_instance-districts-16">
-            <value>Songea Urban</value>
-          </text>
-          <text id="static_instance-districts-17">
-            <value>Namtumbo</value>
-          </text>
-          <text id="static_instance-districts-18">
-            <value>Nyasa</value>
-          </text>
-          <text id="static_instance-districts-19">
-            <value>Iringa Rural</value>
-          </text>
-          <text id="static_instance-regions-0">
-            <value>Morogoro</value>
-          </text>
-          <text id="static_instance-regions-1">
-            <value>Pwani</value>
-          </text>
-          <text id="static_instance-regions-6">
-            <value>Western Region</value>
-          </text>
-          <text id="static_instance-regions-7">
-            <value>Central Region</value>
-          </text>
-          <text id="static_instance-regions-4">
-            <value>Mbeya</value>
-          </text>
-          <text id="static_instance-regions-5">
-            <value>Rukwa</value>
           </text>
           <text id="static_instance-districts-181">
             <value>Tolon Kumbugu</value>
@@ -230,6 +116,246 @@
           <text id="static_instance-districts-188">
             <value>Mamprusi East</value>
           </text>
+          <text id="static_instance-facility-7">
+            <value>DAM</value>
+          </text>
+          <text id="static_instance-facility-6">
+            <value>DRAINAGE DITCHES</value>
+          </text>
+          <text id="static_instance-facility-5">
+            <value>WATER HARVEST BUNDS</value>
+          </text>
+          <text id="static_instance-facility-4">
+            <value>TREE BELTS</value>
+          </text>
+          <text id="static_instance-facility-3">
+            <value>VETIVER GRASS</value>
+          </text>
+          <text id="static_instance-facility-2">
+            <value>GABIONS / SAND BAGS</value>
+          </text>
+          <text id="static_instance-facility-1">
+            <value>EROSION CONTROL BUNDS</value>
+          </text>
+          <text id="static_instance-facility-0">
+            <value>TERRACES</value>
+          </text>
+          <text id="static_instance-districts-130">
+            <value>Asante Akim North</value>
+          </text>
+          <text id="static_instance-districts-131">
+            <value>Ejisu Juaben</value>
+          </text>
+          <text id="static_instance-districts-132">
+            <value>Bosumtwi</value>
+          </text>
+          <text id="static_instance-districts-133">
+            <value>Atwima Kwanwoma</value>
+          </text>
+          <text id="static_instance-districts-134">
+            <value>K M A</value>
+          </text>
+          <text id="static_instance-districts-135">
+            <value>Atwima Nwabiagya</value>
+          </text>
+          <text id="static_instance-districts-136">
+            <value>Ahafo Ano South</value>
+          </text>
+          <text id="static_instance-districts-137">
+            <value>Ahafo Ano North</value>
+          </text>
+          <text id="static_instance-districts-138">
+            <value>Offinso Municipal</value>
+          </text>
+          <text id="static_instance-districts-139">
+            <value>Afigya Kwabre</value>
+          </text>
+          <text id="static_instance-districts-249">
+            <value>BUDUDA</value>
+          </text>
+          <text id="static_instance-districts-145">
+            <value>Sekyere Central</value>
+          </text>
+          <text id="static_instance-districts-144">
+            <value>Sekyere Afram Plains</value>
+          </text>
+          <text id="static_instance-districts-147">
+            <value>Offinso North</value>
+          </text>
+          <text id="static_instance-districts-146">
+            <value>Ejura Sekye Dumasi</value>
+          </text>
+          <text id="static_instance-districts-141">
+            <value>Sekyere South</value>
+          </text>
+          <text id="static_instance-districts-140">
+            <value>Kwabre  East</value>
+          </text>
+          <text id="static_instance-districts-143">
+            <value>Sekyere East</value>
+          </text>
+          <text id="static_instance-districts-142">
+            <value>Mampong Municipal</value>
+          </text>
+          <text id="static_instance-districts-149">
+            <value>Asunafo North</value>
+          </text>
+          <text id="static_instance-districts-148">
+            <value>Asunafo South</value>
+          </text>
+          <text id="static_instance-erosion-2">
+            <value>Moderate</value>
+          </text>
+          <text id="static_instance-erosion-3">
+            <value>Severe</value>
+          </text>
+          <text id="static_instance-erosion-0">
+            <value>None</value>
+          </text>
+          <text id="static_instance-erosion-1">
+            <value>Slight</value>
+          </text>
+          <text id="static_instance-districts-211">
+            <value>LUWERO</value>
+          </text>
+          <text id="static_instance-districts-248">
+            <value>BUDAKA</value>
+          </text>
+          <text id="static_instance-districts-210">
+            <value>KIBOGA</value>
+          </text>
+          <text id="static_instance-districts-246">
+            <value>SIRONKO</value>
+          </text>
+          <text id="static_instance-districts-247">
+            <value>AMURIA</value>
+          </text>
+          <text id="static_instance-districts-244">
+            <value>KABERAMAIDO</value>
+          </text>
+          <text id="static_instance-districts-245">
+            <value>MAYUGE</value>
+          </text>
+          <text id="static_instance-districts-242">
+            <value>SOROTI</value>
+          </text>
+          <text id="static_instance-districts-243">
+            <value>TORORO</value>
+          </text>
+          <text id="static_instance-districts-240">
+            <value>MBALE</value>
+          </text>
+          <text id="static_instance-districts-241">
+            <value>PALLISA</value>
+          </text>
+          <text id="static_instance-districts-219">
+            <value>KAYUNGA</value>
+          </text>
+          <text id="static_instance-districts-218">
+            <value>SEMBABULE</value>
+          </text>
+          <text id="static_instance-districts-8">
+            <value>Kisarawe</value>
+          </text>
+          <text id="static_instance-districts-9">
+            <value>Mkuranga</value>
+          </text>
+          <text id="static_instance-districts-6">
+            <value>Bagamoyo</value>
+          </text>
+          <text id="static_instance-districts-7">
+            <value>Kibaha</value>
+          </text>
+          <text id="static_instance-districts-4">
+            <value>Mvomero</value>
+          </text>
+          <text id="static_instance-districts-5">
+            <value>Gairo</value>
+          </text>
+          <text id="static_instance-districts-2">
+            <value>Ulanga</value>
+          </text>
+          <text id="static_instance-districts-3">
+            <value>Morogoro Urban</value>
+          </text>
+          <text id="static_instance-districts-0">
+            <value>Morogoro</value>
+          </text>
+          <text id="static_instance-districts-1">
+            <value>Kilombero</value>
+          </text>
+          <text id="static_instance-districts-78">
+            <value>Ashaiman</value>
+          </text>
+          <text id="static_instance-districts-79">
+            <value>Tema</value>
+          </text>
+          <text id="static_instance-districts-72">
+            <value>Weija (Ga South)</value>
+          </text>
+          <text id="static_instance-districts-73">
+            <value>Ga West</value>
+          </text>
+          <text id="static_instance-districts-70">
+            <value>Upper Denkyira East</value>
+          </text>
+          <text id="static_instance-districts-71">
+            <value>Upper Denkyira West</value>
+          </text>
+          <text id="static_instance-districts-76">
+            <value>Adenta</value>
+          </text>
+          <text id="static_instance-districts-77">
+            <value>Ledzokuku / Krowor</value>
+          </text>
+          <text id="static_instance-districts-74">
+            <value>Ga East</value>
+          </text>
+          <text id="static_instance-districts-75">
+            <value>A M A</value>
+          </text>
+          <text id="static_instance-districts-251">
+            <value>BUKWO</value>
+          </text>
+          <text id="static_instance-districts-250">
+            <value>BUKEDEA</value>
+          </text>
+          <text id="static_instance-districts-109">
+            <value>Asuogyaman</value>
+          </text>
+          <text id="static_instance-districts-108">
+            <value>Lower Manya</value>
+          </text>
+          <text id="static_instance-districts-101">
+            <value>Birim Municipal</value>
+          </text>
+          <text id="static_instance-districts-100">
+            <value>Birim South</value>
+          </text>
+          <text id="static_instance-districts-103">
+            <value>Suhum / Kraboa Coaltar</value>
+          </text>
+          <text id="static_instance-districts-102">
+            <value>West Akim</value>
+          </text>
+          <text id="static_instance-districts-105">
+            <value>Akwapen North</value>
+          </text>
+          <text id="static_instance-districts-104">
+            <value>Akwapem South</value>
+          </text>
+          <text id="static_instance-districts-107">
+            <value>Yilo Krobo</value>
+          </text>
+          <text id="static_instance-districts-106">
+            <value>New Juaben Municipal</value>
+          </text>
+          <text id="static_instance-y_n-1">
+            <value>No</value>
+          </text>
+          <text id="static_instance-y_n-0">
+            <value>Yes</value>
+          </text>
           <text id="static_instance-districts-202">
             <value>Sissala East</value>
           </text>
@@ -257,11 +383,11 @@
           <text id="static_instance-districts-83">
             <value>Keta Municipal</value>
           </text>
-          <text id="static_instance-slope-2">
-            <value>Steep slope (&gt;22%)</value>
+          <text id="static_instance-districts-82">
+            <value>South Tongu</value>
           </text>
-          <text id="static_instance-districts-81">
-            <value>Dangbe East</value>
+          <text id="static_instance-districts-208">
+            <value>KALANGALA</value>
           </text>
           <text id="static_instance-districts-80">
             <value>Dangbe West</value>
@@ -278,41 +404,35 @@
           <text id="static_instance-districts-84">
             <value>Ketu South</value>
           </text>
-          <text id="static_instance-districts-118">
-            <value>Kwahu South</value>
+          <text id="static_instance-districts-299">
+            <value>KASESE</value>
           </text>
-          <text id="static_instance-districts-119">
-            <value>Kwahu East</value>
+          <text id="static_instance-districts-298">
+            <value>KABAROLE</value>
           </text>
-          <text id="static_instance-slope-0">
-            <value>Flat (&lt;8%)</value>
+          <text id="static_instance-districts-291">
+            <value>NWOYA</value>
           </text>
-          <text id="static_instance-districts-112">
-            <value>East Akim</value>
+          <text id="static_instance-districts-290">
+            <value>NAPAK</value>
           </text>
-          <text id="static_instance-districts-113">
-            <value>Kwaebibirem</value>
+          <text id="static_instance-districts-293">
+            <value>ZOMBO</value>
           </text>
-          <text id="static_instance-districts-110">
-            <value>Upper Manya</value>
+          <text id="static_instance-districts-292">
+            <value>OTUKE</value>
           </text>
-          <text id="static_instance-slope-1">
-            <value>Moderate slope (8-22%)</value>
+          <text id="static_instance-districts-295">
+            <value>BUSHENYI</value>
           </text>
-          <text id="static_instance-districts-116">
-            <value>Atiwa</value>
+          <text id="static_instance-districts-294">
+            <value>BUNDIBUGYO</value>
           </text>
-          <text id="static_instance-districts-117">
-            <value>Kwahu West</value>
+          <text id="static_instance-districts-297">
+            <value>KABALE</value>
           </text>
-          <text id="static_instance-districts-114">
-            <value>Akyem Mansa</value>
-          </text>
-          <text id="static_instance-districts-115">
-            <value>Birim North</value>
-          </text>
-          <text id="static_instance-facility-3">
-            <value>VETIVER GRASS</value>
+          <text id="static_instance-districts-296">
+            <value>HOIMA</value>
           </text>
           <text id="static_instance-districts-192">
             <value>Kasena Nankana East</value>
@@ -338,26 +458,539 @@
           <text id="static_instance-districts-195">
             <value>Bongo</value>
           </text>
-          <text id="static_instance-percentage-1">
-            <value>1</value>
-          </text>
           <text id="static_instance-districts-198">
             <value>Bawku Municipal</value>
           </text>
           <text id="static_instance-districts-199">
             <value>Wa West</value>
           </text>
-          <text id="static_instance-erosion-3">
-            <value>Severe</value>
+          <text id="static_instance-districts-38">
+            <value>Jomoro</value>
+          </text>
+          <text id="static_instance-districts-39">
+            <value>Ellembelle</value>
+          </text>
+          <text id="static_instance-districts-36">
+            <value>Nkasi</value>
+          </text>
+          <text id="static_instance-districts-37">
+            <value>Sumbawanga Urban</value>
+          </text>
+          <text id="static_instance-districts-34">
+            <value>Kalambo</value>
+          </text>
+          <text id="static_instance-districts-35">
+            <value>Sumbawanga Rural</value>
+          </text>
+          <text id="static_instance-districts-32">
+            <value>Momba</value>
+          </text>
+          <text id="static_instance-districts-33">
+            <value>Tunduma</value>
+          </text>
+          <text id="static_instance-districts-30">
+            <value>Mbarali</value>
+          </text>
+          <text id="static_instance-districts-31">
+            <value>Mbeya Urban</value>
+          </text>
+          <text id="static_instance-districts-156">
+            <value>Sunyani West</value>
+          </text>
+          <text id="static_instance-districts-157">
+            <value>Berekum</value>
+          </text>
+          <text id="static_instance-districts-154">
+            <value>Tano North</value>
+          </text>
+          <text id="static_instance-districts-155">
+            <value>Sunyani Municipal</value>
+          </text>
+          <text id="static_instance-districts-152">
+            <value>Dormaa East</value>
+          </text>
+          <text id="static_instance-districts-153">
+            <value>Tano South</value>
+          </text>
+          <text id="static_instance-districts-150">
+            <value>Asutifi</value>
+          </text>
+          <text id="static_instance-districts-151">
+            <value>Dormaa Municipal</value>
+          </text>
+          <text id="static_instance-districts-158">
+            <value>Jaman South</value>
+          </text>
+          <text id="static_instance-districts-159">
+            <value>Jaman North</value>
+          </text>
+          <text id="static_instance-districts-259">
+            <value>KWEEN</value>
+          </text>
+          <text id="static_instance-districts-258">
+            <value>KIBUKU</value>
+          </text>
+          <text id="static_instance-districts-279">
+            <value>AMURU</value>
+          </text>
+          <text id="static_instance-districts-278">
+            <value>AMOLATAR</value>
+          </text>
+          <text id="static_instance-districts-273">
+            <value>NEBBI</value>
+          </text>
+          <text id="static_instance-districts-272">
+            <value>MOYO</value>
+          </text>
+          <text id="static_instance-districts-271">
+            <value>MOROTO</value>
+          </text>
+          <text id="static_instance-districts-270">
+            <value>LIRA</value>
+          </text>
+          <text id="static_instance-districts-277">
+            <value>ABIM</value>
+          </text>
+          <text id="static_instance-districts-276">
+            <value>YUMBE</value>
+          </text>
+          <text id="static_instance-districts-275">
+            <value>PADER</value>
+          </text>
+          <text id="static_instance-districts-274">
+            <value>NAKAPIRIPIRIT</value>
+          </text>
+          <text id="static_instance-countries-1">
+            <value>Ghana</value>
+          </text>
+          <text id="static_instance-countries-0">
+            <value>Tanzania</value>
+          </text>
+          <text id="static_instance-countries-2">
+            <value>Uganda</value>
+          </text>
+          <text id="static_instance-regions-14">
+            <value>Upper East</value>
+          </text>
+          <text id="static_instance-regions-15">
+            <value>Upper West</value>
+          </text>
+          <text id="static_instance-regions-16">
+            <value>Central Region</value>
+          </text>
+          <text id="static_instance-regions-17">
+            <value>Eastern Region</value>
+          </text>
+          <text id="static_instance-regions-10">
+            <value>Eastern</value>
+          </text>
+          <text id="static_instance-regions-11">
+            <value>Ashanti</value>
+          </text>
+          <text id="static_instance-regions-12">
+            <value>Brong Ahafo</value>
+          </text>
+          <text id="static_instance-regions-13">
+            <value>Northern</value>
+          </text>
+          <text id="static_instance-districts-65">
+            <value>Agona West</value>
+          </text>
+          <text id="static_instance-districts-64">
+            <value>Agona East</value>
+          </text>
+          <text id="static_instance-districts-67">
+            <value>Assin South</value>
+          </text>
+          <text id="static_instance-districts-66">
+            <value>Asikuma / Odoben  / Brakwa</value>
+          </text>
+          <text id="static_instance-districts-61">
+            <value>Effutu</value>
+          </text>
+          <text id="static_instance-districts-60">
+            <value>Gomoa West</value>
+          </text>
+          <text id="static_instance-districts-63">
+            <value>Ewutu Senya</value>
+          </text>
+          <text id="static_instance-districts-62">
+            <value>Gomoa East</value>
+          </text>
+          <text id="static_instance-districts-69">
+            <value>Twifo / Heman / Lower Denkyira</value>
+          </text>
+          <text id="static_instance-districts-68">
+            <value>Assin North</value>
+          </text>
+          <text id="static_instance-surface_condition-10">
+            <value>Termite mound</value>
+          </text>
+          <text id="static_instance-districts-118">
+            <value>Kwahu South</value>
+          </text>
+          <text id="static_instance-districts-119">
+            <value>Kwahu East</value>
+          </text>
+          <text id="static_instance-districts-112">
+            <value>East Akim</value>
+          </text>
+          <text id="static_instance-districts-113">
+            <value>Kwaebibirem</value>
+          </text>
+          <text id="static_instance-districts-110">
+            <value>Upper Manya</value>
+          </text>
+          <text id="static_instance-districts-111">
+            <value>Fanteakwa</value>
+          </text>
+          <text id="static_instance-districts-116">
+            <value>Atiwa</value>
+          </text>
+          <text id="static_instance-districts-117">
+            <value>Kwahu West</value>
+          </text>
+          <text id="static_instance-districts-114">
+            <value>Akyem Mansa</value>
+          </text>
+          <text id="static_instance-districts-115">
+            <value>Birim North</value>
+          </text>
+          <text id="static_instance-percentage-2">
+            <value>2</value>
+          </text>
+          <text id="static_instance-percentage-3">
+            <value>3</value>
+          </text>
+          <text id="static_instance-percentage-0">
+            <value>0</value>
+          </text>
+          <text id="static_instance-percentage-1">
+            <value>1</value>
+          </text>
+          <text id="static_instance-percentage-6">
+            <value>6</value>
+          </text>
+          <text id="static_instance-percentage-7">
+            <value>7</value>
+          </text>
+          <text id="static_instance-districts-239">
+            <value>KUMI</value>
+          </text>
+          <text id="static_instance-districts-238">
+            <value>KATAKWI</value>
+          </text>
+          <text id="static_instance-districts-237">
+            <value>KAPCHORWA</value>
+          </text>
+          <text id="static_instance-districts-236">
+            <value>KAMULI</value>
+          </text>
+          <text id="static_instance-districts-235">
+            <value>JINJA</value>
+          </text>
+          <text id="static_instance-districts-234">
+            <value>IGANGA</value>
+          </text>
+          <text id="static_instance-districts-233">
+            <value>BUSIA</value>
+          </text>
+          <text id="static_instance-districts-232">
+            <value>BUGIRI</value>
+          </text>
+          <text id="static_instance-districts-231">
+            <value>LWENGO</value>
+          </text>
+          <text id="static_instance-districts-230">
+            <value>KYANKWANZI</value>
+          </text>
+          <text id="static_instance-districts-288">
+            <value>KOLE</value>
+          </text>
+          <text id="static_instance-districts-289">
+            <value>LAMWO</value>
+          </text>
+          <text id="static_instance-districts-282">
+            <value>KOBOKO</value>
+          </text>
+          <text id="static_instance-districts-283">
+            <value>MARACHA</value>
+          </text>
+          <text id="static_instance-districts-280">
+            <value>DOKOLO</value>
+          </text>
+          <text id="static_instance-districts-281">
+            <value>KAABONG</value>
+          </text>
+          <text id="static_instance-districts-286">
+            <value>ALEBTONG</value>
+          </text>
+          <text id="static_instance-districts-287">
+            <value>AMUDAT</value>
+          </text>
+          <text id="static_instance-districts-284">
+            <value>OYAM</value>
+          </text>
+          <text id="static_instance-districts-285">
+            <value>AGAGO</value>
+          </text>
+          <text id="static_instance-districts-309">
+            <value>BULIISA</value>
+          </text>
+          <text id="static_instance-districts-308">
+            <value>KYENJOJO</value>
+          </text>
+          <text id="static_instance-percentage-4">
+            <value>4</value>
+          </text>
+          <text id="static_instance-districts-303">
+            <value>MBARARA</value>
+          </text>
+          <text id="static_instance-districts-302">
+            <value>MASINDI</value>
+          </text>
+          <text id="static_instance-districts-301">
+            <value>KISORO</value>
+          </text>
+          <text id="static_instance-districts-300">
+            <value>KIBAALE</value>
+          </text>
+          <text id="static_instance-districts-307">
+            <value>KANUNGU</value>
+          </text>
+          <text id="static_instance-districts-306">
+            <value>KAMWENGE</value>
+          </text>
+          <text id="static_instance-districts-305">
+            <value>RUKUNGIRI</value>
+          </text>
+          <text id="static_instance-districts-304">
+            <value>NTUNGAMO</value>
+          </text>
+          <text id="static_instance-percentage-8">
+            <value>8</value>
+          </text>
+          <text id="static_instance-percentage-9">
+            <value>9</value>
+          </text>
+          <text id="static_instance-districts-29">
+            <value>Mbozi</value>
+          </text>
+          <text id="static_instance-districts-28">
+            <value>Ileje</value>
+          </text>
+          <text id="static_instance-districts-21">
+            <value>Iringa Urban</value>
+          </text>
+          <text id="static_instance-districts-20">
+            <value>Mufindi</value>
+          </text>
+          <text id="static_instance-districts-23">
+            <value>Mafinga Township</value>
+          </text>
+          <text id="static_instance-districts-22">
+            <value>Kilolo</value>
+          </text>
+          <text id="static_instance-districts-25">
+            <value>Mbeya Rural</value>
+          </text>
+          <text id="static_instance-districts-24">
+            <value>Chunya</value>
+          </text>
+          <text id="static_instance-districts-27">
+            <value>Rungwe</value>
+          </text>
+          <text id="static_instance-districts-26">
+            <value>Kyela</value>
+          </text>
+          <text id="static_instance-districts-58">
+            <value>Mfantsiman</value>
+          </text>
+          <text id="static_instance-districts-59">
+            <value>Ajumako / Enyan / Essiam</value>
+          </text>
+          <text id="static_instance-districts-54">
+            <value>Bia</value>
+          </text>
+          <text id="static_instance-districts-55">
+            <value>Komenda / Edina / Eguafo / Abirem</value>
+          </text>
+          <text id="static_instance-districts-56">
+            <value>Cape Coast</value>
+          </text>
+          <text id="static_instance-districts-57">
+            <value>Abura / Asebu / Kwamankese</value>
+          </text>
+          <text id="static_instance-districts-50">
+            <value>Sefwi-Akontombra</value>
+          </text>
+          <text id="static_instance-districts-51">
+            <value>Sefwi-Wiawso</value>
+          </text>
+          <text id="static_instance-districts-52">
+            <value>Sefwi-Bibiani-Ahwiaso-Bekwai</value>
+          </text>
+          <text id="static_instance-districts-53">
+            <value>Juabeso</value>
+          </text>
+          <text id="static_instance-number_of_fields-8">
+            <value>8</value>
+          </text>
+          <text id="static_instance-number_of_fields-7">
+            <value>7</value>
+          </text>
+          <text id="static_instance-number_of_fields-6">
+            <value>6</value>
+          </text>
+          <text id="static_instance-number_of_fields-5">
+            <value>5</value>
+          </text>
+          <text id="static_instance-number_of_fields-4">
+            <value>4</value>
+          </text>
+          <text id="static_instance-number_of_fields-3">
+            <value>3</value>
+          </text>
+          <text id="static_instance-number_of_fields-2">
+            <value>2</value>
+          </text>
+          <text id="static_instance-number_of_fields-1">
+            <value>1</value>
+          </text>
+          <text id="static_instance-number_of_fields-0">
+            <value>0</value>
+          </text>
+          <text id="static_instance-districts-163">
+            <value>Nkoranza South</value>
+          </text>
+          <text id="static_instance-districts-162">
+            <value>Techiman</value>
+          </text>
+          <text id="static_instance-districts-161">
+            <value>Wenchi</value>
+          </text>
+          <text id="static_instance-districts-160">
+            <value>Tain</value>
+          </text>
+          <text id="static_instance-districts-167">
+            <value>Pru</value>
+          </text>
+          <text id="static_instance-districts-166">
+            <value>Sene</value>
+          </text>
+          <text id="static_instance-districts-165">
+            <value>Atebubu</value>
+          </text>
+          <text id="static_instance-districts-164">
+            <value>Nkoranza North</value>
+          </text>
+          <text id="static_instance-districts-169">
+            <value>Kintampo North</value>
+          </text>
+          <text id="static_instance-districts-168">
+            <value>Kintampo South</value>
+          </text>
+          <text id="static_instance-districts-209">
+            <value>KAMPALA</value>
+          </text>
+          <text id="static_instance-percentage-5">
+            <value>5</value>
+          </text>
+          <text id="static_instance-districts-264">
+            <value>ADJUMANI</value>
+          </text>
+          <text id="static_instance-districts-265">
+            <value>APAC</value>
+          </text>
+          <text id="static_instance-districts-266">
+            <value>ARUA</value>
+          </text>
+          <text id="static_instance-districts-267">
+            <value>GULU</value>
+          </text>
+          <text id="static_instance-districts-260">
+            <value>LUUKA</value>
+          </text>
+          <text id="static_instance-districts-261">
+            <value>NAMAYINGO</value>
+          </text>
+          <text id="static_instance-districts-262">
+            <value>NGORA</value>
+          </text>
+          <text id="static_instance-districts-263">
+            <value>SERERE</value>
+          </text>
+          <text id="static_instance-districts-268">
+            <value>KITGUM</value>
+          </text>
+          <text id="static_instance-districts-269">
+            <value>KOTIDO</value>
+          </text>
+          <text id="static_instance-regions-8">
+            <value>Greater Accra</value>
+          </text>
+          <text id="static_instance-regions-9">
+            <value>Volta</value>
+          </text>
+          <text id="static_instance-districts-10">
+            <value>Rufiji</value>
+          </text>
+          <text id="static_instance-districts-11">
+            <value>Mafia</value>
+          </text>
+          <text id="static_instance-districts-12">
+            <value>Kibaha Urban</value>
+          </text>
+          <text id="static_instance-districts-13">
+            <value>Tunduru</value>
+          </text>
+          <text id="static_instance-districts-14">
+            <value>Songea Rural</value>
+          </text>
+          <text id="static_instance-districts-15">
+            <value>Mbinga</value>
+          </text>
+          <text id="static_instance-districts-16">
+            <value>Songea Urban</value>
+          </text>
+          <text id="static_instance-districts-17">
+            <value>Namtumbo</value>
+          </text>
+          <text id="static_instance-regions-2">
+            <value>Ruvuma</value>
+          </text>
+          <text id="static_instance-districts-19">
+            <value>Iringa Rural</value>
+          </text>
+          <text id="static_instance-regions-0">
+            <value>Morogoro</value>
+          </text>
+          <text id="static_instance-regions-1">
+            <value>Pwani</value>
+          </text>
+          <text id="static_instance-regions-6">
+            <value>Western Region</value>
+          </text>
+          <text id="static_instance-regions-7">
+            <value>Central Region</value>
+          </text>
+          <text id="static_instance-regions-4">
+            <value>Mbeya</value>
+          </text>
+          <text id="static_instance-regions-5">
+            <value>Rukwa</value>
+          </text>
+          <text id="static_instance-districts-18">
+            <value>Nyasa</value>
+          </text>
+          <text id="static_instance-regions-3">
+            <value>Iringa</value>
           </text>
           <text id="static_instance-surface_condition-8">
             <value>Sodic soil</value>
           </text>
           <text id="static_instance-surface_condition-9">
             <value>Microfloral crust</value>
-          </text>
-          <text id="static_instance-percentage-7">
-            <value>7</value>
           </text>
           <text id="static_instance-surface_condition-4">
             <value>Dung</value>
@@ -407,284 +1040,107 @@
           <text id="static_instance-districts-120">
             <value>Kwahu North (Afram Plains)</value>
           </text>
-          <text id="static_instance-percentage-8">
-            <value>8</value>
-          </text>
-          <text id="static_instance-percentage-9">
-            <value>9</value>
-          </text>
-          <text id="static_instance-percentage-3">
-            <value>3</value>
-          </text>
           <text id="static_instance-districts-129">
             <value>Asante Akim South</value>
           </text>
           <text id="static_instance-districts-128">
             <value>Bosome Freho</value>
           </text>
-          <text id="static_instance-facility-7">
-            <value>DAM</value>
+          <text id="static_instance-districts-200">
+            <value>Wa Municipal</value>
           </text>
-          <text id="static_instance-facility-6">
-            <value>DRAINAGE DITCHES</value>
+          <text id="static_instance-districts-228">
+            <value>GOMBA</value>
           </text>
-          <text id="static_instance-facility-5">
-            <value>WATER HARVEST BUNDS</value>
-          </text>
-          <text id="static_instance-facility-4">
-            <value>TREE BELTS</value>
+          <text id="static_instance-districts-229">
+            <value>KALUNGU</value>
           </text>
           <text id="static_instance-districts-201">
             <value>Wa East</value>
           </text>
-          <text id="static_instance-districts-38">
-            <value>Jomoro</value>
+          <text id="static_instance-districts-220">
+            <value>WAKISO</value>
           </text>
-          <text id="static_instance-districts-39">
-            <value>Ellembelle</value>
+          <text id="static_instance-districts-221">
+            <value>LYANTONDE</value>
           </text>
-          <text id="static_instance-districts-36">
-            <value>Nkasi</value>
+          <text id="static_instance-districts-222">
+            <value>MITYANA</value>
           </text>
-          <text id="static_instance-districts-37">
-            <value>Sumbawanga Urban</value>
+          <text id="static_instance-districts-223">
+            <value>NAKASEKE</value>
           </text>
-          <text id="static_instance-districts-34">
-            <value>Kalambo</value>
+          <text id="static_instance-districts-224">
+            <value>BUIKWE</value>
           </text>
-          <text id="static_instance-districts-35">
-            <value>Sumbawanga Rural</value>
+          <text id="static_instance-districts-225">
+            <value>BUKOMASIMBI</value>
           </text>
-          <text id="static_instance-districts-32">
-            <value>Momba</value>
+          <text id="static_instance-districts-226">
+            <value>BUTAMBALA</value>
           </text>
-          <text id="static_instance-districts-33">
-            <value>Tunduma</value>
+          <text id="static_instance-districts-227">
+            <value>BUVUMA</value>
           </text>
-          <text id="static_instance-districts-30">
-            <value>Mbarali</value>
+          <text id="static_instance-districts-81">
+            <value>Dangbe East</value>
           </text>
-          <text id="static_instance-districts-31">
-            <value>Mbeya Urban</value>
+          <text id="static_instance-districts-314">
+            <value>KIRYANDONGO</value>
           </text>
-          <text id="static_instance-facility-1">
-            <value>EROSION CONTROL BUNDS</value>
+          <text id="static_instance-districts-315">
+            <value>KYEGEGWA</value>
           </text>
-          <text id="static_instance-facility-0">
-            <value>TERRACES</value>
+          <text id="static_instance-districts-316">
+            <value>MITOOMA</value>
           </text>
-          <text id="static_instance-districts-200">
-            <value>Wa Municipal</value>
+          <text id="static_instance-districts-317">
+            <value>NTOROKO</value>
           </text>
-          <text id="static_instance-field-8">
-            <value>None</value>
+          <text id="static_instance-districts-310">
+            <value>IBANDA</value>
           </text>
-          <text id="static_instance-districts-130">
-            <value>Asante Akim North</value>
+          <text id="static_instance-districts-311">
+            <value>ISINGIRO</value>
           </text>
-          <text id="static_instance-districts-131">
-            <value>Ejisu Juaben</value>
+          <text id="static_instance-districts-312">
+            <value>KIRUHURA</value>
           </text>
-          <text id="static_instance-districts-132">
-            <value>Bosumtwi</value>
+          <text id="static_instance-districts-313">
+            <value>BUHWEJU</value>
           </text>
-          <text id="static_instance-districts-133">
-            <value>Atwima Kwanwoma</value>
+          <text id="static_instance-districts-255">
+            <value>NAMUTUMBA</value>
           </text>
-          <text id="static_instance-districts-134">
-            <value>K M A</value>
+          <text id="static_instance-districts-254">
+            <value>MANAFWA</value>
           </text>
-          <text id="static_instance-districts-135">
-            <value>Atwima Nwabiagya</value>
+          <text id="static_instance-districts-257">
+            <value>BUYENDE</value>
           </text>
-          <text id="static_instance-districts-136">
-            <value>Ahafo Ano South</value>
+          <text id="static_instance-districts-256">
+            <value>BULAMBULI</value>
           </text>
-          <text id="static_instance-districts-137">
-            <value>Ahafo Ano North</value>
+          <text id="static_instance-districts-318">
+            <value>RUBIRIZI</value>
           </text>
-          <text id="static_instance-districts-138">
-            <value>Offinso Municipal</value>
+          <text id="static_instance-districts-319">
+            <value>SHEEMA</value>
           </text>
-          <text id="static_instance-districts-139">
-            <value>Afigya Kwabre</value>
+          <text id="static_instance-districts-253">
+            <value>KALIRO</value>
           </text>
-          <text id="static_instance-districts-29">
-            <value>Mbozi</value>
+          <text id="static_instance-districts-252">
+            <value>BUTALEJA</value>
           </text>
-          <text id="static_instance-districts-28">
-            <value>Ileje</value>
+          <text id="static_instance-slope-2">
+            <value>Steep slope (&gt;22%)</value>
           </text>
-          <text id="static_instance-districts-82">
-            <value>South Tongu</value>
+          <text id="static_instance-slope-0">
+            <value>Flat (&lt;8%)</value>
           </text>
-          <text id="static_instance-districts-21">
-            <value>Iringa Urban</value>
-          </text>
-          <text id="static_instance-districts-20">
-            <value>Mufindi</value>
-          </text>
-          <text id="static_instance-districts-23">
-            <value>Mafinga Township</value>
-          </text>
-          <text id="static_instance-districts-22">
-            <value>Kilolo</value>
-          </text>
-          <text id="static_instance-districts-25">
-            <value>Mbeya Rural</value>
-          </text>
-          <text id="static_instance-districts-24">
-            <value>Chunya</value>
-          </text>
-          <text id="static_instance-districts-27">
-            <value>Rungwe</value>
-          </text>
-          <text id="static_instance-districts-26">
-            <value>Kyela</value>
-          </text>
-          <text id="static_instance-districts-145">
-            <value>Sekyere Central</value>
-          </text>
-          <text id="static_instance-districts-144">
-            <value>Sekyere Afram Plains</value>
-          </text>
-          <text id="static_instance-districts-147">
-            <value>Offinso North</value>
-          </text>
-          <text id="static_instance-districts-146">
-            <value>Ejura Sekye Dumasi</value>
-          </text>
-          <text id="static_instance-districts-141">
-            <value>Sekyere South</value>
-          </text>
-          <text id="static_instance-districts-140">
-            <value>Kwabre  East</value>
-          </text>
-          <text id="static_instance-districts-143">
-            <value>Sekyere East</value>
-          </text>
-          <text id="static_instance-districts-142">
-            <value>Mampong Municipal</value>
-          </text>
-          <text id="static_instance-districts-149">
-            <value>Asunafo North</value>
-          </text>
-          <text id="static_instance-districts-148">
-            <value>Asunafo South</value>
-          </text>
-          <text id="static_instance-field-0">
-            <value>M1</value>
-          </text>
-          <text id="static_instance-percentage-4">
-            <value>4</value>
-          </text>
-          <text id="static_instance-districts-58">
-            <value>Mfantsiman</value>
-          </text>
-          <text id="static_instance-districts-59">
-            <value>Ajumako / Enyan / Essiam</value>
-          </text>
-          <text id="static_instance-districts-54">
-            <value>Bia</value>
-          </text>
-          <text id="static_instance-districts-55">
-            <value>Komenda / Edina / Eguafo / Abirem</value>
-          </text>
-          <text id="static_instance-districts-56">
-            <value>Cape Coast</value>
-          </text>
-          <text id="static_instance-districts-57">
-            <value>Abura / Asebu / Kwamankese</value>
-          </text>
-          <text id="static_instance-districts-50">
-            <value>Sefwi-Akontombra</value>
-          </text>
-          <text id="static_instance-districts-51">
-            <value>Sefwi-Wiawso</value>
-          </text>
-          <text id="static_instance-districts-52">
-            <value>Sefwi-Bibiani-Ahwiaso-Bekwai</value>
-          </text>
-          <text id="static_instance-districts-53">
-            <value>Juabeso</value>
-          </text>
-          <text id="static_instance-erosion-2">
-            <value>Moderate</value>
-          </text>
-          <text id="static_instance-regions-8">
-            <value>Greater Accra</value>
-          </text>
-          <text id="static_instance-erosion-0">
-            <value>None</value>
-          </text>
-          <text id="static_instance-erosion-1">
-            <value>Slight</value>
-          </text>
-          <text id="static_instance-districts-156">
-            <value>Sunyani West</value>
-          </text>
-          <text id="static_instance-districts-157">
-            <value>Berekum</value>
-          </text>
-          <text id="static_instance-districts-154">
-            <value>Tano North</value>
-          </text>
-          <text id="static_instance-districts-155">
-            <value>Sunyani Municipal</value>
-          </text>
-          <text id="static_instance-districts-152">
-            <value>Dormaa East</value>
-          </text>
-          <text id="static_instance-districts-153">
-            <value>Tano South</value>
-          </text>
-          <text id="static_instance-districts-150">
-            <value>Asutifi</value>
-          </text>
-          <text id="static_instance-districts-151">
-            <value>Dormaa Municipal</value>
-          </text>
-          <text id="static_instance-y_n-1">
-            <value>No</value>
-          </text>
-          <text id="static_instance-districts-158">
-            <value>Jaman South</value>
-          </text>
-          <text id="static_instance-districts-159">
-            <value>Jaman North</value>
-          </text>
-          <text id="static_instance-number_of_fields-8">
-            <value>8</value>
-          </text>
-          <text id="static_instance-number_of_fields-7">
-            <value>7</value>
-          </text>
-          <text id="static_instance-number_of_fields-6">
-            <value>6</value>
-          </text>
-          <text id="static_instance-number_of_fields-5">
-            <value>5</value>
-          </text>
-          <text id="static_instance-number_of_fields-4">
-            <value>4</value>
-          </text>
-          <text id="static_instance-number_of_fields-3">
-            <value>3</value>
-          </text>
-          <text id="static_instance-number_of_fields-2">
-            <value>2</value>
-          </text>
-          <text id="static_instance-number_of_fields-1">
-            <value>1</value>
-          </text>
-          <text id="static_instance-number_of_fields-0">
-            <value>0</value>
-          </text>
-          <text id="static_instance-districts-111">
-            <value>Fanteakwa</value>
-          </text>
-          <text id="static_instance-y_n-0">
-            <value>Yes</value>
+          <text id="static_instance-slope-1">
+            <value>Moderate slope (8-22%)</value>
           </text>
           <text id="static_instance-districts-49">
             <value>Aowin / Suaman</value>
@@ -716,68 +1172,11 @@
           <text id="static_instance-districts-40">
             <value>Nzema East</value>
           </text>
-          <text id="static_instance-districts-163">
-            <value>Nkoranza South</value>
+          <text id="static_instance-regions-18">
+            <value>Northern Region</value>
           </text>
-          <text id="static_instance-districts-162">
-            <value>Techiman</value>
-          </text>
-          <text id="static_instance-districts-161">
-            <value>Wenchi</value>
-          </text>
-          <text id="static_instance-districts-160">
-            <value>Tain</value>
-          </text>
-          <text id="static_instance-districts-167">
-            <value>Pru</value>
-          </text>
-          <text id="static_instance-districts-166">
-            <value>Sene</value>
-          </text>
-          <text id="static_instance-districts-165">
-            <value>Atebubu</value>
-          </text>
-          <text id="static_instance-districts-164">
-            <value>Nkoranza North</value>
-          </text>
-          <text id="static_instance-districts-169">
-            <value>Kintampo North</value>
-          </text>
-          <text id="static_instance-districts-168">
-            <value>Kintampo South</value>
-          </text>
-          <text id="static_instance-percentage-2">
-            <value>2</value>
-          </text>
-          <text id="static_instance-districts-8">
-            <value>Kisarawe</value>
-          </text>
-          <text id="static_instance-districts-9">
-            <value>Mkuranga</value>
-          </text>
-          <text id="static_instance-districts-6">
-            <value>Bagamoyo</value>
-          </text>
-          <text id="static_instance-districts-7">
-            <value>Kibaha</value>
-          </text>
-          <text id="static_instance-districts-4">
-            <value>Mvomero</value>
-          </text>
-          <text id="static_instance-districts-5">
-            <value>Gairo</value>
-          </text>
-          <text id="static_instance-districts-2">
-            <value>Ulanga</value>
-          </text>
-          <text id="static_instance-districts-3">
-            <value>Morogoro Urban</value>
-          </text>
-          <text id="static_instance-districts-0">
-            <value>Morogoro</value>
-          </text>
-          <text id="static_instance-districts-1">
-            <value>Kilombero</value>
+          <text id="static_instance-regions-19">
+            <value>Western Region</value>
           </text>
           <text id="static_instance-field-3">
             <value>M4</value>
@@ -785,11 +1184,11 @@
           <text id="static_instance-field-2">
             <value>M3</value>
           </text>
-          <text id="static_instance-districts-78">
-            <value>Ashaiman</value>
+          <text id="static_instance-field-1">
+            <value>M2</value>
           </text>
-          <text id="static_instance-districts-79">
-            <value>Tema</value>
+          <text id="static_instance-field-0">
+            <value>M1</value>
           </text>
           <text id="static_instance-field-7">
             <value>M8</value>
@@ -803,59 +1202,8 @@
           <text id="static_instance-field-4">
             <value>M5</value>
           </text>
-          <text id="static_instance-districts-72">
-            <value>Weija (Ga South)</value>
-          </text>
-          <text id="static_instance-districts-73">
-            <value>Ga West</value>
-          </text>
-          <text id="static_instance-districts-70">
-            <value>Upper Denkyira East</value>
-          </text>
-          <text id="static_instance-districts-71">
-            <value>Upper Denkyira West</value>
-          </text>
-          <text id="static_instance-districts-76">
-            <value>Adenta</value>
-          </text>
-          <text id="static_instance-districts-77">
-            <value>Ledzokuku / Krowor</value>
-          </text>
-          <text id="static_instance-districts-74">
-            <value>Ga East</value>
-          </text>
-          <text id="static_instance-districts-75">
-            <value>A M A</value>
-          </text>
-          <text id="static_instance-percentage-5">
-            <value>5</value>
-          </text>
-          <text id="static_instance-countries-1">
-            <value>Ghana</value>
-          </text>
-          <text id="static_instance-countries-0">
-            <value>Tanzania</value>
-          </text>
-          <text id="static_instance-countries-2">
-            <value>Uganda</value>
-          </text>
-          <text id="static_instance-regions-14">
-            <value>Upper East</value>
-          </text>
-          <text id="static_instance-regions-15">
-            <value>Upper West</value>
-          </text>
-          <text id="static_instance-regions-10">
-            <value>Eastern</value>
-          </text>
-          <text id="static_instance-regions-11">
-            <value>Ashanti</value>
-          </text>
-          <text id="static_instance-regions-12">
-            <value>Brong Ahafo</value>
-          </text>
-          <text id="static_instance-regions-13">
-            <value>Northern</value>
+          <text id="static_instance-field-8">
+            <value>None</value>
           </text>
         </translation>
       </itext>
@@ -2310,6 +2658,678 @@
             <region>10</region>
             <name>09</name>
           </item>
+          <item>
+            <itextId>static_instance-districts-208</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>101</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-209</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>102</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-210</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>103</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-211</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>104</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-212</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>105</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-213</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>106</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-214</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>107</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-215</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>108</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-216</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>109</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-217</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>110</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-218</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>111</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-219</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>112</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-220</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>113</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-221</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>114</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-222</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>115</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-223</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>116</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-224</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>117</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-225</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>118</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-226</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>119</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-227</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>120</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-228</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>121</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-229</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>122</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-230</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>123</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-231</itextId>
+            <country>UGA</country>
+            <region>01</region>
+            <name>124</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-232</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>201</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-233</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>202</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-234</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>203</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-235</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>204</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-236</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>205</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-237</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>206</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-238</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>207</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-239</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>208</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-240</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>209</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-241</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>210</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-242</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>211</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-243</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>212</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-244</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>213</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-245</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>214</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-246</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>215</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-247</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>216</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-248</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>217</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-249</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>218</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-250</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>219</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-251</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>220</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-252</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>221</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-253</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>222</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-254</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>223</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-255</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>224</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-256</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>225</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-257</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>226</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-258</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>227</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-259</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>228</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-260</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>229</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-261</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>230</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-262</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>231</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-263</itextId>
+            <country>UGA</country>
+            <region>02</region>
+            <name>232</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-264</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>301</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-265</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>302</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-266</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>303</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-267</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>304</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-268</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>305</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-269</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>306</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-270</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>307</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-271</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>308</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-272</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>309</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-273</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>310</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-274</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>311</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-275</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>312</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-276</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>313</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-277</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>314</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-278</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>315</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-279</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>316</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-280</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>317</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-281</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>318</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-282</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>319</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-283</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>320</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-284</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>321</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-285</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>322</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-286</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>323</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-287</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>324</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-288</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>325</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-289</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>326</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-290</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>327</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-291</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>328</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-292</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>329</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-293</itextId>
+            <country>UGA</country>
+            <region>03</region>
+            <name>330</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-294</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>401</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-295</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>402</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-296</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>403</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-297</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>404</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-298</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>405</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-299</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>406</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-300</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>407</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-301</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>408</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-302</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>409</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-303</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>410</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-304</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>411</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-305</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>412</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-306</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>413</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-307</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>414</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-308</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>415</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-309</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>416</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-310</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>417</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-311</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>418</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-312</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>419</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-313</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>420</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-314</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>421</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-315</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>422</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-316</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>423</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-317</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>424</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-318</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>425</name>
+          </item>
+          <item>
+            <itextId>static_instance-districts-319</itextId>
+            <country>UGA</country>
+            <region>04</region>
+            <name>426</name>
+          </item>
         </root>
       </instance>
       <instance id="field">
@@ -2449,6 +3469,26 @@
             <itextId>static_instance-regions-15</itextId>
             <country>GHA</country>
             <name>10</name>
+          </item>
+          <item>
+            <itextId>static_instance-regions-16</itextId>
+            <country>UGA</country>
+            <name>01</name>
+          </item>
+          <item>
+            <itextId>static_instance-regions-17</itextId>
+            <country>UGA</country>
+            <name>02</name>
+          </item>
+          <item>
+            <itextId>static_instance-regions-18</itextId>
+            <country>UGA</country>
+            <name>03</name>
+          </item>
+          <item>
+            <itextId>static_instance-regions-19</itextId>
+            <country>UGA</country>
+            <name>04</name>
           </item>
         </root>
       </instance>
@@ -2849,16 +3889,16 @@
         <label>Landscape No.</label>
       </input>
       <input ref="/Farm_Field_Soils_13.02.2015_v1/metadata/eplot_no">
-        <label>E-Plot No</label>
+        <label>Eplot No</label>
       </input>
       <input ref="/Farm_Field_Soils_13.02.2015_v1/metadata/hhid">
         <label>Household ID</label>
       </input>
       <input ref="/Farm_Field_Soils_13.02.2015_v1/metadata/enumerator_first_name">
-        <label>Enumerator First</label>
+        <label>Enumerator First Name</label>
       </input>
       <input ref="/Farm_Field_Soils_13.02.2015_v1/metadata/enumerator_last_name">
-        <label>Enumerator Last</label>
+        <label>Enumerator Last Name</label>
       </input>
     </group>
     <select1 appearance="minimal" ref="/Farm_Field_Soils_13.02.2015_v1/number_of_fields">

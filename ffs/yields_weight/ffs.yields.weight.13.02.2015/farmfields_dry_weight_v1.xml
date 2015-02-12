@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Vital Signs Farm Field Yields Dry Weight Survey – 13 February 2015 v1</h:title>
+    <h:title>Vital Signs Farm Field Soils Yields Maize Survey – 12 January 2015 v1</h:title>
     <model>
       <itext>
         <translation default="true()" lang="default">
@@ -1004,6 +1004,9 @@
           <text id="static_instance-districts-168">
             <value>Kintampo South</value>
           </text>
+          <text id="static_instance-dry-2">
+            <value>Other (Specify)</value>
+          </text>
           <text id="static_instance-dry-0">
             <value>Oven</value>
           </text>
@@ -1319,7 +1322,7 @@
         </translation>
       </itext>
       <instance>
-        <FarmField_Yields_Dry_Weight_13.02.2015.v1 id="ffs_yields_dry_weight_13_feb_2015_v1" version="1">
+        <FarmField_Yields_Dry_Weight_12.01.2015.v1 id="ffs_yields_maize_weight_12_jan_2015_v1" version="1">
           <start/>
           <end/>
           <today/>
@@ -1328,41 +1331,74 @@
           <district/>
           <metadata>
             <ward/>
-            <landscape_no/>
+            <landscape/>
             <eplot_id/>
             <hhid/>
-            <enumerator_first_name/>
-            <enumerator_last_name/>
+            <enumerator_first/>
+            <enumerator_last/>
           </metadata>
+          <dry_crop_group>
+            <dry_crop_id/>
+          </dry_crop_group>
           <number_of_fields/>
-          <selected_fields>
-            <selected_first_field/>
-            <selected_second_field/>
-          </selected_fields>
-          <dry_group>
-            <dry_crop_group_a>
-              <dry_crop_a>
-                <dry_crop_id_a/>
-              </dry_crop_a>
-              <f1_141_a1/>
-              <f1_141_a2/>
-              <f1_141_b/>
-              <f1_141_b_other/>
-            </dry_crop_group_a>
-            <dry_crop_group_b>
-              <dry_crop_b>
-                <dry_crop_id_b/>
-              </dry_crop_b>
-              <f2_141_a1/>
-              <f2_141_a2/>
-              <f2_141_b/>
-              <f2_141_b_other/>
-            </dry_crop_group_b>
-          </dry_group>
+          <a_group>
+            <m1_group>
+              <m1_a_5/>
+              <m1_a_6/>
+            </m1_group>
+            <m2_group>
+              <m2_a_5/>
+              <m2_a_6/>
+            </m2_group>
+            <m3_group>
+              <m3_a_5/>
+              <m3_a_6/>
+            </m3_group>
+            <m4_group>
+              <m4_a_5/>
+              <m4_a_6/>
+            </m4_group>
+            <m5_group>
+              <m5_a_5/>
+              <m5_a_6/>
+            </m5_group>
+            <m6_group>
+              <m6_a_5/>
+              <m6_a_6/>
+            </m6_group>
+            <m7_group>
+              <m7_a_5/>
+              <m7_a_6/>
+            </m7_group>
+            <m8_group>
+              <m8_a_5/>
+              <m8_a_6/>
+            </m8_group>
+            <selected_fields>
+              <eligible_first_field/>
+              <eligible_second_field/>
+              <selected_first_field/>
+              <selected_second_field/>
+            </selected_fields>
+            <selected_fields_warning>Warning activated</selected_fields_warning>
+          </a_group>
+          <b_group>
+            <b_group_field_level/>
+            <f1_b_group>
+              <f1_b_141_a/>
+              <f1_b_141_b/>
+              <f1_b_141_1/>
+            </f1_b_group>
+            <f2_b_group>
+              <f2_b_141_a/>
+              <f2_b_141_b/>
+              <f2_b_141_1/>
+            </f2_b_group>
+          </b_group>
           <meta>
             <instanceID/>
           </meta>
-        </FarmField_Yields_Dry_Weight_13.02.2015.v1>
+        </FarmField_Yields_Dry_Weight_12.01.2015.v1>
       </instance>
       <instance id="slope">
         <root>
@@ -1909,6 +1945,10 @@
           <item>
             <itextId>static_instance-dry-1</itextId>
             <name>2</name>
+          </item>
+          <item>
+            <itextId>static_instance-dry-2</itextId>
+            <name>3</name>
           </item>
         </root>
       </instance>
@@ -3640,41 +3680,66 @@
           </item>
         </root>
       </instance>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/end" type="dateTime"/>
-      <bind jr:preload="date" jr:preloadParams="today" nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/today" type="date"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/country" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/region" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/district" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata" required="true()"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/ward" required="true()" type="int"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/landscape_no" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/eplot_id" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/hhid" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/enumerator_first_name" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/enumerator_last_name" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/number_of_fields" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields" relevant=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/number_of_fields  &gt;= 1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group" relevant=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/number_of_fields  &gt;= 1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a" relevant=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field  != 'None'"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/dry_crop_a/dry_crop_id_a" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_a1" relevant="selected( /FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/dry_crop_a/dry_crop_id_a , '1')" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_a2" relevant="selected( /FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/dry_crop_a/dry_crop_id_a , '2')" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_b" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_b_other" relevant="selected(../f1_141_b, 'other')" type="string"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b" relevant=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field  != 'None'"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/dry_crop_b/dry_crop_id_b" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_a1" relevant="selected( /FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/dry_crop_b/dry_crop_id_b , '1')" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_a2" relevant="selected( /FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/dry_crop_b/dry_crop_id_b , '2')" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_b" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_b_other" relevant="selected(../f2_141_b, 'other')" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/FarmField_Yields_Dry_Weight_13.02.2015.v1/meta/instanceID" readonly="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/today" type="date"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/country" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/region" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/district" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata" required="true()"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/ward" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/landscape" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/eplot_id" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/hhid" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/enumerator_first" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/enumerator_last" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group/dry_crop_id" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group/m1_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group/m1_a_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 2"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group/m2_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group/m2_a_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 3"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group/m3_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group/m3_a_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 4"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group/m4_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group/m4_a_6" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 5"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group/m5_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group/m5_a_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 6"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group/m6_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group/m6_a_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 7"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group/m7_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group/m7_a_6" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 8"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group/m8_a_5" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group/m8_a_6" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 1"/>
+      <bind calculate="concat(if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group/m1_a_5  = '1', 'M1 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group/m2_a_5  = '1', 'M2 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group/m3_a_5  = '1', 'M3 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group/m4_a_5  = '1', 'M4 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group/m5_a_5  = '1', 'M5 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group/m6_a_5  = '1', 'M6 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group/m7_a_5  = '1', 'M7 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group/m8_a_5  = '1', 'M8 ', ''))" nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_first_field" readonly="true()" type="string"/>
+      <bind calculate="concat(if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group/m1_a_6  = '1', 'M1 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group/m2_a_6  = '1', 'M2 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group/m3_a_6  = '1', 'M3 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group/m4_a_6  = '1', 'M4 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group/m5_a_6  = '1', 'M5 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group/m6_a_6  = '1', 'M6 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group/m7_a_6  = '1', 'M7 ', ''), if( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group/m8_a_6  = '1', 'M8 ', ''))" nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_second_field" readonly="true()" type="string"/>
+      <bind constraint="selected( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_first_field ,.) or ( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_first_field  = '' and . = 'None')" jr:constraintMsg="You must select an eligible first field. If there is none, select None." nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field" required="true()" type="select1"/>
+      <bind constraint="(selected( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_second_field ,.) or ( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_second_field  = '' and . = 'None'))" jr:constraintMsg="You must select an eligible second field. If there is none, select None." nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_second_field" required="true()" type="select1"/>
+      <bind calculate="if(( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field  =  /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_second_field ) and ( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field  != 'None'), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="The first and second fields must be different. Go back and correct the selected fields." nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields_warning" readonly="true()" relevant="( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field  =  /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_second_field ) and ( /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field  != 'None')" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields  &gt;= 1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/b_group_field_level" readonly="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field  != 'None'"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group/f1_b_141_a" relevant="selected( /FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group/dry_crop_id , '1')" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group/f1_b_141_b" relevant="selected( /FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group/dry_crop_id , '2')" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group/f1_b_141_1" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group" relevant=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_second_field  != 'None'"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group/f2_b_141_a" relevant="selected( /FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group/dry_crop_id , '1')" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group/f2_b_141_b" relevant="selected( /FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group/dry_crop_id , '2')" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group/f2_b_141_1" required="true()" type="select1"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/FarmField_Yields_Dry_Weight_12.01.2015.v1/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/country">
+    <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/country">
       <label>Country</label>
       <item>
         <label>Tanzania</label>
@@ -3689,42 +3754,55 @@
         <value>UGA</value>
       </item>
     </select1>
-    <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/region">
+    <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/region">
       <label>Region</label>
-      <itemset nodeset="instance('regions')/root/item[country= /FarmField_Yields_Dry_Weight_13.02.2015.v1/country ]">
+      <itemset nodeset="instance('regions')/root/item[country= /FarmField_Yields_Dry_Weight_12.01.2015.v1/country ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/district">
+    <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/district">
       <label>District</label>
-      <itemset nodeset="instance('districts')/root/item[region= /FarmField_Yields_Dry_Weight_13.02.2015.v1/region  and country= /FarmField_Yields_Dry_Weight_13.02.2015.v1/country ]">
+      <itemset nodeset="instance('districts')/root/item[region= /FarmField_Yields_Dry_Weight_12.01.2015.v1/region  and country= /FarmField_Yields_Dry_Weight_12.01.2015.v1/country ]">
         <value ref="name"/>
         <label ref="jr:itext(itextId)"/>
       </itemset>
     </select1>
-    <group appearance="field-list" ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata">
-      <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/ward">
+    <group appearance="field-list" ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata">
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/ward">
         <label>Ward</label>
         <hint>Must be between 1 and 99. Enter 99 for Unknown.</hint>
       </input>
-      <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/landscape_no">
-        <label>Landscape No</label>
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/landscape">
+        <label>Landscape</label>
       </input>
-      <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/eplot_id">
-        <label>EPlot No</label>
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/eplot_id">
+        <label>E-Plot ID</label>
       </input>
-      <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/hhid">
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/hhid">
         <label>Household ID</label>
       </input>
-      <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/enumerator_first_name">
-        <label>Enumerator First Name</label>
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/enumerator_first">
+        <label>Enumerator First</label>
       </input>
-      <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/metadata/enumerator_last_name">
-        <label>Enumerator Last Name</label>
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/metadata/enumerator_last">
+        <label>Enumerator Last</label>
       </input>
     </group>
-    <select1 appearance="minimal" ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/number_of_fields">
+    <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group">
+      <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/dry_crop_group/dry_crop_id">
+        <label>SELECT THE CROP TO BE DRIED AND WEIGHED?</label>
+        <item>
+          <label>MAIZE</label>
+          <value>1</value>
+        </item>
+        <item>
+          <label>RICE PADDY</label>
+          <value>2</value>
+        </item>
+      </select1>
+    </group>
+    <select1 appearance="minimal" ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/number_of_fields">
       <label>Number of fields</label>
       <item>
         <label>0</label>
@@ -3763,151 +3841,313 @@
         <value>8</value>
       </item>
     </select1>
-    <group appearance="field-list" ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields">
-      <select1 appearance="minimal" ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field">
-        <label>Selected first field</label>
-        <hint>You must select an eligible first field. If there is none, select None.</hint>
-        <item>
-          <label>M1</label>
-          <value>M1</value>
-        </item>
-        <item>
-          <label>M2</label>
-          <value>M2</value>
-        </item>
-        <item>
-          <label>M3</label>
-          <value>M3</value>
-        </item>
-        <item>
-          <label>M4</label>
-          <value>M4</value>
-        </item>
-        <item>
-          <label>M5</label>
-          <value>M5</value>
-        </item>
-        <item>
-          <label>M6</label>
-          <value>M6</value>
-        </item>
-        <item>
-          <label>M7</label>
-          <value>M7</value>
-        </item>
-        <item>
-          <label>M8</label>
-          <value>M8</value>
-        </item>
-        <item>
-          <label>None</label>
-          <value>None</value>
-        </item>
-      </select1>
-      <select1 appearance="minimal" ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field">
-        <label>Selected second field</label>
-        <hint>You must select an eligible second field. If there is none, select None.</hint>
-        <item>
-          <label>M1</label>
-          <value>M1</value>
-        </item>
-        <item>
-          <label>M2</label>
-          <value>M2</value>
-        </item>
-        <item>
-          <label>M3</label>
-          <value>M3</value>
-        </item>
-        <item>
-          <label>M4</label>
-          <value>M4</value>
-        </item>
-        <item>
-          <label>M5</label>
-          <value>M5</value>
-        </item>
-        <item>
-          <label>M6</label>
-          <value>M6</value>
-        </item>
-        <item>
-          <label>M7</label>
-          <value>M7</value>
-        </item>
-        <item>
-          <label>M8</label>
-          <value>M8</value>
-        </item>
-        <item>
-          <label>None</label>
-          <value>None</value>
-        </item>
-      </select1>
-    </group>
-    <group ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group">
-      <group ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a">
-        <group ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/dry_crop_a">
-          <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/dry_crop_a/dry_crop_id_a">
-            <label>SELECT THE CROP TO BE DRIED AND WEIGHED?</label>
-            <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field "/>field?</hint><item>
-              <label>MAIZE</label>
-              <value>1</value>
-            </item>
-            <item>
-              <label>RICE PADDY</label>
-              <value>2</value>
-            </item>
-          </select1>
-        </group>
-        <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_a1">
-          <label>F1-141. What is the dry weight of the grains from the 10 cobs composite subsample (g)?</label>
-          <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field "/>field?</hint></input>
-        <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_a2">
-          <label>F1-141. What is the dry weight of the grains from the panicle subsample threshed (g)?</label>
-          <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field "/>field?</hint></input>
-        <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_b">
-          <label>F1-141.B. What method did you use to dry the subsample ? (SELECT ONE)</label>
-          <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_first_field "/>field?</hint><item>
-            <label>Oven</label>
+    <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group">
+      <label>Field Eligibility</label>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group/m1_a_5">
+          <label>M1-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
             <value>1</value>
           </item>
           <item>
-            <label>Sun</label>
+            <label>No</label>
             <value>2</value>
           </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m1_group/m1_a_6">
+          <label>M1-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
           <item>
-            <label>Other</label>
-            <value>other</value>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
           </item>
         </select1>
-        <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_a/f1_141_b_other">
-          <label>Specify other.</label>
-        </input>
       </group>
-      <group ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b">
-        <group ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/dry_crop_b">
-          <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/dry_crop_b/dry_crop_id_b">
-            <label>SELECT THE CROP TO BE DRIED AND WEIGHED?</label>
-            <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field "/>field?</hint><item>
-              <label>MAIZE</label>
-              <value>1</value>
-            </item>
-            <item>
-              <label>RICE PADDY</label>
-              <value>2</value>
-            </item>
-          </select1>
-        </group>
-        <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_a1">
-          <label>F2-141. What is the dry weight of the grains from the 10 cobs composite subsample (g)?</label>
-          <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field "/>field?</hint></input>
-        <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_a2">
-          <label>F2-141. What is the dry weight of the grains from the panicle subsample threshed (g)?</label>
-          <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field "/>field?</hint></input>
-        <select1 ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_b">
-          <label>F2-141.B. What method did you use to dry the subsample ? (SELECT ONE)</label>
-          <hint><output value=" /FarmField_Yields_Dry_Weight_13.02.2015.v1/selected_fields/selected_second_field "/>field?</hint><item>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group/m2_a_5">
+          <label>M2-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m2_group/m2_a_6">
+          <label>M2-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group/m3_a_5">
+          <label>M3-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m3_group/m3_a_6">
+          <label>M3-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group/m4_a_5">
+          <label>M4-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m4_group/m4_a_6">
+          <label>M4-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group/m5_a_5">
+          <label>M5-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m5_group/m5_a_6">
+          <label>M5-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group/m6_a_5">
+          <label>M6-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m6_group/m6_a_6">
+          <label>M6-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group/m7_a_5">
+          <label>M7-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m7_group/m7_a_6">
+          <label>M7-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group">
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group/m8_a_5">
+          <label>M8-5. Is this field eligible for YIELD MEASUREMENT? (first field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/m8_group/m8_a_6">
+          <label>M8-6. Is this field eligible for YIELD MEASUREMENT? (second field)</label>
+          <item>
+            <label>Yes</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>2</value>
+          </item>
+        </select1>
+      </group>
+      <group appearance="field-list" ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields">
+        <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_first_field">
+          <label>Eligible first field</label>
+        </input>
+        <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/eligible_second_field">
+          <label>Eligible second field</label>
+        </input>
+        <select1 appearance="minimal" ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field">
+          <label>Selected first field</label>
+          <hint>You must select an eligible first field. If there is none, select None.</hint>
+          <item>
+            <label>M1</label>
+            <value>M1</value>
+          </item>
+          <item>
+            <label>M2</label>
+            <value>M2</value>
+          </item>
+          <item>
+            <label>M3</label>
+            <value>M3</value>
+          </item>
+          <item>
+            <label>M4</label>
+            <value>M4</value>
+          </item>
+          <item>
+            <label>M5</label>
+            <value>M5</value>
+          </item>
+          <item>
+            <label>M6</label>
+            <value>M6</value>
+          </item>
+          <item>
+            <label>M7</label>
+            <value>M7</value>
+          </item>
+          <item>
+            <label>M8</label>
+            <value>M8</value>
+          </item>
+          <item>
+            <label>None</label>
+            <value>None</value>
+          </item>
+        </select1>
+        <select1 appearance="minimal" ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_second_field">
+          <label>Selected second field</label>
+          <hint>You must select an eligible second field. If there is none, select None.</hint>
+          <item>
+            <label>M1</label>
+            <value>M1</value>
+          </item>
+          <item>
+            <label>M2</label>
+            <value>M2</value>
+          </item>
+          <item>
+            <label>M3</label>
+            <value>M3</value>
+          </item>
+          <item>
+            <label>M4</label>
+            <value>M4</value>
+          </item>
+          <item>
+            <label>M5</label>
+            <value>M5</value>
+          </item>
+          <item>
+            <label>M6</label>
+            <value>M6</value>
+          </item>
+          <item>
+            <label>M7</label>
+            <value>M7</value>
+          </item>
+          <item>
+            <label>M8</label>
+            <value>M8</value>
+          </item>
+          <item>
+            <label>None</label>
+            <value>None</value>
+          </item>
+        </select1>
+      </group>
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields_warning">
+        <label>The first and second fields must be different. Go back and correct the selected fields.</label>
+      </input>
+    </group>
+    <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group">
+      <label>FIELD LEVEL</label>
+      <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/b_group_field_level">
+        <label>THE GRAINS SHOULD BE DRIED FOR 3-4 DAYS IN THE SUN OR IN AN OVEN AT 60-70 OC AND WEIGHTED TO THE NEAREST GRAM. RECORD THE WEIGHT OF THE GRAINS AFTER DRYING.</label>
+      </input>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group">
+        <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group/f1_b_141_a">
+          <label>F1-141. What is the DRY WEIGHT of the grains from the 10 COBS composite subsample (g)?</label>
+          <hint>
+            <output value=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field "/>field? 
+90 = Don't Know</hint>
+        </input>
+        <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group/f1_b_141_b">
+          <label>F1-141. What is the DRY WEIGHT of the grains from the PANICLE subsample threshold (g)?</label>
+          <hint>
+            <output value=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field "/>field? 
+90 = Don't Know</hint>
+        </input>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f1_b_group/f1_b_141_1">
+          <label>F1-141.1 What method did you use to dry the subsample?</label>
+          <item>
             <label>Oven</label>
             <value>1</value>
           </item>
@@ -3916,13 +4156,39 @@
             <value>2</value>
           </item>
           <item>
-            <label>Other</label>
-            <value>other</value>
+            <label>Other (Specify)</label>
+            <value>3</value>
           </item>
         </select1>
-        <input ref="/FarmField_Yields_Dry_Weight_13.02.2015.v1/dry_group/dry_crop_group_b/f2_141_b_other">
-          <label>Specify other.</label>
+      </group>
+      <group ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group">
+        <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group/f2_b_141_a">
+          <label>F2-141. What is the DRY WEIGHT of the grains from the 10 COBS composite subsample (g)?</label>
+          <hint>
+            <output value=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field "/>field? 
+90 = Don't Know</hint>
         </input>
+        <input ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group/f2_b_141_b">
+          <label>F2-141. What is the DRY WEIGHT of the grains from the PANICLE subsample threshold (g)?</label>
+          <hint>
+            <output value=" /FarmField_Yields_Dry_Weight_12.01.2015.v1/a_group/selected_fields/selected_first_field "/>field? 
+90 = Don't Know</hint>
+        </input>
+        <select1 ref="/FarmField_Yields_Dry_Weight_12.01.2015.v1/b_group/f2_b_group/f2_b_141_1">
+          <label>F2-141.1 What method did you use to dry the subsample?</label>
+          <item>
+            <label>Oven</label>
+            <value>1</value>
+          </item>
+          <item>
+            <label>Sun</label>
+            <value>2</value>
+          </item>
+          <item>
+            <label>Other (Specify)</label>
+            <value>3</value>
+          </item>
+        </select1>
       </group>
     </group>
   </h:body>
