@@ -1761,9 +1761,6 @@
               </f1_y_crop>
               <f1_101_grp>
                 <f1_101/>
-                <f1_101_a/>
-                <f1_101_b/>
-                <f1_101_c/>
               </f1_101_grp>
               <f1_b_103/>
               <f1_b_103_a/>
@@ -1854,9 +1851,6 @@
               </f2_y_crop>
               <f2_101_grp>
                 <f2_101/>
-                <f2_101_a/>
-                <f2_101_b/>
-                <f2_101_c/>
               </f2_101_grp>
               <f2_b_103/>
               <f2_b_103_a/>
@@ -5006,9 +5000,6 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop" type="select1"/>
       <bind calculate="jr:choice-name( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , ' /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop ')" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_a" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_b" required="true()" type="int"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_c" required="true()" type="decimal"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_103" required="true()" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_103_a" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_106" type="date"/>
@@ -5087,9 +5078,6 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop" type="select1"/>
       <bind calculate="jr:choice-name( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , ' /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop ')" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_a" required="true()" type="string"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_b" required="true()" type="int"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_c" required="true()" type="decimal"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_103" required="true()" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_103_a" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_106" type="date"/>
@@ -5878,17 +5866,6 @@
           <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101">
             <label>F1-101. GPS MEASUREMENT ((what is the area of the field taken by GPS tracking (Acres)?)</label>
             <hint>Field: <output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_first_field "/> AREA (ACRES) (Up to 2 decimal places)</hint>
-          </input>
-          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_a">
-            <label>F1-101-A. Name of the area file</label>
-          </input>
-          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_b">
-            <label>F1-101-B. Area step measurement</label>
-            <hint># of steps</hint>
-          </input>
-          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_c">
-            <label>F1-101-C. Area step measurement</label>
-            <hint>Length of one step (m)</hint>
           </input>
         </group>
         <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_103">
@@ -7342,17 +7319,6 @@ Plant Space between SEEDING HOLES (cm): (PLEASE MEASURE)</label>
           <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101">
             <label>F2-101. GPS MEASUREMENT ((what is the area of the field taken by GPS tracking (Acres)?)</label>
             <hint>Field: <output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_second_field "/> AREA (ACRES) (Up to 2 decimal places)</hint>
-          </input>
-          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_a">
-            <label>F2-101-A. Name of the area file</label>
-          </input>
-          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_b">
-            <label>F2-101-B. Area step measurement</label>
-            <hint># of steps</hint>
-          </input>
-          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_c">
-            <label>F2-101-C. Area step measurement</label>
-            <hint>Length of one step (m)</hint>
           </input>
         </group>
         <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_103">
