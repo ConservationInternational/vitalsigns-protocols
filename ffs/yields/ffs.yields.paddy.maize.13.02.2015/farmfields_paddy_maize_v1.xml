@@ -1759,6 +1759,12 @@
                 <f1_yield_crop/>
                 <f1_yield_crop_name/>
               </f1_y_crop>
+              <f1_101_grp>
+                <f1_101/>
+                <f1_101_a/>
+                <f1_101_b/>
+                <f1_101_c/>
+              </f1_101_grp>
               <f1_b_103/>
               <f1_b_103_a/>
               <f1_b_106/>
@@ -1789,6 +1795,8 @@
               <f1_b_128_a/>
               <f1_b_128_b/>
               <f1_b_128_b_other/>
+              <f1_selected_maize_warning>Warning activated</f1_selected_maize_warning>
+              <f1_selected_paddy_warning>Warning activated</f1_selected_paddy_warning>
               <f1_b_128_c/>
               <f1_b_11_group>
                 <gpsne_group_f1>
@@ -1844,6 +1852,12 @@
                 <f2_yield_crop/>
                 <f2_yield_crop_name/>
               </f2_y_crop>
+              <f2_101_grp>
+                <f2_101/>
+                <f2_101_a/>
+                <f2_101_b/>
+                <f2_101_c/>
+              </f2_101_grp>
               <f2_b_103/>
               <f2_b_103_a/>
               <f2_b_106/>
@@ -1874,6 +1888,8 @@
               <f2_b_128_a/>
               <f2_b_128_b/>
               <f2_b_128_b_other/>
+              <f2_selected_maize_warning>Warning activated</f2_selected_maize_warning>
+              <f2_selected_paddy_warning>Warning activated</f2_selected_paddy_warning>
               <f2_b_128_c/>
               <f2_b_11_group>
                 <gpsne_group_f2>
@@ -4927,58 +4943,58 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3  = '1'" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 2"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1'" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3  = '1'" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 3"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_3  = '1'" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 4"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1'" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_3  = '1'" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 5"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_3  = '1'" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 6"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1'" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3  = '1'" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 7"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1'" required="true()" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3  = '1'" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 8"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_field_name" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1'" required="true()" type="select1"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3  = '1'" required="true()" type="select1"/>
-      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1'" type="select1"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_5" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3  = '1'" required="true()" type="select1"/>
+      <bind calculate="if( /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1', '1', '2')" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_6" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_1  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_2  = '1' and  /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3  = '1'" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields" relevant=" /FarmField_Yields_Paddy_Maize_v1/number_of_fields  &gt;= 1"/>
       <bind calculate="concat(if( /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_5  = '1', 'M1 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_5  = '1', 'M2 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_5  = '1', 'M3 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_5  = '1', 'M4 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_5  = '1', 'M5 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_5  = '1', 'M6 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_5  = '1', 'M7 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_5  = '1', 'M8 ', ''))" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/eligible_first_field" readonly="true()" type="string"/>
       <bind calculate="concat(if( /FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_6  = '1', 'M1 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_6  = '1', 'M2 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m3_group/m3_a_6  = '1', 'M3 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m4_group/m4_a_6  = '1', 'M4 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m5_group/m5_a_6  = '1', 'M5 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_6  = '1', 'M6 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_6  = '1', 'M7 ', ''), if( /FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_6  = '1', 'M8 ', ''))" nodeset="/FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/eligible_second_field" readonly="true()" type="string"/>
@@ -4989,6 +5005,10 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_first_field  != 'None'"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop" type="select1"/>
       <bind calculate="jr:choice-name( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , ' /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop ')" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name" type="string"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101" required="true()" type="decimal"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_a" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_b" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_c" required="true()" type="decimal"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_103" required="true()" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_103_a" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_106" type="date"/>
@@ -5019,6 +5039,8 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_a" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_a , '1')" required="true()" type="select"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b_other" relevant="selected(../f1_b_128_b, 'other')" type="string"/>
+      <bind calculate="if((selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name , '1') = selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b , '11')), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="Go back and correct the selected Crops." nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_selected_maize_warning" readonly="true()" relevant="(selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')) and (selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name , '1') != selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b , '11'))" type="string"/>
+      <bind calculate="if((selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name , '2') = selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b , '12')), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="Go back and correct the selected Crops." nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_selected_paddy_warning" readonly="true()" relevant="(selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '2')) and (selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name , '2') != selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b , '12'))" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_c" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_a , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/gpsne_group_f1" required="true()"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/gpsne_group_f1/gpsne_note_f1" readonly="true()" type="string"/>
@@ -5030,16 +5052,16 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_130_1" required="true()" type="decimal"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_130_2" required="true()" type="decimal"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_132" required="true()" type="int"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_104" required="true()" type="decimal"/>
-      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_105" required="true()" type="decimal"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_104" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_105" required="true()" type="int"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_133" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')" required="true()" type="int"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')" required="true()" type="decimal"/>
       <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134 )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136 ) &gt;= 0" jr:constraintMsg="The fresh weight of 10 COBS (q136) should be inferior or equal to the total fresh weight of the of COBS in the quadrant (q134)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')" required="true()" type="decimal"/>
       <bind calculate="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136 *1000)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a" readonly="true()" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')" type="string"/>
-      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137 ) &gt;= 0" jr:constraintMsg="Q137: The fresh weight of the COBS subsample threshed (Q137) should be inferior or equal to the 1KG subsample of rice (Q136)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')" type="int"/>
+      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137 ) &gt;= 0" jr:constraintMsg="The fresh weight of the grain from the 10 COBS threshed (Q137) should be inferior or equal to fresh weight of the 10 COBS (Q136)." nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '1')" type="int"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '2')" required="true()" type="decimal"/>
-      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134_r )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136_r ) &gt;= 0" jr:constraintMsg="The fresh weight of the PANICLES subsample threshed (Q136) should be inferior or equal to the 1KG subsample of rice (Q134)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '2')" required="true()" type="decimal"/>
+      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_134_r )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136_r ) &gt;= 0" jr:constraintMsg="The fresh weight of approximately 1KG subsample of rice (Q136) should be inferior or equal to the total fresh weight of the panicles sampled in the quadrant (Q134)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '2')" required="true()" type="decimal"/>
       <bind calculate="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136_r *1000)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc_r" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_r" readonly="true()" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '2')" type="string"/>
       <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_136a_calc_r )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137_r ) &gt;= 0" jr:constraintMsg="The fresh weight of the PANICLES subsample threshed (Q137) should be inferior or equal to the 1KG subsample of rice (Q136)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_11_group/f1_b_11_137_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop , '2')" required="true()" type="int"/>
@@ -5064,6 +5086,10 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group" relevant=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_second_field  != 'None'"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop" type="select1"/>
       <bind calculate="jr:choice-name( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , ' /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop ')" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name" type="string"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101" required="true()" type="decimal"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_a" required="true()" type="string"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_b" required="true()" type="int"/>
+      <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_c" required="true()" type="decimal"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_103" required="true()" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_103_a" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_106" type="date"/>
@@ -5094,6 +5120,8 @@
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_a" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_a , '1')" required="true()" type="select"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b_other" relevant="selected(../f2_b_128_b, 'other')" type="string"/>
+      <bind calculate="if((selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name , '1') = selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b , '11')), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="Go back and correct the selected Crops." nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_selected_maize_warning" readonly="true()" relevant="(selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '1')) and (selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name , '1') != selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b , '11'))" type="string"/>
+      <bind calculate="if((selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name , '2') = selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b , '12')), 'Warning activated', 'No warning')" constraint=". = 'Warning activated'" jr:constraintMsg="Go back and correct the selected Crops." nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_selected_paddy_warning" readonly="true()" relevant="(selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '2')) and (selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name , '2') != selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b , '12'))" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_c" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_a , '1')" required="true()" type="select1"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/gpsne_group_f2" required="true()"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/gpsne_group_f2/gpsne_note_f2" readonly="true()" type="string"/>
@@ -5112,9 +5140,9 @@
       <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_134 )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136 ) &gt;= 0" jr:constraintMsg="The fresh weight of 10 COBS (q136) should be inferior or equal to the total fresh weight of the of COBS in the quadrant (q134)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '1')" required="true()" type="decimal"/>
       <bind calculate="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136 *1000)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a" readonly="true()" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '1')" type="string"/>
-      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137 ) &gt;= 0" jr:constraintMsg="The fresh weight of 10 COBS (q137) should be inferior or equal to the total fresh weight of the of COBS in the quadrant (q136)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '1')" type="int"/>
+      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137 ) &gt;= 0" jr:constraintMsg="The fresh weight of the grain from the 10 COBS threshed (Q137) should be inferior or equal to fresh weight of the 10 COBS (Q136)." nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '1')" type="int"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_134_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '2')" required="true()" type="decimal"/>
-      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_134_r )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136_r ) &gt;= 0" jr:constraintMsg="The fresh weight of approximately 1KG of rice (Q136) should be inferior or equal to the total fresh weight of the panicles sampled in the quadrant (Q134)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '2')" required="true()" type="decimal"/>
+      <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_134_r )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136_r ) &gt;= 0" jr:constraintMsg="The fresh weight of approximately 1KG subsample of rice (Q136) should be inferior or equal to the total fresh weight of the panicles sampled in the quadrant (Q134)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '2')" required="true()" type="decimal"/>
       <bind calculate="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136_r *1000)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc_r" type="string"/>
       <bind nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_r" readonly="true()" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '2')" type="string"/>
       <bind constraint="( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_136a_calc_r )-( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137_r ) &gt;= 0" jr:constraintMsg="The fresh weight of the PANICLES subsample threshed (Q137) should be inferior or equal to the 1KG subsample of rice (Q136)" nodeset="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_11_group/f2_b_11_137_r" relevant="selected( /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop , '2')" required="true()" type="int"/>
@@ -5267,7 +5295,8 @@
           </item>
         </select1>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/a_group/m1_group/m1_a_3">
-          <label>M1-3. Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest?</label>
+          <label>M1-3. Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest? 
+(ARE THE COBS/PANICLES MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -5329,7 +5358,8 @@
           </item>
         </select1>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/a_group/m2_group/m2_a_3">
-          <label>M2-3. Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest?</label>
+          <label>M2-3. Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest?
+(ARE THE COBS/PANICLES MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -5577,7 +5607,7 @@
           </item>
         </select1>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/a_group/m6_group/m6_a_3">
-          <label>M6-3. Is MAIZE/ RICE PADDY cultivated during the Current or most recently completed Season?</label>
+          <label>M6-3. Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS/PANICLES MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -5639,7 +5669,7 @@
           </item>
         </select1>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/a_group/m7_group/m7_a_3">
-          <label>M7-3. Is MAIZE/ RICE PADDY cultivated during the Current or most recently completed Season?</label>
+          <label>M7-3.Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS/PANICLES MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -5701,7 +5731,7 @@
           </item>
         </select1>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/a_group/m8_group/m8_a_3">
-          <label>M8-3. Is MAIZE/ RICE PADDY cultivated during the Current or most recently completed Season?</label>
+          <label>M8-3. Is the MAIZE/ RICE PADDY ready for harvest or at least 2 to 4 weeks before harvest? (ARE THE COBS/PANICLES MATURE?)</label>
           <item>
             <label>Yes</label>
             <value>1</value>
@@ -5843,6 +5873,23 @@
               <value>2</value>
             </item>
           </select1>
+        </group>
+        <group appearance="field-list" ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp">
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101">
+            <label>F1-101. GPS MEASUREMENT ((what is the area of the field taken by GPS tracking (Acres)?)</label>
+            <hint>Field: <output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_first_field "/> AREA (ACRES) (Up to 2 decimal places)</hint>
+          </input>
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_a">
+            <label>F1-101-A. Name of the area file</label>
+          </input>
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_b">
+            <label>F1-101-B. Area step measurement</label>
+            <hint># of steps</hint>
+          </input>
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_101_grp/f1_101_c">
+            <label>F1-101-C. Area step measurement</label>
+            <hint>Length of one step (m)</hint>
+          </input>
         </group>
         <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_103">
           <label>F1-103. What is the name of the variety?</label>
@@ -6537,6 +6584,12 @@ NA = Don't Know
         <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_b_other">
           <label>Specify other.</label>
         </input>
+        <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_selected_maize_warning">
+          <label>Go back and correct the selected Crops. REMOVE <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name "/> FROM THE LIST. We have noticed you did select <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name "/> AS crop GROWN IN ASSOCIATION.</label>
+          <hint><output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
+        <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_selected_paddy_warning">
+          <label>Go back and correct the selected Crops. REMOVE <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name "/> FROM THE LIST. We have noticed you did select <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name "/> AS crop GROWN IN ASSOCIATION.</label>
+          <hint><output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint></input>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_b_128_c">
           <label>F1-128C. Approximately how much of the field area was cultivated with <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f1_b_group/f1_y_crop/f1_yield_crop_name "/> ?</label>
           <hint><output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_first_field "/>field?</hint><item>
@@ -7285,6 +7338,23 @@ Plant Space between SEEDING HOLES (cm): (PLEASE MEASURE)</label>
             </item>
           </select1>
         </group>
+        <group appearance="field-list" ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp">
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101">
+            <label>F2-101. GPS MEASUREMENT ((what is the area of the field taken by GPS tracking (Acres)?)</label>
+            <hint>Field: <output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_second_field "/> AREA (ACRES) (Up to 2 decimal places)</hint>
+          </input>
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_a">
+            <label>F2-101-A. Name of the area file</label>
+          </input>
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_b">
+            <label>F2-101-B. Area step measurement</label>
+            <hint># of steps</hint>
+          </input>
+          <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_101_grp/f2_101_c">
+            <label>F2-101-C. Area step measurement</label>
+            <hint>Length of one step (m)</hint>
+          </input>
+        </group>
         <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_103">
           <label>F2-103. What is the name of the variety?</label>
           <hint>
@@ -7978,6 +8048,12 @@ NA = Don't Know
         <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_b_other">
           <label>Specify other.</label>
         </input>
+        <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_selected_maize_warning">
+          <label>Go back and correct the selected Crops. REMOVE <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name "/> FROM THE LIST. We have noticed you did select <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name "/> AS crop GROWN IN ASSOCIATION.</label>
+          <hint><output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
+        <input ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_selected_paddy_warning">
+          <label>Go back and correct the selected Crops. REMOVE <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name "/> FROM THE LIST. We have noticed you did select <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name "/> AS crop GROWN IN ASSOCIATION.</label>
+          <hint><output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint></input>
         <select1 ref="/FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_b_128_c">
           <label>F2-128C. Approximately how much of the field area was cultivated with <output value=" /FarmField_Yields_Paddy_Maize_v1/b_group/f2_b_group/f2_y_crop/f2_yield_crop_name "/> ?</label>
           <hint><output value=" /FarmField_Yields_Paddy_Maize_v1/a_group/selected_fields/selected_second_field "/>field?</hint><item>
