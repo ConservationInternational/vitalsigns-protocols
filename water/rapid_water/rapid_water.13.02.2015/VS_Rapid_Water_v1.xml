@@ -33,6 +33,10 @@
             <photo_water/>
           </photos>
           <water_depth_marker/>
+          <flow_status/>
+          <flow_grp>
+            <flow_1/>
+          </flow_grp>
           <water_surface_cover/>
           <b_14_group>
             <b_14/>
@@ -45,10 +49,6 @@
             <b_14_7>0</b_14_7>
           </b_14_group>
           <b_14_sum/>
-          <flow_status/>
-          <flow_grp>
-            <flow_1/>
-          </flow_grp>
           <color/>
           <dp2_grp>
             <dp_color_type>yes</dp_color_type>
@@ -79,7 +79,7 @@
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/country" required="true()" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/vs_code" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_no" type="string"/>
-      <bind calculate="concat( /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/country , '_', 'WS', '-',  /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_no )" nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_code" type="string"/>
+      <bind calculate="concat( /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/country , '-', 'WS', '-',  /VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_no )" nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/rapid_water_asses_code" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/water_sample_code" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_first_name" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/metadata/meta_display/observer_last_name" required="true()" type="string"/>
@@ -94,6 +94,8 @@
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/photos/photo_file_name" required="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/photos/photo_water" required="true()" type="binary"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/water_depth_marker" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/flow_status" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/flow_grp/flow_1" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/water_surface_cover" readonly="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14" readonly="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1" required="true()" type="select1"/>
@@ -104,8 +106,6 @@
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6" required="true()" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7" required="true()" type="select1"/>
       <bind calculate="( /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_2  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_3  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_4  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_5  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7 )" constraint=". = 10" jr:constraintMsg="Go back and correct water surface cover values so they add up to 10." nodeset="/VS_Rapid_Water_13.02.2015_v1/b_14_sum" readonly="true()" relevant="( /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_1  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_2  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_3  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_4  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_5  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_6  +  /VS_Rapid_Water_13.02.2015_v1/b_14_group/b_14_7 ) != 1" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/flow_status" readonly="true()" type="string"/>
-      <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/flow_grp/flow_1" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/color" readonly="true()" type="string"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp2_grp/dp_color_type" type="select1"/>
       <bind nodeset="/VS_Rapid_Water_13.02.2015_v1/dp2_grp/dp_color_intensity" type="select1"/>
@@ -211,6 +211,38 @@
       <label>Water Depth Against Marker</label>
       <hint>(If applicable)</hint>
     </input>
+    <input ref="/VS_Rapid_Water_13.02.2015_v1/flow_status">
+      <label>FLOW STATUS</label>
+    </input>
+    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/flow_grp">
+      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/flow_grp/flow_1">
+        <label>Flow Status</label>
+        <item>
+          <label>DRY</label>
+          <value>dry</value>
+        </item>
+        <item>
+          <label>POOLS</label>
+          <value>pools</value>
+        </item>
+        <item>
+          <label>LOW</label>
+          <value>low</value>
+        </item>
+        <item>
+          <label>NORMAL</label>
+          <value>normal</value>
+        </item>
+        <item>
+          <label>HIGH</label>
+          <value>high</value>
+        </item>
+        <item>
+          <label>FLOOD</label>
+          <value>flood</value>
+        </item>
+      </select1>
+    </group>
     <input ref="/VS_Rapid_Water_13.02.2015_v1/water_surface_cover">
       <label>Water Surface Cover %</label>
     </input>
@@ -552,38 +584,6 @@
     <input ref="/VS_Rapid_Water_13.02.2015_v1/b_14_sum">
       <label>Surface condition values must sum up to 10. Current sum is</label>
     </input>
-    <input ref="/VS_Rapid_Water_13.02.2015_v1/flow_status">
-      <label>FLOW STATUS</label>
-    </input>
-    <group appearance="field-list" ref="/VS_Rapid_Water_13.02.2015_v1/flow_grp">
-      <select1 ref="/VS_Rapid_Water_13.02.2015_v1/flow_grp/flow_1">
-        <label>Flow Status</label>
-        <item>
-          <label>DRY</label>
-          <value>dry</value>
-        </item>
-        <item>
-          <label>POOLS</label>
-          <value>pools</value>
-        </item>
-        <item>
-          <label>LOW</label>
-          <value>low</value>
-        </item>
-        <item>
-          <label>NORMAL</label>
-          <value>normal</value>
-        </item>
-        <item>
-          <label>HIGH</label>
-          <value>high</value>
-        </item>
-        <item>
-          <label>FLOOD</label>
-          <value>flood</value>
-        </item>
-      </select1>
-    </group>
     <input ref="/VS_Rapid_Water_13.02.2015_v1/color">
       <label>Appearance</label>
     </input>

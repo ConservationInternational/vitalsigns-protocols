@@ -1,271 +1,814 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <h:head>
-    <h:title>Vital Signs Eplot Soil Sample Laboratory Analysis Survey – 13 February 2015 v1</h:title>
+    <h:title>Vital Signs Eplot Soils Sample Survey – 13 February 2015 v1</h:title>
     <model>
       <instance>
-        <VS_soil_lab_13.02.2015_v1 id="eplot_soil_lab_13_feb_2015_v1" version="1">
+        <VS_Eplot_soils_sample_13.02.2015_v1 id="soils_eplot_sample_13_feb_2015_v1" version="1">
           <start/>
           <end/>
           <today/>
           <metadata>
-            <meta_display>
-              <country/>
-              <landscape_no/>
-              <eplot_no/>
-              <eplot_code/>
-              <analyst_first_name/>
-              <analyst_last_name/>
-              <data_entry_date/>
-            </meta_display>
+            <country/>
+            <eplot_no/>
+            <name_group>
+              <sampler_first_name/>
+              <sampler_last_name/>
+            </name_group>
+            <scribe_first_name/>
+            <scribe_last_name/>
           </metadata>
-          <top_depth/>
-          <dp1_grp>
-            <top_moisture_tin_id/>
-            <top_tin_dry_weight>yes</top_tin_dry_weight>
-            <top_sample_bag_label/>
-            <top_total_dry_weight>yes</top_total_dry_weight>
-            <top_fine_dry_weight>yes</top_fine_dry_weight>
-            <top_coarse_dry_weight>yes</top_coarse_dry_weight>
-          </dp1_grp>
-          <top_dp1_test/>
-          <subsoil_depth/>
-          <ddp1_grp>
-            <subsoil_moisture_tin_id/>
-            <subsoil_tin_dry_weight>yes</subsoil_tin_dry_weight>
-            <subsoil_sample_bag_label/>
-            <subsoil_total_dry_weight>yes</subsoil_total_dry_weight>
-            <subsoil_fine_dry_weight>yes</subsoil_fine_dry_weight>
-            <subsoil_coarse_dry_weight>yes</subsoil_coarse_dry_weight>
-          </ddp1_grp>
-          <subsoil_ddp1_test/>
-          <s_50_80_depth/>
-          <dddp1_grp>
-            <s_50_80_moisture_tin_id/>
-            <s_50_80_tin_dry_weight>yes</s_50_80_tin_dry_weight>
-            <s_50_80_sample_bag_label/>
-            <s_50_80_total_dry_weight>yes</s_50_80_total_dry_weight>
-            <s_50_80_fine_dry_weight>yes</s_50_80_fine_dry_weight>
-            <s_50_80_coarse_dry_weight>yes</s_50_80_coarse_dry_weight>
-          </dddp1_grp>
-          <s_50_80_dddp1_test/>
-          <s_80_100_depth/>
-          <ddddp1_grp>
-            <s_80_100_moisture_tin_id/>
-            <s_80_100_tin_dry_weight>yes</s_80_100_tin_dry_weight>
-            <s_80_100_sample_bag_label/>
-            <s_80_100_total_dry_weight>yes</s_80_100_total_dry_weight>
-            <s_80_100_fine_dry_weight>yes</s_80_100_fine_dry_weight>
-            <s_80_100_coarse_dry_weight>yes</s_80_100_coarse_dry_weight>
-          </ddddp1_grp>
-          <s_80_100_ddddp1_test/>
+          <se_top_group>
+            <generated_note_name_16/>
+            <se_top_restriction_depth/>
+            <se_top_weight/>
+            <se_top_moisture/>
+            <se_top_tin_weight/>
+            <se_top_tin_fresh_weight/>
+            <se_top_texture/>
+          </se_top_group>
+          <se_subsoil_group>
+            <generated_note_name_26/>
+            <se_subsoil_restriction_depth/>
+            <se_subsoil_weight/>
+            <se_subsoil_moisture/>
+            <se_subsoil_tin_weight/>
+            <se_subsoil_tin_fresh_weight/>
+            <se_subsoil_texture/>
+          </se_subsoil_group>
+          <se_50-80_group>
+            <generated_note_name_36/>
+            <se_50-80_restriction_depth/>
+            <se_50-80_weight/>
+            <se_50-80_moisture/>
+            <se_50-80_tin_weight/>
+            <se_50-80_tin_fresh_weight/>
+            <se_50-80_texture/>
+          </se_50-80_group>
+          <se_80-100_group>
+            <generated_note_name_46/>
+            <se_80-100_restriction_depth/>
+            <se_80-100_weight/>
+            <se_80-100_moisture/>
+            <se_80-100_tin_weight/>
+            <se_80-100_tin_fresh_weight/>
+            <se_80-100_texture/>
+          </se_80-100_group>
+          <sw_top_group>
+            <generated_note_name_56/>
+            <sw_top_restriction_depth/>
+            <sw_top_texture/>
+          </sw_top_group>
+          <sw_sub_group>
+            <generated_note_name_62/>
+            <sw_sub_restriction_depth/>
+            <sw_sub_texture/>
+          </sw_sub_group>
+          <nw_top_group>
+            <generated_note_name_68/>
+            <nw_top_restriction_depth/>
+            <nw_top_texture/>
+          </nw_top_group>
+          <nw_sub_group>
+            <generated_note_name_74/>
+            <nw_sub_restriction_depth/>
+            <nw_sub_texture/>
+          </nw_sub_group>
+          <ne_top_group>
+            <generated_note_name_80/>
+            <ne_top_restriction_depth/>
+            <ne_top_texture/>
+          </ne_top_group>
+          <ne_sub_group>
+            <generated_note_name_86/>
+            <ne_sub_restriction_depth/>
+            <ne_sub_texture/>
+          </ne_sub_group>
           <meta>
             <instanceID/>
           </meta>
-        </VS_soil_lab_13.02.2015_v1>
+        </VS_Eplot_soils_sample_13.02.2015_v1>
       </instance>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_soil_lab_13.02.2015_v1/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_soil_lab_13.02.2015_v1/end" type="dateTime"/>
-      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_soil_lab_13.02.2015_v1/today" type="date"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/country" required="true()" type="select1"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/landscape_no" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no" type="string"/>
-      <bind calculate="concat( /VS_soil_lab_13.02.2015_v1/metadata/meta_display/country , '-',  /VS_soil_lab_13.02.2015_v1/metadata/meta_display/landscape_no , '-',  /VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no )" nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_code" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_first_name" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_last_name" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/data_entry_date" type="date"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/top_depth" readonly="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_moisture_tin_id" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_tin_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_sample_bag_label" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_total_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_fine_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/dp1_grp/top_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/dp1_grp/top_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/top_dp1_test" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/subsoil_depth" readonly="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_moisture_tin_id" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_tin_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_sample_bag_label" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_total_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_fine_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/subsoil_ddp1_test" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/s_50_80_depth" readonly="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_moisture_tin_id" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_tin_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_sample_bag_label" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_total_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_fine_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/s_50_80_dddp1_test" readonly="true()" required="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/s_80_100_depth" readonly="true()" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_moisture_tin_id" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_tin_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_sample_bag_label" type="string"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_total_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_fine_dry_weight" type="decimal"/>
-      <bind nodeset="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_coarse_dry_weight" type="decimal"/>
-      <bind calculate="( /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_fine_dry_weight  +  /VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_coarse_dry_weight )" jr:constraintMsg="Go back and correct Values!" nodeset="/VS_soil_lab_13.02.2015_v1/s_80_100_ddddp1_test" readonly="true()" required="true()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_soil_lab_13.02.2015_v1/meta/instanceID" readonly="true()" type="string"/>
+      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/start" type="dateTime"/>
+      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/end" type="dateTime"/>
+      <bind jr:preload="date" jr:preloadParams="today" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/today" type="date"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/country" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/eplot_no" required="true()" type="string"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/name_group/sampler_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/name_group/sampler_last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/scribe_first_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/scribe_last_name" required="true()" type="string"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/generated_note_name_16" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group" relevant=" /VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth  = ''"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/generated_note_name_26" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group" relevant=" /VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth  = '' and  /VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth  = ''"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/generated_note_name_36" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 50 and . &lt;= 80" jr:constraintMsg="Must be between 50-80" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group" relevant=" /VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth  = '' and  /VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth  = '' and  /VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_restriction_depth  = ''"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/generated_note_name_46" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 80 and . &lt;= 100" jr:constraintMsg="Must be between 80-100" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_restriction_depth" type="decimal"/>
+      <bind jr:constraintMsg="Must be between 0-2000" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_moisture" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_tin_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_tin_fresh_weight" required="true()" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/generated_note_name_56" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/sw_top_restriction_depth" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/sw_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group" relevant=" /VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/sw_top_restriction_depth  = ''"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group/generated_note_name_62" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_restriction_depth" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/generated_note_name_68" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/nw_top_restriction_depth" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/nw_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group" relevant=" /VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/nw_top_restriction_depth  = ''"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group/generated_note_name_74" readonly="true()" type="string"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_restriction_depth" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/generated_note_name_80" readonly="true()" type="string"/>
+      <bind constraint=". &gt;= 0 and . &lt;= 20" jr:constraintMsg="Must be between 0-20" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/ne_top_restriction_depth" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/ne_top_texture" required="true()" type="select1"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group" relevant=" /VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/ne_top_restriction_depth  = ''"/>
+      <bind constraint=".&gt;= 20 and . &lt;= 50" jr:constraintMsg="Must be between 20-50" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group/generated_note_name_86" readonly="true()" type="string"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_restriction_depth" type="decimal"/>
+      <bind nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_texture" required="true()" type="select1"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/VS_Eplot_soils_sample_13.02.2015_v1/meta/instanceID" readonly="true()" type="string"/>
     </model>
   </h:head>
   <h:body>
-    <group ref="/VS_soil_lab_13.02.2015_v1/metadata">
-      <group appearance="field-list" ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display">
-        <select1 ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/country">
-          <label>Country</label>
-          <item>
-            <label>Ghana</label>
-            <value>GHA</value>
-          </item>
-          <item>
-            <label>Tanzania</label>
-            <value>TZA</value>
-          </item>
-          <item>
-            <label>Uganda</label>
-            <value>UGA</value>
-          </item>
-        </select1>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/landscape_no">
-          <label>Landscape No</label>
+    <group ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata">
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/country">
+        <label>Country</label>
+        <item>
+          <label>Tanzania</label>
+          <value>TZA</value>
+        </item>
+        <item>
+          <label>Ghana</label>
+          <value>GHA</value>
+        </item>
+        <item>
+          <label>Uganda</label>
+          <value>UGA</value>
+        </item>
+      </select1>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/eplot_no">
+        <label>Eplot No</label>
+      </input>
+      <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/name_group">
+        <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/name_group/sampler_first_name">
+          <label>First Name of person sampling and weighing samples</label>
+          <hint>First Name</hint>
         </input>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/eplot_no">
-          <label>Eplot No</label>
-          <hint>Optional e.g 004</hint>
-        </input>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_first_name">
-          <label>Analyst First Name</label>
-          <hint>First Name of person Weighing Samples</hint>
-        </input>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/analyst_last_name">
-          <label>Analyst Last Name</label>
-          <hint>Last Name of person Weighing Samples</hint>
-        </input>
-        <input ref="/VS_soil_lab_13.02.2015_v1/metadata/meta_display/data_entry_date">
-          <label>Date of Weighing dried samples</label>
+        <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/name_group/sampler_last_name">
+          <label>First Name of person sampling and weighing samples</label>
+          <hint>Last Name</hint>
         </input>
       </group>
-    </group>
-    <input ref="/VS_soil_lab_13.02.2015_v1/top_depth">
-      <label>TOP SOIL ( 0 – 20 ) Depth (cm)</label>
-    </input>
-    <group appearance="field-list" ref="/VS_soil_lab_13.02.2015_v1/dp1_grp">
-      <input ref="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_moisture_tin_id">
-        <label>Moisture Tin ID #</label>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/scribe_first_name">
+        <label>First Name of scribe:</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_tin_dry_weight">
-        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
-        <hint>to nearest 0.1 g</hint>
-      </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_sample_bag_label">
-        <label>Sample Bag label ID #</label>
-      </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_total_dry_weight">
-        <label>Total Air Dried Weight of Composite Sample in Bag</label>
-        <hint>to nearest g</hint>
-      </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_fine_dry_weight">
-        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
-        <hint>to nearest g</hint>
-      </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dp1_grp/top_coarse_dry_weight">
-        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/metadata/scribe_last_name">
+        <label>Last Name of scribe:</label>
       </input>
     </group>
-    <input ref="/VS_soil_lab_13.02.2015_v1/top_dp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
-    </input>
-    <input ref="/VS_soil_lab_13.02.2015_v1/subsoil_depth">
-      <label>SUB SOIL ( 20 – 50 ) Depth (cm)</label>
-    </input>
-    <group appearance="field-list" ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp">
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_moisture_tin_id">
-        <label>Moisture Tin ID #</label>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/generated_note_name_16">
+        <label>Corner 1. SE -- Topsoil (0-20)</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_tin_dry_weight">
-        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
-        <hint>to nearest 0.1 g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_sample_bag_label">
-        <label>Sample Bag label ID #</label>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_total_dry_weight">
-        <label>Total Air Dried Weight of Composite Sample in Bag</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_moisture">
+        <label>Soil Moisture Tin ID#</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_fine_dry_weight">
-        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddp1_grp/subsoil_coarse_dry_weight">
-        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
       </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_top_group/se_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
     </group>
-    <input ref="/VS_soil_lab_13.02.2015_v1/subsoil_ddp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
-    </input>
-    <input ref="/VS_soil_lab_13.02.2015_v1/s_50_80_depth">
-      <label>( 50 – 80 ) Depth (cm)</label>
-    </input>
-    <group appearance="field-list" ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp">
-      <input ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_moisture_tin_id">
-        <label>Moisture Tin ID #</label>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/generated_note_name_26">
+        <label>Corner 1. SE -- Subsoil (20-50)</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_tin_dry_weight">
-        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
-        <hint>to nearest 0.1 g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_sample_bag_label">
-        <label>Sample Bag label ID #</label>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_total_dry_weight">
-        <label>Total Air Dried Weight of Composite Sample in Bag</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_moisture">
+        <label>Soil Moisture Tin ID#</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_fine_dry_weight">
-        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/dddp1_grp/s_50_80_coarse_dry_weight">
-        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
       </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_subsoil_group/se_subsoil_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
     </group>
-    <input ref="/VS_soil_lab_13.02.2015_v1/s_50_80_dddp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
-    </input>
-    <input ref="/VS_soil_lab_13.02.2015_v1/s_80_100_depth">
-      <label>( 80 – 100 ) Depth (cm)</label>
-    </input>
-    <group appearance="field-list" ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp">
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_moisture_tin_id">
-        <label>Moisture Tin ID #</label>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/generated_note_name_36">
+        <label>Corner 1. SE -- 50-80</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_tin_dry_weight">
-        <label>Weight of Cumulative Soil Moisture Tin + Oven/or Air Dried Soil;</label>
-        <hint>to nearest 0.1 g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_sample_bag_label">
-        <label>Sample Bag label ID #</label>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_total_dry_weight">
-        <label>Total Air Dried Weight of Composite Sample in Bag</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_moisture">
+        <label>Soil Moisture Tin ID#</label>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_fine_dry_weight">
-        <label>Total Weight of Composite Soil Fine Fraction (&lt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
       </input>
-      <input ref="/VS_soil_lab_13.02.2015_v1/ddddp1_grp/s_80_100_coarse_dry_weight">
-        <label>Total Weight of Composite Sample Coarse Fraction (&gt; 2mm)</label>
-        <hint>to nearest g</hint>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
       </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_50-80_group/se_50-80_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
     </group>
-    <input ref="/VS_soil_lab_13.02.2015_v1/s_80_100_ddddp1_test">
-      <label>Total Air Dried Weight of Composite Sample in Bag SHOULD BE EQUAL TO (Soil Fine Fraction + Sample Coarse Fraction)</label>
-    </input>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/generated_note_name_46">
+        <label>Corner 1. SE -- 80-100</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_weight">
+        <label>Total weight of cumulative Mass sample</label>
+        <hint>(g)</hint>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_moisture">
+        <label>Soil Moisture Tin ID#</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_tin_weight">
+        <label>Weight of soil moisture tin</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_tin_fresh_weight">
+        <label>Weight of soil moisture tin + fresh soil subsample</label>
+        <hint>to nearest 0.1g</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/se_80-100_group/se_80-100_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/generated_note_name_56">
+        <label>Corner 6. SW -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/sw_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_top_group/sw_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group/generated_note_name_62">
+        <label>Corner 6. SW -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/sw_sub_group/sw_sub_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/generated_note_name_68">
+        <label>Corner 11. NW -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/nw_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_top_group/nw_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group/generated_note_name_74">
+        <label>Corner 11. NW -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/nw_sub_group/nw_sub_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/generated_note_name_80">
+        <label>Corner 16. NE -- Topsoil (0-20)</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/ne_top_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_top_group/ne_top_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group">
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group/generated_note_name_86">
+        <label>Corner 16. NE -- Subsoil (20-50)</label>
+      </input>
+      <input ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_restriction_depth">
+        <label>Depth to sampling restriction, if any</label>
+        <hint>(cm)</hint>
+      </input>
+      <select1 ref="/VS_Eplot_soils_sample_13.02.2015_v1/ne_sub_group/ne_sub_texture">
+        <label>Hand Texture</label>
+        <item>
+          <label>Sand</label>
+          <value>sand</value>
+        </item>
+        <item>
+          <label>Loam</label>
+          <value>loam</value>
+        </item>
+        <item>
+          <label>Loamy Sand</label>
+          <value>loamy_sand</value>
+        </item>
+        <item>
+          <label>Sandy Loam</label>
+          <value>sandy_loam</value>
+        </item>
+        <item>
+          <label>Silt Loam</label>
+          <value>silt_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay Loam</label>
+          <value>sandy_clay_loam</value>
+        </item>
+        <item>
+          <label>Clay Loam</label>
+          <value>clay_loam</value>
+        </item>
+        <item>
+          <label>Silty Clay Loam</label>
+          <value>silty_clay_loam</value>
+        </item>
+        <item>
+          <label>Sandy Clay</label>
+          <value>sandy_clay</value>
+        </item>
+        <item>
+          <label>Clay</label>
+          <value>clay</value>
+        </item>
+        <item>
+          <label>Silty Clay</label>
+          <value>silty_clay</value>
+        </item>
+      </select1>
+    </group>
   </h:body>
 </h:html>
