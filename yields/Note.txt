@@ -1,0 +1,1 @@
+As of September 2015, the Yields form for Maize was replaced with the Yields_Paddy_Maize form.  The Paddy_Maize form is designed for yields of either Maize or Rice.
